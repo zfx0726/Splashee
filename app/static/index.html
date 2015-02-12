@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en" ng-app="splashapp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Splashee</title> 
+  <!-- SEE IF I CAN INSERT TITLE WORDS THAT DONT APPEAR, CAN OPTIMIZE SEARCHES,
+  ADD: TRIP RECOMMENDER, TRAVEL RECOMMENDATION, TRIP PLANNING, SIMPLE EASY TRAVEL-->
+  <link href="lib/bootstrap-css/css/bootstrap.css" rel="stylesheet">
+  <link href="lib/jquery-ui/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
+  <link href="css/app.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/
+    svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+	
+ <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+   
+   <div class="account-bar">
+	    <ul>
+	    <li><h3><a href="#">Blog</a></h3></li>
+       	<li><h3><a href="#">Account</a></h3></li>
+       	<li><h3><a href="#">Mission</a></h3></li>
+       </ul>
+   </div>
+
+<!-- 
+	<div class="score-bar">
+	    <ul>
+       	<li><h3><a href="#">Points</a></h3></li>
+       	<li><h3><a href="#">Level</a></h3></li>
+       </ul>
+       <ul>
+       	<li><h3><a href="#">12</a></h3></li>
+       	<li><h3><a href="#">5</a></h3></li>
+       </ul>
+   </div>
+ -->
+
+   
+   <a href="#"><h1 class="logo">Splashee!</h1></a>
+   <h1 class="motto">Simplify Travel</h1>
+
+   
+   <div class="container">
+     <div class="navbar-header">
+<!-- 
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </button>
+ -->
+       
+       <ul>
+       	<a class="navbar-brand" href="#"><li class="pages"><h3>Discover</h3></li></a>
+       	<a class="navbar-brand" href="#/explore"><li class="pages"><h3>Explore</h3></li></a>
+       	<a class="navbar-brand" href="#/comingsoon"><li class="pages"><h3>Go</h3></li></a>
+       </ul>
+     
+     </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+     <div class="collapse navbar-collapse navbar-ex1-collapse">
+       <ul class="nav navbar-nav">
+         
+       </ul>
+     </div> 
+     <!-- /.navbar-collapse -->
+     
+
+     
+   </div>
+   
+   <!-- /.container -->
+  </nav>
+  
+  <div class="container" ng-view></div>
+  
+  
+  
+  <script src="lib/jquery/dist/jquery.js"></script>
+  <script src="lib/jquery-ui/jquery-ui.js"></script>
+  <script src="lib/lodash/dist/lodash.js"></script>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-resource/angular-resource.js"></script>
+  <script src="lib/angular-route/angular-route.js"></script>
+  <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="lib/angular-ui-date/src/date.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/home/home-controller.js"></script>
+  <script src="js/home/home-service.js"></script>
+  <script src="js/explore/explore-controller.js"></script>
+  <script src="js/coming/coming-controller.js"></script>
+  
+</body>
+</html>

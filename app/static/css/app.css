@@ -1,0 +1,173 @@
+*{
+-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+
+section{
+    border: 1px solid black; 
+    clear: both;
+}
+
+a:link { color: #FF; }
+a:visited { color: #FFFFFF; }
+a:hover { color: #F60; cursor: pointer; }
+a:active {color: #B2F511; }
+
+
+td a:link { color: #FF; }
+td a:visited { color: #FFFFFF; }
+td a:hover { color: #F60; cursor: pointer; }
+td a:active {color: #B2F511; }
+
+.basics{
+	float:left;
+	width: 300px;
+	height: 250px;
+	clear: left;
+}
+
+
+.toplineQuestion{
+	padding: 0 55px;
+}
+
+.citySelect{
+	padding: 10px 0;
+	text-align: left;
+	
+}
+
+.picAns{
+	text-align: center;
+	float: right;
+	margin: -10px 0;
+}
+
+
+.destPics{
+	text-align: center;
+	float: right;
+	margin: -30px 0;
+}
+
+.sub{
+	border: 1px solid black;
+	float: right;
+}
+
+.basics input{
+    border: 0;
+    	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	    	width: 75px;
+	    	text-align: center;
+}
+
+.basics td{
+	text-align: right;
+}
+
+
+
+.citySelect input{
+border: 0;
+    	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	    	width: 150px;
+	    	text-align: center;	
+}
+
+
+.andor{
+	padding: 5px 0px;
+	display: block;
+}
+
+.coming{
+	text-align: center;
+	font-size: 40px;
+	padding: 60px;
+}
+
+span input {
+    border: 0;
+    	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	    	width: 75px;
+	    	text-align: center;
+}
+
+
+
+.datepicker:before {
+content: '';
+display: inline-block;
+border-left: 7px solid transparent;
+border-right: 7px solid transparent;
+border-bottom: 7px solid #ccc;
+border-bottom-color: rgba(0, 0, 0, 0.2);
+position: absolute;
+top: -7px;
+left: 190px;
+}
+
+
+td, th { padding: 10px; }
+
+.questions {
+	width: 100%;
+	overflow: auto;
+	text-align: left;
+	height: 40%
+	position: fixed;
+	text-transform: normal;
+}
+
+.discover{
+	background-color: #FFFFFF;
+	color: #82D0FF;
+	
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	text-shadow: -1px 1px 0px #999999;
+
+	text-transform: normal;
+	letter-spacing: 0px;
+	width: 100%;
+	overflow: auto;
+	text-align: left;
+	height: 42%;
+	position: fixed;
+	bottom: 0px;
+}
+
+.discover h2{
+	background-color: #FFFFFF;
+	color: #82D0FF;
+	text-shadow: -1px 1px 0px #999999;
+	text-align: left;
+	width: 250px;
+}
+
+
+
+
+.questionHead{
+	text-align: left;
+	float: left;
+	width: 500px;
+	
+}
+
+.picHead{
+	width: 980px;
+	text-align: center;
+	position: fixed;
+	top: 200;
+	right: 0;
+	padding: 10px;
+}

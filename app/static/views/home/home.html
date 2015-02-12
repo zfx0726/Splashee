@@ -1,0 +1,167 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+        
+            <section class="questions">
+            <h2 class="questionHead">Trip Details</h2>  
+            <p class="picHead">Choose your favorite pictures:</p>
+              
+            
+            {{d1}}
+            {{d2}}
+            {{d3}}
+
+
+
+	<div class="basics">
+		<form method="POST"">
+        	<table class="filters">	
+				<colgroup>
+					<col class="question" /> 
+					<col class="answer" />
+				</colgroup>
+
+				<tbody>
+					<tr>
+						<td>Budget ({{currency}})</td> 
+						<td> <input type="text" name="currency" ng-model="budget"></td> 
+					</tr>
+					
+					<tr>
+						<td> Trip Length </td>
+						<td><input type="text" name="dayInput" ng-model="tripLength"></td>
+					</tr>
+			
+					<tr>
+						<td> Start Date </td>
+						<td> <span class="input-append date" data-date-format="mm/dd/yyyy">
+        						<input id="dp3" size="16" type="text" value="mm/dd/yyyy"/>
+      							<span class="add-on">
+      								<i class="icon-calendar" id="cal2"></i>
+      							</span>
+							</span> </td>
+					</tr>	
+					
+					<tr>
+						<td> Group Size </td>
+						<td> <input type="text" name="name" ng-model="groupSize">
+						<!--<a class="friends" href="#">Invite Friends</a> --> </td>
+					</tr>
+					
+					
+					
+				</tbody>
+			</table>
+		</form>
+		
+<div class="citySelect">List favorite cities
+	<input type="text" name="dayInput" ng-model="citiesLiked">
+	
+</div>
+
+
+<div class="citySelect">
+				<form>
+						 Add New Pic Path 
+						<input type="text" name="newPic" ng-model="model.newPath">
+						<a ng-click='addPic()' >click me</a>
+				</form>
+</div>
+	
+	
+</div>
+
+				
+            
+            <table class="picAns">
+     			
+				<colgroup>
+					<col class="Answer1" /> 
+					<col class="Answer2" />
+					<col class="Answer3" />
+				</colgroup>
+<!-- 
+				<thead> <tr>
+					<th scope="col">Answer 1</th>
+					<th scope="col">Answer 2</th> </tr>
+					<th scope="col">Answer 3</th> </tr>
+				</thead>
+ -->
+				<tbody>
+					<tr>
+						<td>
+  							<a ng-click="inputClick(0)">
+  								<img ng-src="{{i1}}" name="img1" width="300" height="230"/>
+  							</a>
+						</td>
+						<td>
+							<a ng-click="inputClick(1)">
+  								<img ng-src="{{i2}}" name="img2" width="300" height="230"/>
+  							</a>
+						</td>
+						<td>
+							<a ng-click="inputClick(2)">
+  								<img ng-src="{{i3}}" name="img3" width="300" height="230"/>
+  							</a>
+						</td>
+						
+					</tr>
+  
+      			</tbody>
+			</table>
+			
+            </section>
+            
+            
+            <section class="discover">
+            <h2>Recommended Cities</h2>       
+			
+			
+<p>
+
+            <table class="destPics">
+     			
+				<colgroup>
+					<col class="Answer1" /> 
+					<col class="Answer2" />
+					<col class="Answer3" />
+				</colgroup>
+<!-- 
+				<thead> <tr>
+					<th scope="col">Answer 1</th>
+					<th scope="col">Answer 2</th> </tr>
+					<th scope="col">Answer 3</th> </tr>
+				</thead>
+ -->
+				<tbody>
+					<tr>
+						<td>
+  							<a ng-click="cityClick(0)">
+  								<img ng-src="{{d1}}" name="img1" width="300" height="230"/>
+  							</a>
+  							<p> Temporary Details</p>
+						</td>
+						<td>
+							<a ng-click="cityClick(1)">
+  								<img ng-src="{{d2}}" name="img2" width="300" height="230"/>
+  							</a>
+  							<p> Temporary Details</p>
+						</td>
+						<td>
+							<a ng-click="cityClick(2)">
+  								<img ng-src="{{d3}}" name="img3" width="300" height="230"/>
+  							</a>
+  							<p> Temporary Details</p>
+						</td>
+					</tr>
+  
+      			</tbody>
+			</table>
+            
+            </section>
+            
+            <p>
+            </p>
+        </div>
+    </div>
+</div>

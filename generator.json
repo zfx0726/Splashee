@@ -1,0 +1,19 @@
+{
+	"baseName": "splashapp",
+	"entities": [
+		{
+			"name": "imgs",
+			"attrs": [
+				{
+					"attrName": "backgroundimg",
+					"attrType": "String",
+					"minLength": "",
+					"maxLength": "",
+					"enumValues": [],
+					"required": false
+				}
+			]
+		}
+	],
+	"resources": []
+}
