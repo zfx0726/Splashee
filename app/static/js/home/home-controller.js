@@ -191,11 +191,18 @@ angular.module('splashapp')
         	weights.splice(randInput,1);
         	paths.splice(randInput,1); 
         	
+        	cityRec();
 	};
 	
 
 
+
+
+
+
 //NEED TO MODIFY.  Copied this over cuz tipsy right now.
+
+
 
 $scope.cityClick = function(n){
 		
@@ -228,9 +235,31 @@ $scope.cityClick = function(n){
         	cityWeights.splice(randCity,1);
         	cityPaths.splice(randCity,1); 
         	
-        	$scope.left= clicked;   	
 	};
 
+
+var cityRec = function(){
+		
+ //    SOME OF THIS CAN WORK WELL for choosing desintations.  Probability based choices.  Keeping track.  
+    	
+    	
+    		var randCity= Math.floor(rand(cityPaths.length)); 
+        	$scope.d1=cityPaths[randCity];
+        	cityWeights.splice(randCity,1);
+        	cityPaths.splice(randCity,1);
+        
+        
+        	randCity= Math.floor(rand(cityPaths.length)); 
+        	$scope.d2=cityPaths[randCity];
+        	cityWeights.splice(randCity,1);
+        	cityPaths.splice(randCity,1);
+        
+        	randCity= Math.floor(rand(cityPaths.length)); 
+        	$scope.d3=cityPaths[randCity];
+        	cityWeights.splice(randCity,1);
+        	cityPaths.splice(randCity,1); 
+        	
+	};
 
   
 	$scope.sendClicked = function(x){

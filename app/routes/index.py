@@ -25,8 +25,8 @@ def getCities():
 
 @app.route('/api/subtables/', methods=['GET'])
 def populate():
-	destinations = Picture.query.filter_by(category='destination')
-	return jsonify(data=[c.to_dict() for c in destinations])
+	cities = Picture.query.filter_by(category='city')
+	return jsonify(data=[c.to_dict() for c in cities])
 
 @app.route('/api/pics/', methods=['POST'])
 def addPics():
