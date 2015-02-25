@@ -3,11 +3,12 @@
         <div class="col-md-8">
         
             <section class="questions">
-            <h2 class="questionHead">Trip Details</h2>  
-            <p class="picHead">Choose your favorite pictures:</p>
-
+            
 
 	<div class="basics">
+	
+	
+	
 		<form method="POST"">
         	<table class="filters">	
 				<colgroup>
@@ -17,15 +18,29 @@
 
 				<tbody>
 					<tr>
-						<td>Budget ({{currency}})</td> 
+						<h2>Step 1: Basic Info</h2> 
+					</tr>
+					
+					
+					<tr>
+						<td>Starting City</td> <!-- make this alphabetical order!!  filter -->
+						
+						
+        
+                        <td><select ng-model="value" ng-options="wrap.value as wrap.key for wrap in wrappers"></select></td>
+					</tr>
+					
+					<tr>
+						<td>Budget ({{value}})</td>  
 						<td> <input type="text" name="currency" ng-model="budget"></td> 
 					</tr>
 					
 					<tr>
-						<td> Trip Length </td>
+						<td> Trip Length (days) </td>
 						<td><input type="text" name="dayInput" ng-model="tripLength"></td>
 					</tr>
 			
+<!-- 
 					<tr>
 						<td> Start Date </td>
 						<td> <span class="input-append date" data-date-format="mm/dd/yyyy">
@@ -39,8 +54,11 @@
 					<tr>
 						<td> Group Size </td>
 						<td> <input type="text" name="name" ng-model="groupSize">
-						<!--<a class="friends" href="#">Invite Friends</a> --> </td>
+						
+						<a class="friends" href="#">Invite Friends</a> </td>
+						
 					</tr>
+ -->
 					
 					
 					
@@ -48,28 +66,33 @@
 			</table>
 		</form>
 		
+<!-- 
 <div class="citySelect">List favorite cities
 	<input type="text" name="dayInput" ng-model="citiesLiked">
 	
-</div>
+</div> #end of Basics class
+ -->
 
 
-<div class="citySelect">
-				<form>
-						 Add New Pic Path 
-						<input type="text" name="newPic" ng-model="model.newPath">
-						<a ng-click='addPic()' >click me</a>
-				</form>
-</div>
+	<div class="citySelect">
+					<form>
+							<a ng-click='addData()' >Update Database</a>
+					</form>
+	</div>
+	
+	
 	
 	
 </div>
+
 
 				
+            <h2 class="stepTwo">Step 2: Click Your Favorite Pictures to Help Us Learn Your Preferences</h2>
             
             <table class="picAns">
      			
 				<colgroup>
+				
 					<col class="Answer1" /> 
 					<col class="Answer2" />
 					<col class="Answer3" />
@@ -82,20 +105,22 @@
 				</thead>
  -->
 				<tbody>
+				
 					<tr>
+					
 						<td>
   							<a ng-click="inputClick(0)">
-  								<img ng-src="{{i1}}" name="img1" width="300" height="230"/>
+  								<img ng-src="{{i1}}" name="img1" width="280" height="220"/>
   							</a>
 						</td>
 						<td>
 							<a ng-click="inputClick(1)">
-  								<img ng-src="{{i2}}" name="img2" width="300" height="230"/>
+  								<img ng-src="{{i2}}" name="img2" width="280" height="220"/>
   							</a>
 						</td>
 						<td>
 							<a ng-click="inputClick(2)">
-  								<img ng-src="{{i3}}" name="img3" width="300" height="230"/>
+  								<img ng-src="{{i3}}" name="img3" width="280" height="220"/>
   							</a>
 						</td>
 						
@@ -104,11 +129,19 @@
       			</tbody>
 			</table>
 			
-            </section>
+</section>
+            
+
+
+            
+            
             
             
             <section class="discover">
-            <h2>Recommended Cities</h2>       
+            <h2>Step 3: Select From Recommended Cities</h2>  
+
+            
+                 
 			
 			
 <p>
@@ -131,26 +164,35 @@
 					<tr>
 						<td>
   							<a ng-click="cityClick(0)">
-  								<img ng-src="{{d1}}" name="img1" width="300" height="230"/>
+  								<img ng-src="{{d1['path']}}" name="img1" width="280" height="220"/>
   							</a>
-  							<p> Temporary Details</p>
+  							<p> {{d1['name']}}</p>
+  							<p> Average Flight Price: ${{d1['flightPrice']}}</p>
+  							<p> Cost Per Day: ${{d1['price']}}</p>
+  							
 						</td>
 						<td>
 							<a ng-click="cityClick(1)">
-  								<img ng-src="{{d2}}" name="img2" width="300" height="230"/>
+  								<img ng-src="{{d2['path']}}" name="img2" width="280" height="220"/>
   							</a>
-  							<p> Temporary Details</p>
+  							<p> {{d2['name']}}</p>
+  							<p> Average Flight Price: ${{d2['flightPrice']}}</p>
+  							<p> Cost Per Day: ${{d2['price']}}</p>
+  							
 						</td>
 						<td>
 							<a ng-click="cityClick(2)">
-  								<img ng-src="{{d3}}" name="img3" width="300" height="230"/>
+  								<img ng-src="{{d3['path']}}" name="img3" width="280" height="220"/>
   							</a>
-  							<p> Temporary Details</p>
+  							<p> {{d3['name']}}</p>
+  							<p> Average Flight Price: ${{d3['flightPrice']}}</p>
+  							<p> Cost Per Day: ${{d3['price']}}</p>
 						</td>
 					</tr>
   
       			</tbody>
 			</table>
+			
             
             </section>
             

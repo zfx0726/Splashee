@@ -36,7 +36,13 @@ section {
     display: block;
 }
 
-
+.navbar {
+  position: relative;
+  z-index: 1000;
+  min-height: 50px;
+  height: 100px;
+  background-color: #B0E2FF;
+}
 
 h2,h3,h4,h5{
 	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", 
@@ -84,18 +90,15 @@ table {
 
 
 nav{
-/*    border: 1px solid black; */
     clear: both;
 }
 
 .container{
-/*    border: 1px solid black; */
 	text-align: center;
 	clear: both;
 }
 
 .navbar-header{
-/*    border: 1px solid black; */
     margin: -10px 0 0 0;
     clear: both;
 }
@@ -117,9 +120,8 @@ h1{
 h2{
 	padding: 0px;
 	margin: 0px;
-	font-size: 24px;
+	font-size: 20px;
 	text-align: left;
-	clear: both;
 }
 
 h3{
@@ -154,7 +156,6 @@ Can use transforms and transitions on event to make page more interactive.
 }
 
 .logo{
-/*	border: 1px solid black; */
 	clear: none;
 }
 
@@ -173,7 +174,6 @@ Can use transforms and transitions on event to make page more interactive.
 }
 
 .account-bar{
-/*	border: 1px solid black;*/
 	text-align: right;
 	position: fixed;
 	top: 0;
@@ -181,7 +181,6 @@ Can use transforms and transitions on event to make page more interactive.
 }
 
 .score-bar{
-/*	border: 1px solid black; */
 	float:left;
 	width: 200px;
 	text-align: center;
@@ -191,7 +190,6 @@ Can use transforms and transitions on event to make page more interactive.
 }
 
 .points-bar{
-/*  border: 1px solid black; */
 	float:left;
 	clear: both;
 	width: 200px;
@@ -224,7 +222,7 @@ body {
 	background-size:5px 5px;
 */
 
-	background-color: #B0E2FF; 
+	background-color: #FFFFFF; 
 	
 	line-height: 1.2;
     font-family: Helvetica, Arial, sans-serif;
