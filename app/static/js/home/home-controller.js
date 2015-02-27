@@ -47,6 +47,8 @@ angular.module('splashapp')
  	
  	var sentClicked=false;
  	
+ 	$scope.budget;
+ 	$scope.tripLength;
  	
   	var getWeights = function(jsonArray) {
      	var tempWeights = [];
@@ -111,9 +113,9 @@ angular.module('splashapp')
  	
  	var sendClicked = function(){
         $http.post('/api/clicked/', {clickedPaths: clicked}).success(function() {
-        	alert('Nice Choice!');
+        	alert('Nice Choice!  Go to www.tripadvisor.com to learn more about this city.');
         }).error(function() {
-        	alert('ERROR!');
+        	//alert('ERROR!'); 
         });
     };
  	
@@ -142,7 +144,7 @@ angular.module('splashapp')
         	paths.splice(randInput,1);  
         	        	
         }).error(function() {
-        	alert('ERROR!');
+        	//alert('ERROR!'); -NEED TO SEE WHY THIS IS GETTING TRIGGERED WHEN WE GET REDIRECTED BACK TO HOMEPAGE
         });
     };
     
@@ -165,7 +167,8 @@ angular.module('splashapp')
     		var tempCityPrices= [];
     		var tempFlightPrices= [];
     		
-    		for (var d = 0, len = cityWeights.length; d < len; d += 1) {
+    		
+    		for (var d = 0, len = cityWeights.length; d < len; d += 1) {    			
          		tempCityWeights[d]=cityWeights[d];
          		tempCityPaths[d]=cityPaths[d];
          		tempCityNames[d]=cityNames[d];
@@ -213,7 +216,7 @@ angular.module('splashapp')
 
         	
         }).error(function() {
-        	alert('dest error!');
+        	//alert('dest error!'); -NEED TO SEE WHY THIS IS GETTING TRIGGERED WHEN WE GET REDIRECTED BACK TO HOMEPAGE
         });
     };
     
@@ -370,12 +373,38 @@ var cityRec = function(){
     		var tempCityPrices= [];
     		var tempFlightPrices =[];
     		
-    		for (var d = 0, len = cityWeights.length; d < len; d += 1) {
-         		tempCityWeights[d]=cityWeights[d];
-         		tempCityPaths[d]=cityPaths[d];
-         		tempCityNames[d]=cityNames[d];
-         		tempCityPrices[d]=cityPrices[d];
-         		tempFlightPrices[d]=flightPrices[d];
+    		var tempCounter=0;
+    		
+    		if (typeof $scope.budget !== 'undefined' && typeof $scope.tripLength !== 'undefined'){
+    			
+    			for (var d = 0, len = cityWeights.length; d < len; d += 1) {
+    			
+    				if( $scope.budget >= ((cityPrices[d] * $scope.tripLength) + flightPrices[d]) ){
+    			
+         				tempCityWeights[tempCounter]=cityWeights[d];
+         				tempCityPaths[tempCounter]=cityPaths[d];
+         				tempCityNames[tempCounter]=cityNames[d];
+         				tempCityPrices[tempCounter]=cityPrices[d];
+         				tempFlightPrices[tempCounter]=flightPrices[d];
+         			
+         				tempCounter = tempCounter +1;
+       		  		}
+     				
+     			}
+     		
+     		}
+     		
+     		else{
+     			
+     			for (var d = 0, len = cityWeights.length; d < len; d += 1) {    			
+         			tempCityWeights[d]=cityWeights[d];
+         			tempCityPaths[d]=cityPaths[d];
+         			tempCityNames[d]=cityNames[d];
+         			tempCityPrices[d]=cityPrices[d];
+         			tempFlightPrices[d]=flightPrices[d];
+     			}
+     		
+     		
      		}
     		
     		    		
@@ -421,6 +450,21 @@ var cityRec = function(){
         	tempFlightPrices.splice(randCity,1);
 
         	}
+        	
+        	
+        	else{
+        		
+        	
+        		$scope.d2['path']="";
+        		$scope.d2['name']="";
+        		$scope.d2['price']="";
+        		$scope.d2['flightPrice']="";
+        		
+        		
+        	}
+        	
+        	
+        	
 	};
 
 

@@ -42,6 +42,13 @@ def addClicked():
 
 @app.route('/api/database/', methods=['POST'])
 def addData():
+	City.query.delete()
+	Picture.query.delete()
+	Connection.query.delete()
+	Price.query.delete()
+	FXRate.query.delete()
+	Flight.query.delete()
+	db.session.commit()
 	
 	nycFlightPrices = [732, 0, 859, 1152, 838,
 	684, 963, 873, 874, 834, 
@@ -108,7 +115,7 @@ def addData():
 	
 	# initialize input pics
 	for index in range(len(inputPathList)):
-		a=Picture(path= "../img/picPool/" + inputPathList[index], category='input', total_count=1)	
+		a=Picture(id = index+len(cityPathList), path= "../img/picPool/" + inputPathList[index], category='input', total_count=1)	
 		db.session.add(a)
 	db.session.commit()
 	

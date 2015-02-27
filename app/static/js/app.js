@@ -5,6 +5,9 @@ angular.module('splashapp', ['ngResource', 'ngRoute', 'ui.bootstrap', 'ui.date']
       .when('/', {
         templateUrl: 'views/home/home.html', 
         controller: 'HomeController'})
+      .when('/blog', {
+        templateUrl: 'views/blog/blog.html', 
+        controller: 'BlogController'})  
       .when('/explore', {
         templateUrl: 'views/explore/explore.html', 
         controller: 'ExploreController'})
@@ -14,3 +17,5 @@ angular.module('splashapp', ['ngResource', 'ngRoute', 'ui.bootstrap', 'ui.date']
       .otherwise({redirectTo: '/'});}
       
 ]);
+
+

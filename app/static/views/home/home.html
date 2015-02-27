@@ -65,20 +65,15 @@
 				</tbody>
 			</table>
 		</form>
-		
+
+
 <!-- 
-<div class="citySelect">List favorite cities
-	<input type="text" name="dayInput" ng-model="citiesLiked">
-	
-</div> #end of Basics class
- -->
-
-
 	<div class="citySelect">
 					<form>
 							<a ng-click='addData()' >Update Database</a>
 					</form>
 	</div>
+ -->
 	
 	
 	
@@ -138,7 +133,7 @@
             
             
             <section class="discover">
-            <h2>Step 3: Select From Recommended Cities</h2>  
+            <h2>Step 3: Pick a Destination</h2>  
 
             
                  
@@ -163,30 +158,84 @@
 				<tbody>
 					<tr>
 						<td>
+						
+						
+						<div ng-show="d1['path'] != null">
   							<a ng-click="cityClick(0)">
   								<img ng-src="{{d1['path']}}" name="img1" width="280" height="220"/>
   							</a>
-  							<p> {{d1['name']}}</p>
-  							<p> Average Flight Price: ${{d1['flightPrice']}}</p>
-  							<p> Cost Per Day: ${{d1['price']}}</p>
   							
+  							
+  							<p id="cityName"> {{d1['name']}}</p>
+  						
+  							
+  							
+  							<div ng-show="tripLength != null">
+  								<p> Total Cost: ${{d1['flightPrice']+d1['price']*tripLength| number:2}}</p>
+  							</div>
+  							
+  							<p> Average Flight Price: ${{d1['flightPrice']| number:2}}</p>
+  							
+  							<p> Cost Per Day: ${{d1['price']| number:2}}</p>
+  							
+  							
+  							
+  						</div>  
+  								
 						</td>
+						
+						
+						
+						
 						<td>
+						
+						
+						
+						<div ng-show="d2['path'] != null">
+						
 							<a ng-click="cityClick(1)">
   								<img ng-src="{{d2['path']}}" name="img2" width="280" height="220"/>
   							</a>
-  							<p> {{d2['name']}}</p>
-  							<p> Average Flight Price: ${{d2['flightPrice']}}</p>
-  							<p> Cost Per Day: ${{d2['price']}}</p>
+  							<p id="cityName"> {{d2['name']}}</p>
+  							<div ng-show="tripLength != null">
+  								<p> Total Cost: ${{d2['flightPrice']+d2['price']*tripLength | number:2}}</p>
+  							</div>
+  							
+  							<p> Average Flight Price: ${{d2['flightPrice']| number:2}}</p>
+  							
+  							<p> Cost Per Day: ${{d2['price']| number:2}}</p>
+  						
+  						</div>
+  							
   							
 						</td>
+						
+						
+						
+						
 						<td>
+						
+						
+						<div ng-show="d3['path'] != null">
 							<a ng-click="cityClick(2)">
   								<img ng-src="{{d3['path']}}" name="img3" width="280" height="220"/>
   							</a>
-  							<p> {{d3['name']}}</p>
-  							<p> Average Flight Price: ${{d3['flightPrice']}}</p>
-  							<p> Cost Per Day: ${{d3['price']}}</p>
+  							<p id="cityName"> {{d3['name']}}</p>
+  							
+  							<div ng-show="tripLength != null">
+  								<p> Total Cost: ${{d3['flightPrice']+d3['price']*tripLength| number:2}}</p>
+  							</div>
+  							
+  							
+  							<p> Average Flight Price: ${{d3['flightPrice']| number:2}}</p>
+ 
+  							
+  							<p> Cost Per Day: ${{d3['price']| number:2}}</p>
+  							
+  						</div>	
+  							
+  						
+  						
 						</td>
 					</tr>
   
