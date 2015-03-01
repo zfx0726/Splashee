@@ -1,6 +1,9 @@
 angular.module('splashapp')
   .controller('HomeController', ['$scope', '$http', function ($scope, $http, $filter) {
   	
+  	
+  	$scope.page = 1;
+  	
     $scope.i1;
     $scope.i2;
     $scope.i3;
@@ -24,6 +27,10 @@ angular.module('splashapp')
   	{'flightPrice':''}
   	];
   	
+  	  	
+  	$scope.nextStep = function(){
+  		$scope.page= $scope.page + 1;
+  	}
 
     
   	$scope.currency="$";
@@ -270,7 +277,9 @@ angular.module('splashapp')
     getInputs();
     getCities();
     
-    
+    $scope.forward = function(){
+    	getInputs();
+    }
     
   	//could get slow as list grows
 

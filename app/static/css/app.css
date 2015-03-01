@@ -3,6 +3,170 @@
 }
 
 
+.box{
+	
+	white-space: nowrap;
+	text-align: center;
+}
+
+.pageOne{
+	height: 150px;
+}
+
+
+.pageTwo{
+	height: 75px;
+}	
+
+.pageThree{
+	height: 35px;
+}	
+
+
+.pagePic{
+	height: 250px;
+}	
+
+.pagePicBig{
+	height: 310px;
+}
+
+.category{
+	text-decoration: underline;
+}
+
+
+button.backArrow {
+    position:relative;
+}
+
+
+
+button.backArrow:before {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 24px solid transparent;
+    border-bottom: 24px solid transparent;
+    border-right: 24px solid #fff;
+    position: absolute;
+    top: 50%;
+    margin-top: -24px;
+    right: 99%;
+    z-index: 1;
+}
+
+
+button.forwardArrow {
+    position:relative;
+}
+
+
+
+button.forwardArrow:before {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 24px solid transparent;
+    border-bottom: 24px solid transparent;
+    border-left: 24px solid #fff;
+    position: absolute;
+    top: 50%;
+    margin-top: -24px;
+    left: 99%;
+    z-index: 1;
+}
+
+
+
+div input{
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	width: 100px;
+	text-align: center;
+	height: 20px;
+}
+
+
+div input{
+	-moz-box-shadow:    0px 0px 0px 0px #FFFFFF;
+  -webkit-box-shadow: 0px 0px 0px 0px #FFFFFF;
+  box-shadow:         0px 0px 0px 0px #FFFFFF;
+	color: black;
+}
+
+div input:hover{
+-moz-box-shadow:    0px 0px 0px 2px #F60;
+  -webkit-box-shadow: 0px 0px 0px 2px #F60;
+  box-shadow:         0px 0px 0px 2px #F60;
+}
+
+div input:active{
+-moz-box-shadow:    0px 0px 0px 2px #B2F511;
+  -webkit-box-shadow: 0px 0px 0px 2px #B2F511;
+  box-shadow:         0px 0px 0px 2px #B2F511;
+}
+
+.nextButton{
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    background-color: transparent;
+    width: 200px;
+    font-weight: 300;
+    
+    -moz-box-shadow:    0px 0px 0px 0px #FFFFFF;
+  -webkit-box-shadow: 0px 0px 0px 0px #FFFFFF;
+  box-shadow:         0px 0px 0px 0px #FFFFFF;
+}
+
+
+.recButton{
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    background-color: transparent;
+    width: 300px;
+    font-weight: 300;
+}
+
+.recButton:hover{
+-moz-box-shadow:    0px 0px 0px 2px #F60;
+  -webkit-box-shadow: 0px 0px 0px 2px #F60;
+  box-shadow:         0px 0px 0px 2px #F60;
+}
+
+.recButton:active{
+-moz-box-shadow:    0px 0px 0px 2px #B2F511;
+  -webkit-box-shadow: 0px 0px 0px 2px #B2F511;
+  box-shadow:         0px 0px 0px 2px #B2F511;
+}
+
+
+.nextButton:hover{
+-moz-box-shadow:    0px 0px 0px 2px #F60;
+  -webkit-box-shadow: 0px 0px 0px 2px #F60;
+  box-shadow:         0px 0px 0px 2px #F60;
+}
+
+.nextButton:active{
+-moz-box-shadow:    0px 0px 0px 2px #B2F511;
+  -webkit-box-shadow: 0px 0px 0px 2px #B2F511;
+  box-shadow:         0px 0px 0px 2px #B2F511;
+}
+
+.slideOne{
+  	float:none;
+  	height: 100%;
+  	vertical-align: middle;
+  
+}
+
+
+
 #blogLinks {
 	width: 300px;
 }
@@ -11,14 +175,8 @@
 	color: #F60;
 	width: 800px;
 	background-color: #B0E2FF;
-	text-shadow: 0px 0px 0px #999999;	
 }
 
-
-
-h1 a{
-	text-shadow: -3px 3px 3px #999999;	
-}
 
 
 section{
@@ -39,9 +197,9 @@ td a:hover { color: #F60; cursor: pointer; }
 td a:active {color: #B2F511; }
 
 td img{
-	-moz-box-shadow:    -3px 3px 3px 0px #999999;
-  -webkit-box-shadow: -3px 3px 3px 0px #999999;
-  box-shadow:         -3px 3px 3px 0px #999999;
+	-moz-box-shadow:    0px 0px 0px 2px #FFFFFF;
+  -webkit-box-shadow: 0px 0px 0px 2px #FFFFFF;
+  box-shadow:         0px 0px 0px 2px #FFFFFF;
 }
 
 td img:hover{
@@ -81,6 +239,7 @@ td img:active{
 
 
 .stepTwo{
+	white-space: nowrap;
 	position: absolute;
     left: 320px;
     top: 100px;
@@ -107,15 +266,7 @@ td img:active{
 
 
 
-.basics input{
-    	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	    	width: 100px;
-	    	text-align: center;
-	    	
-	
-}
+
 
 img{
 border: 0;
@@ -167,12 +318,10 @@ left: 190px;
 td, th { padding: 10px; }
 
 .questions {
-	width: 100%;
 	overflow: auto;
 	text-align: left;
 	height: 280px;
 	text-transform: normal;
-	background-color: #B0E2FF;
 
 }
 
@@ -183,13 +332,10 @@ td, th { padding: 10px; }
 }
 
 .discover{
-	background-color: #FFFFFF;
-	color: #82D0FF;
 	
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 16px;
 	font-style: normal;
-	text-shadow: -1px 1px 0px #999999;
 
 	text-transform: normal;
 	letter-spacing: 0px;
@@ -200,10 +346,4 @@ td, th { padding: 10px; }
 	
 }
 
-.discover h2{
-	background-color: #FFFFFF;
-	color: #82D0FF;
-	text-shadow: -1px 1px 0px #999999;
-	text-align: left;
-}
 

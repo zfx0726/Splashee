@@ -1,72 +1,91 @@
 <div class="container-fluid">
+
+	
+	
     <div class="row">
-        <div class="col-md-8">
-        
-            <section class="questions">
-            
+    
+    
 
-	<div class="basics">
-	
-	
-	
-		<form method="POST"">
-        	<table class="filters">	
-				<colgroup>
-					<col class="question" /> 
-					<col class="answer" />
-				</colgroup>
-
-				<tbody>
-					<tr>
-						<h2>Step 1: Basic Info</h2> 
-					</tr>
-					
-					
-					<tr>
-						<td>Starting City</td> <!-- make this alphabetical order!!  filter -->
-						
-						
-        
-                        <td><select ng-model="value" ng-options="wrap.value as wrap.key for wrap in wrappers"></select></td>
-					</tr>
-					
-					<tr>
-						<td>Budget ({{value}})</td>  
-						<td> <input type="text" name="currency" ng-model="budget"></td> 
-					</tr>
-					
-					<tr>
-						<td> Trip Length (days) </td>
-						<td><input type="text" name="dayInput" ng-model="tripLength"></td>
-					</tr>
-			
-<!-- 
-					<tr>
-						<td> Start Date </td>
-						<td> <span class="input-append date" data-date-format="mm/dd/yyyy">
-        						<input id="dp3" size="16" type="text" value="mm/dd/yyyy"/>
-      							<span class="add-on">
-      								<i class="icon-calendar" id="cal2"></i>
-      							</span>
-							</span> </td>
-					</tr>	
-					
-					<tr>
-						<td> Group Size </td>
-						<td> <input type="text" name="name" ng-model="groupSize">
-						
-						<a class="friends" href="#">Invite Friends</a> </td>
-						
-					</tr>
+    		
+    		
+			<!-- 
+check out the clearfix, if I end up with issues: 
+			http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-grid-system.php
  -->
-					
-					
-					
-				</tbody>
-			</table>
-		</form>
 
+		
+        
+       <div class= "slideOne" ng-show="page==1">
+			<div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageOne"></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageOne"></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageOne"></div>
 
+			<div class="clearfix visible-lg-block pageOne"></div>
+			<div class="clearfix visible-md-block pageOne"></div>
+			
+            <div class="col-sm-4 col-md-4 col-lg-4 pageOne"></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 pageOne"><h2><p class="box"> 
+            Plan Your Next Trip In Three Easy Steps 
+            <br>
+            <br>
+            <button class="nextButton" ng-click="nextStep()">Next</button>
+            </p></h2></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 pageOne"></div>
+
+			
+		</div> 
+        
+        
+        <div class="slideTwo" ng-show="page==2">
+        
+        
+        	<div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageTwo"></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageTwo"></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageTwo"></div>
+            
+            <div class="col-sm-4 col-md-4 col-lg-4 pageTwo"></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 pageTwo"></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 pageTwo"></div>
+
+			<div class="clearfix visible-lg-block pageTwo"></div>
+			<div class="clearfix visible-md-block pageTwo"></div>
+			
+            <div class="col-sm-4 col-md-4 col-lg-4 pageTwo">
+            	
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 pageTwo">
+            <h2> <p class="box">  Step 1: Enter Basic Info </p> </h2>
+            <br>
+            
+            	<p class="box">
+            	Starting City <!-- make this alphabetical order!!  filter -->
+                <select ng-model="value" ng-options="wrap.value as wrap.key for wrap in wrappers"></select>
+            	</p>
+            	<br>
+            	
+            	<p class="box">
+            	Budget ({{value}}) 
+				<input type="text" name="currency" ng-model="budget"> 
+				</p>
+				<br>
+				
+				<p class="box">
+				Trip Length (days)
+				<input type="text" name="dayInput" ng-model="tripLength">
+				</p>
+            <br>
+            <br>
+            
+            <h2><p class="box"> 
+            <button class="nextButton" ng-click="nextStep()">Next</button>
+            </p></h2></div>
+            
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 pageTwo"></div>	
+            
+     </div>
+            
+       
 <!-- 
 	<div class="citySelect">
 					<form>
@@ -75,92 +94,106 @@
 	</div>
  -->
 	
-	
-	
-	
-</div>
 
 
-				
-            <h2 class="stepTwo">Step 2: Click Your Favorite Pictures to Help Us Learn Your Preferences</h2>
-            
-            <table class="picAns">
-     			
-				<colgroup>
-				
-					<col class="Answer1" /> 
-					<col class="Answer2" />
-					<col class="Answer3" />
-				</colgroup>
-<!-- 
-				<thead> <tr>
-					<th scope="col">Answer 1</th>
-					<th scope="col">Answer 2</th> </tr>
-					<th scope="col">Answer 3</th> </tr>
-				</thead>
- -->
-				<tbody>
-				
-					<tr>
-					
-						<td>
-  							<a ng-click="inputClick(0)">
-  								<img ng-src="{{i1}}" name="img1" width="280" height="220"/>
-  							</a>
-						</td>
-						<td>
-							<a ng-click="inputClick(1)">
+	
+
+
+<div class="slideThree" ng-show="page==3">
+
+			<div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageTwo"></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageTwo"></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageTwo"></div>
+
+			<div class="clearfix visible-lg-block pageTwo"></div>
+			<div class="clearfix visible-md-block pageTwo"></div>
+			
+            <div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 pageThree"><h2><p class="box"> 
+            Step 2: What Type of Trip Do You Want? 
+            </p></h2></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
+
+
+			<div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
+			<div class="col-sm-4 col-md-4 col-lg-4 pageThree">
+				<h3><p class="category">   </p> </h3>   <!-- this should say the category, ie weather, activity, etc -->
+			</div>
+			<div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
+			
+			<div class="col-sm-4 col-md-4 col-lg-4 pagePic">
+				<a ng-click="inputClick(0)">
+  					<img ng-src="{{i1}}" name="img1" width="280" height="220"/>
+  				</a>
+			</div>
+			<div class="col-sm-4 col-md-4 col-lg-4 pagePic">
+				<a ng-click="inputClick(1)">
   								<img ng-src="{{i2}}" name="img2" width="280" height="220"/>
   							</a>
-						</td>
-						<td>
-							<a ng-click="inputClick(2)">
+  			</div>
+			<div class="col-sm-4 col-md-4 col-lg-4 pagePic">
+				<a ng-click="inputClick(2)">
   								<img ng-src="{{i3}}" name="img3" width="280" height="220"/>
-  							</a>
-						</td>
-						
-					</tr>
-  
-      			</tbody>
-			</table>
+  				</a>
+			</div>
 			
-</section>
-            
-
-
-            
-            
-            
-            
-            <section class="discover">
-            <h2>Step 3: Pick a Destination</h2>  
-
-            
-                 
+	
 			
-			
-<p>
-
-            <table class="destPics">
-     			
-				<colgroup>
-					<col class="Answer1" /> 
-					<col class="Answer2" />
-					<col class="Answer3" />
-				</colgroup>
-<!-- 
-				<thead> <tr>
-					<th scope="col">Answer 1</th>
-					<th scope="col">Answer 2</th> </tr>
-					<th scope="col">Answer 3</th> </tr>
-				</thead>
+			<div class="col-sm-4 col-md-4 col-lg-4 pageOne">
+				<!-- 
+<h2>
+				<p class="box"> 
+            	<button class="backArrow nextButton" ng-click="backward()">Change Answers</button>
+            	</p></h2>
+            	
+            	ADD THIS BACK IN LATER
  -->
-				<tbody>
-					<tr>
-						<td>
-						
-						
-						<div ng-show="d1['path'] != null">
+            </div>
+			<div class="col-sm-4 col-md-4 col-lg-4 pageOne">
+				<h2>
+				<p class="box"> 
+            	<button class="recButton" ng-click="nextStep()">See Trip Recommendation!</button>
+            	</p></h2></div>
+			<div class="col-sm-4 col-md-4 col-lg-4 pageOne">
+				<h2>
+				<p class="box"> 
+            	<button class="forwardArrow nextButton" ng-click="forward()">Skip</button>
+            	</p></h2>
+			</div>
+			
+	</div>
+
+            
+
+
+            
+            
+            
+<div class="slideFour" ng-show="page==4">
+
+
+		<div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageTwo"></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageTwo"></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageTwo"></div>
+
+			<div class="clearfix visible-lg-block pageTwo"></div>
+			<div class="clearfix visible-md-block pageTwo"></div>
+			
+            <div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 pageThree"><h2><p class="box"> 
+            Step 3: Pick From Recommended Cities! 
+            </p></h2></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
+
+
+			<div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
+			<div class="col-sm-4 col-md-4 col-lg-4 pageThree">
+				<h3><p class="category"> Cities We Think You'll Like </p> </h3>
+			</div>
+			<div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
+			
+			<div class="col-sm-4 col-md-4 col-lg-4 pagePicBig">
+				<div ng-show="d1['path'] != null">
   							<a ng-click="cityClick(0)">
   								<img ng-src="{{d1['path']}}" name="img1" width="280" height="220"/>
   							</a>
@@ -181,17 +214,10 @@
   							
   							
   						</div>  
-  								
-						</td>
-						
-						
-						
-						
-						<td>
-						
-						
-						
-						<div ng-show="d2['path'] != null">
+			</div>
+			<div class="col-sm-4 col-md-4 col-lg-4 pagePicBig">
+				
+				<div ng-show="d2['path'] != null">
 						
 							<a ng-click="cityClick(1)">
   								<img ng-src="{{d2['path']}}" name="img2" width="280" height="220"/>
@@ -206,17 +232,12 @@
   							<p> Cost Per Day: ${{d2['price']| number:2}}</p>
   						
   						</div>
-  							
-  							
-						</td>
-						
-						
-						
-						
-						<td>
-						
-						
-						<div ng-show="d3['path'] != null">
+  						
+  						
+  			</div>
+			<div class="col-sm-4 col-md-4 col-lg-4 pagePicBig">
+				
+				<div ng-show="d3['path'] != null">
 							<a ng-click="cityClick(2)">
   								<img ng-src="{{d3['path']}}" name="img3" width="280" height="220"/>
   							</a>
@@ -233,20 +254,16 @@
   							<p> Cost Per Day: ${{d3['price']| number:2}}</p>
   							
   						</div>	
-  							
   						
-  						
-						</td>
-					</tr>
-  
-      			</tbody>
-			</table>
+			</div>
 			
-            
-            </section>
-            
-            <p>
-            </p>
-        </div>
+	
+	
     </div>
+    
+</div>
+    
+    
+  
+    
 </div>
