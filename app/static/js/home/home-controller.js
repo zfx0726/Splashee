@@ -17,11 +17,11 @@ angular.module('splashapp')
  	
  	
  	$scope.experiencePictures = [
-     {"experience":"Kitesurfing", "location":"Kite Beach, Dominican Republic", "path":"../img/picPool/Kitesurfing.jpg", "flightPrice":621, "dailyPrice":130},
-     {"experience":"Camping", "location":"Denali National Park, Alaska", "path":"../img/picPool/DenaliCamping.jpg", "flightPrice":526, "dailyPrice":25},
+     {"experience":"Kitesurf", "location":"Kite Beach, Dominican Republic", "path":"../img/picPool/Kitesurfing.jpg", "flightPrice":621, "dailyPrice":130},
+     {"experience":"Camp", "location":"Denali National Park, Alaska", "path":"../img/picPool/DenaliCamping.jpg", "flightPrice":526, "dailyPrice":25},
      {"experience":"Wine Tour", "location":"Napa Valley, California", "path":"../img/picPool/NapaVineyard.jpg", "flightPrice":328, "dailyPrice":100},
-     {"experience":"Skiing", "location":"the Swiss Alps", "path":"../img/picPool/SwissAlps.jpg", "flightPrice":696, "dailyPrice":175},
- 	 {"experience":"Meditate", "location":"Bali, Indonesia", "path":"../img/picPool/BaliRetreat.jpg", "flightPrice":1283, "dailyPrice":25},
+     {"experience":"Ski", "location":"the Swiss Alps", "path":"../img/picPool/SwissAlps.jpg", "flightPrice":696, "dailyPrice":175},
+ 	 {"experience":"Meditation Retreat", "location":"Bali, Indonesia", "path":"../img/picPool/BaliRetreat.jpg", "flightPrice":1283, "dailyPrice":25},
  	]
 
   	$scope.inputBatch = 0;
@@ -29,7 +29,15 @@ angular.module('splashapp')
   	$scope.e2;
   	$scope.e3;
   	
+  	$scope.show1=true;
+  	$scope.show2=true;
+  	$scope.show3=true;
+  	
+  	$scope.tripLength;
+  	$scope.budget;
+  	
   	$scope.backArrow = false;
+  	
   	
   	$scope.forward = function(){
     	$scope.inputBatch= $scope.inputBatch + 1;
@@ -44,15 +52,72 @@ angular.module('splashapp')
 
 
 	$scope.nextStep = function(){
-  		$scope.page= $scope.page + 1;
+  			$scope.page= $scope.page + 1;
   		
   		if ($scope.page==3){
-  			$scope.e1= 1;
-  			$scope.e2= 2;
-  			$scope.e3= 3;
+  		
+  		
+  			var tempArray=[];
+  			var tempIndex=0;
+  		
+  			for (var index=0; index<$scope.experiencePictures.length; index++)
+  			{
+  				
+  				if($scope.experiencePictures[index].flightPrice + $scope.experiencePictures[index].dailyPrice*$scope.tripLength<$scope.budget)
+  				{
+  					tempArray[tempIndex]=$scope.experiencePictures[index];
+  					tempIndex= tempIndex+1;
+  				}
+  				
+  			}
   			
+  			
+  			if (tempArray.length==0)
+  			{
+  				
+  				$scope.show1=false;
+  				$scope.show2=false;
+  				$scope.show3=false;
+  			}
+
+  			else{
+  				
+  				var randomIndex = Math.floor(Math.random() * tempArray.length);
+  				$scope.e1= tempArray[randomIndex];
+  			
+  				if (tempArray.length==1)
+  				{	
+  					$scope.show2=false;
+  					$scope.show3=false;
+  				}
+				else{
+					tempArray.splice(randomIndex,1);
+					randomIndex = Math.floor(Math.random() * tempArray.length);
+  					$scope.e2= tempArray[randomIndex];
+  					
+  				
+					if (tempArray.length==2)
+  					{
+  						$scope.show3=false;
+  					}
+
+					else{
+						tempArray.splice(randomIndex,1);
+						randomIndex = Math.floor(Math.random() * tempArray.length);
+  						$scope.e3= tempArray[randomIndex];
+					
+					}
+
+  				}
+  				
+  			
+  			}
+  			
+	
   		}
   	}
+  	
+
   	
 
     

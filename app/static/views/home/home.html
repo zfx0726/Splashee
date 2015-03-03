@@ -25,10 +25,7 @@ check out the clearfix, if I end up with issues:
 			
             <div class="col-sm-12 col-md-12 col-lg-12 pageOne"><h2><p class="wrapBox"> 
           
-			Kitesurf in the DR. Wine Tour through Napa Valley.  Camp in Denali National Park.
-			<br>
-			<br>
-			We'll Create the Ideal Trip For You.
+			Find Your Ideal Travel Experience
             </p></h2>
             
             <br>
@@ -223,76 +220,82 @@ check out the clearfix, if I end up with issues:
 			
 			
 			
-			
 			<div class="col-sm-4 col-md-4 col-lg-4 pagePicBig">
 				
-				<div ng-show="{{experiencePictures[e1].flightPrice + experiencePictures[e1].dailyPrice *tripLength >=budget}}">
+				<div ng-show="show1">
 				
   							<a ng-click="cityClick(0)">
-  								<img ng-src="{{experiencePictures[e1].path}}" width="280" height="220"/>
+  								<img ng-src="{{e1.path}}" width="280" height="220"/>
   							</a>
   							
   							
-  							<p id="cityName">{{experiencePictures[e1].experience}} in {{experiencePictures[e1].location}}</p>
+  							<p id="cityName">{{e1.experience}} in {{e1.location}}</p>
   						
   							
   							
   							<div ng-show="tripLength != null">
-  								<p> Total Cost: ${{experiencePictures[e1].flightPrice + experiencePictures[e1].dailyPrice *tripLength| number:2}}</p>
+  								<p> Total Cost: ${{e1.flightPrice + e1.dailyPrice *tripLength| number:2}}</p>
   							</div>
   							
-  							<p> Average Flight Price: ${{experiencePictures[e1].flightPrice| number:2}}</p>
+  							<p> Average Flight Price: ${{e1.flightPrice| number:2}}</p>
   							
-  							<p> Cost Per Day: ${{experiencePictures[e1].dailyPrice| number:2}}</p>
-  				</div>	 
+  							<p> Cost Per Day: ${{e1.dailyPrice| number:2}}</p>	
+  					</div>
+  					
 			</div>
 			
-			
 			<div class="col-sm-4 col-md-4 col-lg-4 pagePicBig">
-				<div ng-show="{{experiencePictures[e2].flightPrice + experiencePictures[e2].dailyPrice *tripLength >=budget}}">
+			
+				<div ng-show="show2">
   							<a ng-click="cityClick(0)">
-  								<img ng-src="{{experiencePictures[e2].path}}" width="280" height="220"/>
+  								<img ng-src="{{e2.path}}" width="280" height="220"/>
   							</a>
   							
   							
-  							<p id="cityName">{{experiencePictures[e2].experience}} in {{experiencePictures[e2].location}}</p>
+  							<p id="cityName">{{e2.experience}} in {{e2.location}}</p>
   						
   							
   							
   							<div ng-show="tripLength != null">
-  								<p> Total Cost: ${{experiencePictures[e2].flightPrice + experiencePictures[e2].dailyPrice *tripLength| number:2}}</p>
+  								<p> Total Cost: ${{e2.flightPrice + e2.dailyPrice *tripLength| number:2}}</p>
   							</div>
   							
-  							<p> Average Flight Price: ${{experiencePictures[e2].flightPrice| number:2}}</p>
+  							<p> Average Flight Price: ${{e2.flightPrice| number:2}}</p>
   							
-  							<p> Cost Per Day: ${{experiencePictures[e2].dailyPrice| number:2}}</p>
-  					</div>	 
+  							<p> Cost Per Day: ${{e2.dailyPrice| number:2}}</p>  					
   					
+  					</div>
   					
-  					<div ng-hide="{{experiencePictures[e2].flightPrice + experiencePictures[e2].dailyPrice *tripLength >=budget}}">
+  					<div ng-show="!show1">
   						Budget Too Low :(
   					</div>
+  					
+  					
+
 			</div>
 			
 			<div class="col-sm-4 col-md-4 col-lg-4 pagePicBig">
-					<div ng-show="{{experiencePictures[e3].flightPrice + experiencePictures[e3].dailyPrice *tripLength >=budget}}">
+			
+				<div ng-show="show3">
+				
   							<a ng-click="cityClick(0)">
-  								<img ng-src="{{experiencePictures[e3].path}}" width="280" height="220"/>
+  								<img ng-src="{{e3.path}}" width="280" height="220"/>
   							</a>
   							
   							
-  							<p id="cityName">{{experiencePictures[e3].experience}} in {{experiencePictures[e3].location}}</p>
+  							<p id="cityName">{{e3.experience}} in {{e3.location}}</p>
   						
   							
   							
   							<div ng-show="tripLength != null">
-  								<p> Total Cost: ${{experiencePictures[e3].flightPrice + experiencePictures[e3].dailyPrice *tripLength| number:2}}</p>
+  								<p> Total Cost: ${{e3.flightPrice + e3.dailyPrice *tripLength| number:2}}</p>
   							</div>
   							
-  							<p> Average Flight Price: ${{experiencePictures[e3].flightPrice| number:2}}</p>
+  							<p> Average Flight Price: ${{e3.flightPrice| number:2}}</p>
   							
-  							<p> Cost Per Day: ${{experiencePictures[e3].dailyPrice| number:2}}</p>
-  					</div>	 
+  							<p> Cost Per Day: ${{e3.dailyPrice| number:2}}</p>
+  							
+  				</div>
 			</div>
 	
 	
