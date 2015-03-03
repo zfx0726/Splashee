@@ -22,6 +22,8 @@ angular.module('splashapp')
      {"experience":"Wine Tour", "location":"Napa Valley, California", "path":"../img/picPool/NapaVineyard.jpg", "flightPrice":328, "dailyPrice":100},
      {"experience":"Ski", "location":"the Swiss Alps", "path":"../img/picPool/SwissAlps.jpg", "flightPrice":696, "dailyPrice":175},
  	 {"experience":"Meditation Retreat", "location":"Bali, Indonesia", "path":"../img/picPool/BaliRetreat.jpg", "flightPrice":1283, "dailyPrice":25},
+ 	 {"experience":"Safari", "location":"Kruger National Park, South Africa", "path":"../img/picPool/KrugerSafari.jpg", "flightPrice":1194, "dailyPrice":40},
+ 	 {"experience":"Scuba Dive", "location":"Thailand", "path":"../img/picPool/ThaiScuba.jpg", "flightPrice":1138, "dailyPrice":100},
  	]
 
   	$scope.inputBatch = 0;
@@ -72,6 +74,8 @@ angular.module('splashapp')
   			}
   			
   			
+  			
+  			
   			if (tempArray.length==0)
   			{
   				
@@ -84,19 +88,21 @@ angular.module('splashapp')
   				
   				var randomIndex = Math.floor(Math.random() * tempArray.length);
   				$scope.e1= tempArray[randomIndex];
-  			
+  				
   				if (tempArray.length==1)
   				{	
   					$scope.show2=false;
   					$scope.show3=false;
   				}
 				else{
+				
+					
 					tempArray.splice(randomIndex,1);
 					randomIndex = Math.floor(Math.random() * tempArray.length);
   					$scope.e2= tempArray[randomIndex];
   					
   				
-					if (tempArray.length==2)
+					if (tempArray.length==1)
   					{
   						$scope.show3=false;
   					}
