@@ -23,14 +23,19 @@ check out the clearfix, if I end up with issues:
 			<div class="clearfix visible-lg-block pageOne"></div>
 			<div class="clearfix visible-md-block pageOne"></div>
 			
-            <div class="col-sm-4 col-md-4 col-lg-4 pageOne"></div>
-            <div class="col-sm-4 col-md-4 col-lg-4 pageOne"><h2><p class="box"> 
-            Plan Your Next Trip In Three Easy Steps 
+            <div class="col-sm-12 col-md-12 col-lg-12 pageOne"><h2><p class="wrapBox"> 
+          
+			Kitesurf in the DR. Wine Tour through Napa Valley.  Camp in Denali National Park.
+			<br>
+			<br>
+			We'll Create the Ideal Trip For You.
+            </p></h2>
+            
             <br>
-            <br>
-            <button class="nextButton" ng-click="nextStep()">Next</button>
+            
+            <h2><p class="box">
+            <button class="nextButton" ng-click="nextStep()">Go!</button>
             </p></h2></div>
-            <div class="col-sm-4 col-md-4 col-lg-4 pageOne"></div>
 
 			
 		</div> 
@@ -43,6 +48,9 @@ check out the clearfix, if I end up with issues:
             <div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageTwo"></div>
             <div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageTwo"></div>
             
+            <div class="clearfix visible-lg-block pageTwo"></div>
+			<div class="clearfix visible-md-block pageTwo"></div>
+			
             <div class="col-sm-4 col-md-4 col-lg-4 pageTwo"></div>
             <div class="col-sm-4 col-md-4 col-lg-4 pageTwo"></div>
             <div class="col-sm-4 col-md-4 col-lg-4 pageTwo"></div>
@@ -50,56 +58,140 @@ check out the clearfix, if I end up with issues:
 			<div class="clearfix visible-lg-block pageTwo"></div>
 			<div class="clearfix visible-md-block pageTwo"></div>
 			
-            <div class="col-sm-4 col-md-4 col-lg-4 pageTwo">
-            	
-            </div>
-            <div class="col-sm-4 col-md-4 col-lg-4 pageTwo">
-            <h2> <p class="box">  Step 1: Enter Basic Info </p> </h2>
-            <br>
+			
+			
+            <div class="col-sm-4 col-md-4 col-lg-4 pageFive"></div>
             
+            <div class="col-sm-4 col-md-4 col-lg-4 pageFive">
+            	<h2 class="underline"> <p class="box">  Step 1: Logistics </p> </h2>
+            </div>
+   
+            <div class="col-sm-4 col-md-4 col-lg-4 pageFive"></div>
+            
+            
+            
+            <div class="col-sm-4 col-md-4 col-lg-4 pageTwo">
+            	<table align="center" style="margin: 0px auto;">
+            	<tr>
+            	<td>
+            		<p class="box">
+            		Starting City <!-- make this alphabetical order!!  filter -->
+            		</p>
+            	</td>
+            	<td>
             	<p class="box">
-            	Starting City <!-- make this alphabetical order!!  filter -->
                 <select ng-model="value" ng-options="wrap.value as wrap.key for wrap in wrappers"></select>
             	</p>
-            	<br>
-            	
-            	<p class="box">
-            	Budget ({{value}}) 
-				<input type="text" name="currency" ng-model="budget"> 
-				</p>
-				<br>
-				
-				<p class="box">
-				Trip Length (days)
-				<input type="text" name="dayInput" ng-model="tripLength">
-				</p>
-            <br>
-            <br>
-            
-            <h2><p class="box"> 
-            <button class="nextButton" ng-click="nextStep()">Next</button>
-            </p></h2></div>
-            
+            	</td>
+            	</tr>
+            </table>
             </div>
-            <div class="col-sm-4 col-md-4 col-lg-4 pageTwo"></div>	
             
-     </div>
+           
+           
+           <div class="col-sm-4 col-md-4 col-lg-4 pageTwo">
+            <table align="center" style="margin: 0px auto;">
+            	<tr>
+            	<td>
+            		<p class="box">
+            		Budget ({{value}}) 
+            		</p>
+            	</td>
+            	<td>
+					<p class="box">
+					<input type="text" name="currency" ng-model="budget"> 
+					</p>
+				</td>
+				</tr>
+			</table>
+			</div>
+			
+            <div class="col-sm-4 col-md-4 col-lg-4 pageTwo">
+            <table align="center" style="margin: 0px auto;">
+            	<tr>
+				<td>
+					<p class="box">
+					Trip Length (days)
+					</p>
+				</td>
+				<td>
+					<p class="box">
+					<input type="text" name="dayInput" ng-model="tripLength">
+					</p>
+				</td>
+				</tr>
+			</table>
+			</div>
             
-       
-<!-- 
-	<div class="citySelect">
-					<form>
-							<a ng-click='addData()' >Update Database</a>
-					</form>
-	</div>
- -->
+  			
+  			<div class="col-sm-4 col-md-4 col-lg-4 pageSix"></div>
+  			<div class="col-sm-4 col-md-4 col-lg-4 pageSix"></div>
+  			<div class="col-sm-4 col-md-4 col-lg-4 pageSix"></div>
+  			 
+
+			<div class="clearfix visible-lg-block pageTwo"></div>
+			<div class="clearfix visible-md-block pageTwo"></div>
+			
+            <div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 pageThree"><h2 class="underline"><p class="box"> 
+            Step 2: What Type of Trip Do You Want? 
+            </p></h2></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
+
+
+			<div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
+			<div class="col-sm-4 col-md-4 col-lg-4 pageThree">
+				<h3><p class="category"> {{inputPictures[inputBatch].category}}  </p> </h3>   <!-- this should say the category, ie weather, activity, etc -->
+			</div>
+			<div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
+			
+			<div class="col-sm-4 col-md-4 col-lg-4 pagePic">
+				<a ng-click="inputClick(inputBatch+1)">
+  					<img ng-src="{{inputPictures[inputBatch].paths[0]}}"width="280" height="220"/>
+  				</a>
+			</div>
+			<div class="col-sm-4 col-md-4 col-lg-4 pagePic">
+				<a ng-click="inputClick(inputBatch+1)">
+  					<img ng-src="{{inputPictures[inputBatch].paths[1]}}"width="280" height="220"/>
+  				</a>
+			</div>
+			<div class="col-sm-4 col-md-4 col-lg-4 pagePic">
+				<a ng-click="inputClick(inputBatch+1)">
+  					<img ng-src="{{inputPictures[inputBatch].paths[2]}}"width="280" height="220"/>
+  				</a>
+			</div>
+			
 	
+			
+			<div class="col-sm-4 col-md-4 col-lg-4 pageOne">
+				<h2 ng-show="backArrow==true">
+				<p class="box"> 
+            	<button class="backArrow nextButton" ng-click="backward()">Change Answers</button>
+            	</p></h2>
+            	
+            </div>
+			<div class="col-sm-4 col-md-4 col-lg-4 pageOne">
+				<h2>
+				<p class="box"> 
+            	<button class="recButton" ng-click="nextStep()">Go To Trip Recommendation!</button>
+            	</p></h2>
+            	<br> (Or {{inputPictures.length - inputBatch}} More Pic Clicks Gets You There)
+            	</div>
+			<div class="col-sm-4 col-md-4 col-lg-4 pageOne">
+				<h2>
+				<p class="box"> 
+            	<button class="forwardArrow nextButton" ng-click="forward()">Skip</button>
+            	</p></h2>
+			</div>
+
+        </div>
 
 
-	
-
-
+            
+            
+            
 <div class="slideThree" ng-show="page==3">
+
 
 			<div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageTwo"></div>
             <div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageTwo"></div>
@@ -108,155 +200,100 @@ check out the clearfix, if I end up with issues:
 			<div class="clearfix visible-lg-block pageTwo"></div>
 			<div class="clearfix visible-md-block pageTwo"></div>
 			
-            <div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
-            <div class="col-sm-4 col-md-4 col-lg-4 pageThree"><h2><p class="box"> 
-            Step 2: What Type of Trip Do You Want? 
-            </p></h2></div>
-            <div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
-
-
-			<div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
-			<div class="col-sm-4 col-md-4 col-lg-4 pageThree">
-				<h3><p class="category">   </p> </h3>   <!-- this should say the category, ie weather, activity, etc -->
-			</div>
-			<div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
-			
-			<div class="col-sm-4 col-md-4 col-lg-4 pagePic">
-				<a ng-click="inputClick(0)">
-  					<img ng-src="{{i1}}" name="img1" width="280" height="220"/>
-  				</a>
-			</div>
-			<div class="col-sm-4 col-md-4 col-lg-4 pagePic">
-				<a ng-click="inputClick(1)">
-  								<img ng-src="{{i2}}" name="img2" width="280" height="220"/>
-  							</a>
-  			</div>
-			<div class="col-sm-4 col-md-4 col-lg-4 pagePic">
-				<a ng-click="inputClick(2)">
-  								<img ng-src="{{i3}}" name="img3" width="280" height="220"/>
-  				</a>
-			</div>
-			
-	
-			
-			<div class="col-sm-4 col-md-4 col-lg-4 pageOne">
-				<!-- 
-<h2>
-				<p class="box"> 
-            	<button class="backArrow nextButton" ng-click="backward()">Change Answers</button>
-            	</p></h2>
-            	
-            	ADD THIS BACK IN LATER
- -->
-            </div>
-			<div class="col-sm-4 col-md-4 col-lg-4 pageOne">
-				<h2>
-				<p class="box"> 
-            	<button class="recButton" ng-click="nextStep()">See Trip Recommendation!</button>
-            	</p></h2></div>
-			<div class="col-sm-4 col-md-4 col-lg-4 pageOne">
-				<h2>
-				<p class="box"> 
-            	<button class="forwardArrow nextButton" ng-click="forward()">Skip</button>
-            	</p></h2>
-			</div>
-			
-	</div>
-
+			<div class="col-sm-4 col-md-4 col-lg-4 pageTwo"></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 pageTwo"></div>
+            <div class="col-sm-4 col-md-4 col-lg-4 pageTwo"></div>
             
-
-
-            
-            
-            
-<div class="slideFour" ng-show="page==4">
-
-
-		<div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageTwo"></div>
-            <div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageTwo"></div>
-            <div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageTwo"></div>
-
-			<div class="clearfix visible-lg-block pageTwo"></div>
+            <div class="clearfix visible-lg-block pageTwo"></div>
 			<div class="clearfix visible-md-block pageTwo"></div>
-			
+            
             <div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
-            <div class="col-sm-4 col-md-4 col-lg-4 pageThree"><h2><p class="box"> 
-            Step 3: Pick From Recommended Cities! 
+            <div class="col-sm-4 col-md-4 col-lg-4 pageThree"><h2 class="underline"><p class="box"> 
+            Trips We've Chosen For You! 
             </p></h2></div>
             <div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
 
 
 			<div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
 			<div class="col-sm-4 col-md-4 col-lg-4 pageThree">
-				<h3><p class="category"> Cities We Think You'll Like </p> </h3>
+				<h3><p class="category">  </p> </h3>
 			</div>
 			<div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
 			
+			
+			
+			
+			
 			<div class="col-sm-4 col-md-4 col-lg-4 pagePicBig">
-				<div ng-show="d1['path'] != null">
+				
+				<div ng-show="{{experiencePictures[e1].flightPrice + experiencePictures[e1].dailyPrice *tripLength >=budget}}">
+				
   							<a ng-click="cityClick(0)">
-  								<img ng-src="{{d1['path']}}" name="img1" width="280" height="220"/>
+  								<img ng-src="{{experiencePictures[e1].path}}" width="280" height="220"/>
   							</a>
   							
   							
-  							<p id="cityName"> {{d1['name']}}</p>
+  							<p id="cityName">{{experiencePictures[e1].experience}} in {{experiencePictures[e1].location}}</p>
   						
   							
   							
   							<div ng-show="tripLength != null">
-  								<p> Total Cost: ${{d1['flightPrice']+d1['price']*tripLength| number:2}}</p>
+  								<p> Total Cost: ${{experiencePictures[e1].flightPrice + experiencePictures[e1].dailyPrice *tripLength| number:2}}</p>
   							</div>
   							
-  							<p> Average Flight Price: ${{d1['flightPrice']| number:2}}</p>
+  							<p> Average Flight Price: ${{experiencePictures[e1].flightPrice| number:2}}</p>
   							
-  							<p> Cost Per Day: ${{d1['price']| number:2}}</p>
-  							
-  							
-  							
-  						</div>  
-			</div>
-			<div class="col-sm-4 col-md-4 col-lg-4 pagePicBig">
-				
-				<div ng-show="d2['path'] != null">
-						
-							<a ng-click="cityClick(1)">
-  								<img ng-src="{{d2['path']}}" name="img2" width="280" height="220"/>
-  							</a>
-  							<p id="cityName"> {{d2['name']}}</p>
-  							<div ng-show="tripLength != null">
-  								<p> Total Cost: ${{d2['flightPrice']+d2['price']*tripLength | number:2}}</p>
-  							</div>
-  							
-  							<p> Average Flight Price: ${{d2['flightPrice']| number:2}}</p>
-  							
-  							<p> Cost Per Day: ${{d2['price']| number:2}}</p>
-  						
-  						</div>
-  						
-  						
-  			</div>
-			<div class="col-sm-4 col-md-4 col-lg-4 pagePicBig">
-				
-				<div ng-show="d3['path'] != null">
-							<a ng-click="cityClick(2)">
-  								<img ng-src="{{d3['path']}}" name="img3" width="280" height="220"/>
-  							</a>
-  							<p id="cityName"> {{d3['name']}}</p>
-  							
-  							<div ng-show="tripLength != null">
-  								<p> Total Cost: ${{d3['flightPrice']+d3['price']*tripLength| number:2}}</p>
-  							</div>
-  							
-  							
-  							<p> Average Flight Price: ${{d3['flightPrice']| number:2}}</p>
- 
-  							
-  							<p> Cost Per Day: ${{d3['price']| number:2}}</p>
-  							
-  						</div>	
-  						
+  							<p> Cost Per Day: ${{experiencePictures[e1].dailyPrice| number:2}}</p>
+  				</div>	 
 			</div>
 			
+			
+			<div class="col-sm-4 col-md-4 col-lg-4 pagePicBig">
+				<div ng-show="{{experiencePictures[e2].flightPrice + experiencePictures[e2].dailyPrice *tripLength >=budget}}">
+  							<a ng-click="cityClick(0)">
+  								<img ng-src="{{experiencePictures[e2].path}}" width="280" height="220"/>
+  							</a>
+  							
+  							
+  							<p id="cityName">{{experiencePictures[e2].experience}} in {{experiencePictures[e2].location}}</p>
+  						
+  							
+  							
+  							<div ng-show="tripLength != null">
+  								<p> Total Cost: ${{experiencePictures[e2].flightPrice + experiencePictures[e2].dailyPrice *tripLength| number:2}}</p>
+  							</div>
+  							
+  							<p> Average Flight Price: ${{experiencePictures[e2].flightPrice| number:2}}</p>
+  							
+  							<p> Cost Per Day: ${{experiencePictures[e2].dailyPrice| number:2}}</p>
+  					</div>	 
+  					
+  					
+  					<div ng-hide="{{experiencePictures[e2].flightPrice + experiencePictures[e2].dailyPrice *tripLength >=budget}}">
+  						Budget Too Low :(
+  					</div>
+			</div>
+			
+			<div class="col-sm-4 col-md-4 col-lg-4 pagePicBig">
+					<div ng-show="{{experiencePictures[e3].flightPrice + experiencePictures[e3].dailyPrice *tripLength >=budget}}">
+  							<a ng-click="cityClick(0)">
+  								<img ng-src="{{experiencePictures[e3].path}}" width="280" height="220"/>
+  							</a>
+  							
+  							
+  							<p id="cityName">{{experiencePictures[e3].experience}} in {{experiencePictures[e3].location}}</p>
+  						
+  							
+  							
+  							<div ng-show="tripLength != null">
+  								<p> Total Cost: ${{experiencePictures[e3].flightPrice + experiencePictures[e3].dailyPrice *tripLength| number:2}}</p>
+  							</div>
+  							
+  							<p> Average Flight Price: ${{experiencePictures[e3].flightPrice| number:2}}</p>
+  							
+  							<p> Cost Per Day: ${{experiencePictures[e3].dailyPrice| number:2}}</p>
+  					</div>	 
+			</div>
 	
 	
     </div>

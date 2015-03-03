@@ -9,9 +9,14 @@
 	text-align: center;
 }
 
+.wrapBox{	
+	text-align: center;
+}
+
 .pageOne{
 	height: 150px;
 }
+
 
 
 .pageTwo{
@@ -22,6 +27,13 @@
 	height: 35px;
 }	
 
+.pageFive{
+	height: 25px;
+}
+
+.pageSix{
+	height: 20px;
+}
 
 .pagePic{
 	height: 250px;
@@ -32,6 +44,10 @@
 }
 
 .category{
+	
+}
+
+.underline{
 	text-decoration: underline;
 }
 
@@ -77,6 +93,23 @@ button.forwardArrow:before {
     margin-top: -24px;
     left: 99%;
     z-index: 1;
+}
+
+
+button.forwardArrow:before:hover: {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 24px solid transparent;
+    border-bottom: 24px solid transparent;
+    border-left: 24px solid #fff;
+    position: absolute;
+    top: 50%;
+    margin-top: -24px;
+    left: 99%;
+    z-index: 1;
+    
 }
 
 
@@ -196,19 +229,19 @@ td a:hover { color: #F60; cursor: pointer; }
 
 td a:active {color: #B2F511; }
 
-td img{
+img{
 	-moz-box-shadow:    0px 0px 0px 2px #FFFFFF;
   -webkit-box-shadow: 0px 0px 0px 2px #FFFFFF;
   box-shadow:         0px 0px 0px 2px #FFFFFF;
 }
 
-td img:hover{
+img:hover{
 -moz-box-shadow:    0px 0px 0px 5px #F60;
   -webkit-box-shadow: 0px 0px 0px 5px #F60;
   box-shadow:         0px 0px 0px 5px #F60;
 }
 
-td img:active{
+img:active{
 -moz-box-shadow:    0px 0px 0px 5px #B2F511;
   -webkit-box-shadow: 0px 0px 0px 5px #B2F511;
   box-shadow:         0px 0px 0px 5px #B2F511;
