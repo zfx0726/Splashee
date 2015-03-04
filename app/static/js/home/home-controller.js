@@ -10,20 +10,22 @@ angular.module('splashapp')
   	
   	$scope.inputPictures = [
      {"category":"Weather", "paths":["../img/picPool/Ski.jpg", "../img/picPool/SunnyBeach.jpg","../img/picPool/Autumn.jpg"]},
-     {"category":"Environment", "paths":["../img/picPool/MountainLake.jpg", "../img/picPool/Village.jpg","../img/picPool/Urban.jpg"]},
-     {"category":"Group", "paths":["../img/picPool/CityGirl.jpg", "../img/picPool/Kiss.jpg","../img/picPool/Party.jpg"]},
-     {"category":"Activity Level", "paths":["../img/picPool/BarcelonaChilling.jpg", "../img/picPool/ArtGallery.jpg","../img/picPool/SurfsUp.jpg"]},
+     {"category":"Environment", "paths":["../img/picPool/MountainLake.jpg", "../img/picPool/Village.jpg","../img/picPool/City.jpg"]},
+     {"category":"Company", "paths":["../img/picPool/CityGirl.jpg", "../img/picPool/Kiss.jpg","../img/picPool/Party.jpg"]},
+     {"category":"Activeness", "paths":["../img/picPool/BarcelonaChilling.jpg", "../img/picPool/ArtGallery.jpg","../img/picPool/SurfsUp.jpg"]},
+     
  	]
  	
  	
  	$scope.experiencePictures = [
-     {"experience":"Kitesurf", "location":"Kite Beach, Dominican Republic", "path":"../img/picPool/Kitesurfing.jpg", "flightPrice":621, "dailyPrice":130},
-     {"experience":"Camp", "location":"Denali National Park, Alaska", "path":"../img/picPool/DenaliCamping.jpg", "flightPrice":526, "dailyPrice":25},
-     {"experience":"Wine Tour", "location":"Napa Valley, California", "path":"../img/picPool/NapaVineyard.jpg", "flightPrice":328, "dailyPrice":100},
-     {"experience":"Ski", "location":"the Swiss Alps", "path":"../img/picPool/SwissAlps.jpg", "flightPrice":696, "dailyPrice":175},
- 	 {"experience":"Meditation Retreat", "location":"Bali, Indonesia", "path":"../img/picPool/BaliRetreat.jpg", "flightPrice":1283, "dailyPrice":25},
- 	 {"experience":"Safari", "location":"Kruger National Park, South Africa", "path":"../img/picPool/KrugerSafari.jpg", "flightPrice":1194, "dailyPrice":40},
- 	 {"experience":"Scuba Dive", "location":"Thailand", "path":"../img/picPool/ThaiScuba.jpg", "flightPrice":1138, "dailyPrice":100},
+     {"experience":"Kitesurf", "location":"on Kite Beach, Dominican Republic", "path":"../img/picPool/Kitesurfing.jpg", "flightPrice":621, "dailyPrice":130},
+     {"experience":"Camp", "location":"in Denali National Park, Alaska", "path":"../img/picPool/DenaliCamping.jpg", "flightPrice":526, "dailyPrice":25},
+     {"experience":"Wine Tour", "location":"around Napa Valley, California", "path":"../img/picPool/NapaVineyard.jpg", "flightPrice":328, "dailyPrice":100},
+     {"experience":"Ski", "location":"in the Swiss Alps", "path":"../img/picPool/SwissAlps.jpg", "flightPrice":696, "dailyPrice":175},
+ 	 {"experience":"Meditation Retreat", "location":"in Bali, Indonesia", "path":"../img/picPool/BaliRetreat.jpg", "flightPrice":1283, "dailyPrice":25},
+ 	 {"experience":"Safari", "location":"in Kruger National Park, South Africa", "path":"../img/picPool/KrugerSafari.jpg", "flightPrice":1194, "dailyPrice":40},
+ 	 {"experience":"Scuba Dive", "location":"in Thailand", "path":"../img/picPool/ThaiScuba.jpg", "flightPrice":1138, "dailyPrice":100},
+ 	 {"experience":"Pilgrimage", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25},
  	]
 
   	$scope.inputBatch = 0;
@@ -55,8 +57,12 @@ angular.module('splashapp')
 
 	$scope.nextStep = function(){
   			$scope.page= $scope.page + 1;
-  		
-  		if ($scope.page==3){
+			getRecs();
+  	}
+  	
+	var getRecs = function(){
+		
+		if ($scope.page==3){
   		
   		
   			var tempArray=[];
@@ -121,9 +127,11 @@ angular.module('splashapp')
   			
 	
   		}
-  	}
-  	
-
+	
+	
+	}
+	
+	
   	
 
     
@@ -189,8 +197,12 @@ angular.module('splashapp')
 
 
 $scope.cityClick = function(n){
+		
+		$scope.page= 3
+		getRecs();
+  		
 
-		alert('Nice Choice!  Go to www.tripadvisor.com to learn more.');
+		//alert('Nice Choice!  Go to www.tripadvisor.com to learn more.');
 		
 	};
 

@@ -1,5 +1,5 @@
 // Declare app level module which depends on filters, and services
-angular.module('splashapp', ['ngResource', 'ngRoute', 'ui.bootstrap', 'ui.date','angulartics', 'angulartics.google.analytics'])
+angular.module('splashapp', ['ngResource', 'ngRoute', 'ui.bootstrap', 'ui.date'])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
