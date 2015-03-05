@@ -18,14 +18,26 @@ angular.module('splashapp')
  	
  	
  	$scope.experiencePictures = [
-     {"experience":"Kitesurf", "location":"on Kite Beach, Dominican Republic", "path":"../img/picPool/Kitesurfing.jpg", "flightPrice":621, "dailyPrice":130},
-     {"experience":"Camp", "location":"in Denali National Park, Alaska", "path":"../img/picPool/DenaliCamping.jpg", "flightPrice":526, "dailyPrice":25},
-     {"experience":"Wine Tour", "location":"around Napa Valley, California", "path":"../img/picPool/NapaVineyard.jpg", "flightPrice":328, "dailyPrice":100},
-     {"experience":"Ski", "location":"in the Swiss Alps", "path":"../img/picPool/SwissAlps.jpg", "flightPrice":696, "dailyPrice":175},
- 	 {"experience":"Meditation Retreat", "location":"in Bali, Indonesia", "path":"../img/picPool/BaliRetreat.jpg", "flightPrice":1283, "dailyPrice":25},
- 	 {"experience":"Safari", "location":"in Kruger National Park, South Africa", "path":"../img/picPool/KrugerSafari.jpg", "flightPrice":1194, "dailyPrice":40},
- 	 {"experience":"Scuba Dive", "location":"in Thailand", "path":"../img/picPool/ThaiScuba.jpg", "flightPrice":1138, "dailyPrice":100},
- 	 {"experience":"Pilgrimage", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25},
+     {"experience":"Kitesurf", "location":"on Kite Beach, Dominican Republic", "path":"../img/picPool/Kitesurfing.jpg", "flightPrice":621, "dailyPrice":130, "date": "April"},
+     {"experience":"Camp", "location":"in Denali National Park, Alaska", "path":"../img/picPool/DenaliCamping.jpg", "flightPrice":526, "dailyPrice":25, "date": "July"},
+     {"experience":"Wine Tour", "location":"around Napa Valley, California", "path":"../img/picPool/NapaVineyard.jpg", "flightPrice":328, "dailyPrice":100, "date": "September"},
+     {"experience":"Ski", "location":"in the Swiss Alps", "path":"../img/picPool/SwissAlps.jpg", "flightPrice":696, "dailyPrice":175, "date": "November"},
+ 	 {"experience":"Meditation Retreat", "location":"in Bali, Indonesia", "path":"../img/picPool/BaliRetreat.jpg", "flightPrice":1283, "dailyPrice":25, "date": "April"},
+ 	 {"experience":"Safari", "location":"in Kruger National Park, South Africa", "path":"../img/picPool/KrugerSafari.jpg", "flightPrice":1194, "dailyPrice":40, "date": "September"},
+ 	 {"experience":"Scuba Dive", "location":"in Thailand", "path":"../img/picPool/ThaiScuba.jpg", "flightPrice":1138, "dailyPrice":100, "date": "November"},
+ 	 {"experience":"Pilgrimage", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+ 	 
+ 	 //{"experience":"Yacht Week", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+ 	 //{"experience":"Running of the Bulls", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+ 	 //{"experience":"Hiking", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+ 	 //{"experience":"Work on a Vineyard", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+ 	 //{"experience":"Yoga", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+ 	 //{"experience":"Oktoberfest", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+ 	 //{"experience":"St Patrick's Day", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+ 	 //{"experience":"Songkran", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+ 	 //{"experience":"Surf", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+ 	 //{"experience":"Trek", "location":"in Antarctica", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+ 	 
  	]
 
   	$scope.inputBatch = 0;
@@ -159,7 +171,22 @@ angular.module('splashapp')
 //  	
 
 
- 
+	$scope.yes = function(){
+        $http.post('/api/feedback/', {'sent': 'True'}).success(function() {
+        	alert('Awesome!  You Rock!'); 
+        }).error(function() {
+        	//alert('ERROR!'); 
+        });
+    }; 
+    
+    
+    $scope.no = function(){
+        $http.post('/api/feedback/', {'sent': 'False'}).success(function() {
+        	alert('Sorry to hear that!  If you have some time, I would love to hear your ideas of what could be improved.  Feel free to email me at zfx0726@gmail.com.'); 
+        }).error(function() {
+        	//alert('ERROR!'); 
+        });
+    }; 
 
     
  	

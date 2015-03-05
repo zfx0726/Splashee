@@ -76,6 +76,30 @@ class Picture(db.Model):  #many to one - many pictures for one city or activity.
 		return dict(id= self.id, path= self.path, weight = self.total_count, city_name= self.cities.filter_by(city_id=self.id).one().getName(), city_price= self.prices.filter_by(city_id=self.id).one().getCityPrice(), city_currency= self.prices.filter_by(city_id=self.id).one().getCityCurrency(), flight_price= self.flight_prices.filter_by(destination_city=self.id).one().getFlightPrice())
 		
 
+
+class Feedback(db.Model): 
+	__tablename__ = 'feedbacks'
+	id = db.Column(db.Integer, index=True, primary_key=True)
+	helpful = db.Column(db.Integer, index=True, default=0)
+	not_helpful = db.Column(db.Integer, index=True, default=0)
+		
+	
+	def addHelp(self):
+		self.helpful = self.helpful+1
+		return '<Helpful %r>' % self.helpful
+		
+	def addHurt(self):
+		self.not_helpful = self.not_helpful+1
+		return '<Not Helpful %r>' % self.not_helpful
+	
+	
+	def __repr__(self):
+		return '<id %r helpful %r not_helpful %r >' % (self.id, self.helpful, self.not_helpful)
+
+		
+		
+		
+
 class Price(db.Model):
 	__tablename__ = 'prices'
 	city_id = db.Column(db.Integer, db.ForeignKey('pictures.id'), primary_key=True)

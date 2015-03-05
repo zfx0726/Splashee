@@ -96,7 +96,7 @@ check out the clearfix, if I end up with issues:
             	</td>
             	<td>
 					<p class="box">
-					<input type="text" name="currency" ng-model="budget"> 
+					<input type="text" name="currency" ng-model="budget" ng-init="budget=1500"> 
 					</p>
 				</td>
 				</tr>
@@ -113,7 +113,7 @@ check out the clearfix, if I end up with issues:
 				</td>
 				<td>
 					<p class="box">
-					<input type="text" name="dayInput" ng-model="tripLength">
+					<input type="text" name="dayInput" ng-model="tripLength" ng-init="tripLength=10">
 					</p>
 				</td>
 				</tr>
@@ -212,9 +212,7 @@ check out the clearfix, if I end up with issues:
 
 
 			<div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
-			<div class="col-sm-4 col-md-4 col-lg-4 pageThree">
-				<h3><p class="category">  </p> </h3>
-			</div>
+			<div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
 			<div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
 			
 			
@@ -297,6 +295,34 @@ check out the clearfix, if I end up with issues:
   							
   				</div>
 			</div>
+	
+			<div class="clearfix visible-lg-block pageTwo"></div>
+			<div class="clearfix visible-md-block pageTwo"></div>
+			
+			
+			
+			<div class="col-sm-12 col-md-12 col-lg-12 pageTwo"><h2><p class="specialBox"> 
+          	<br>
+			Congratulations!  You've Just Used the Beta Version of This Site.  Was It Helpful?
+            </p></h2>
+            
+            </div>
+            
+            
+            
+            <div class="col-sm-3 col-md-3 col-lg-3 pageThree"></div>
+            <div class="col-sm-3 col-md-3 col-lg-3 pageThree">
+            	<h2><p class="box">
+            <button class="nextButton" ng-click="yes()">Yes :)</button>
+            </p></h2>
+            </div>
+        
+            <div class="col-sm-3 col-md-3 col-lg-3 pageThree">
+            	<h2><p class="box">
+            <button class="nextButton" ng-click="no()">No :(</button>
+            </p></h2>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3 pageThree"></div>
 	
 	
     </div>

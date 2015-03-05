@@ -35,7 +35,18 @@ def addClicked():
 	return jsonify({ 'success': True })
 
 
-
+@app.route('/api/feedback/', methods=['POST'])
+def sendFeedback():
+	args = json.loads(request.data)
+	
+	if args['sent']=='True':
+		Feedback.query.one().addHelp()
+		db.session.commit()
+	else:
+		Feedback.query.one().addHurt()
+		db.session.commit()
+	
+	return jsonify({ 'success': True })
 
 
 

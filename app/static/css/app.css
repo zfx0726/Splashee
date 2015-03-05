@@ -6,6 +6,10 @@ div select{
 	color: black;
 }
 
+.blogPage{
+	text-align: left;
+}
+
 .box{
 	
 	white-space: nowrap;
@@ -15,6 +19,12 @@ div select{
 .wrapBox{	
 	text-align: center;
 }
+
+.specialBox{
+	text-align: center;
+	color: #B2F511; 
+}
+
 
 .pageOne{
 	height: 150px;
@@ -200,19 +210,6 @@ div input:active{
   	vertical-align: middle;
   
 }
-
-
-
-#blogLinks {
-	width: 300px;
-}
-
-#blog {
-	color: #F60;
-	width: 800px;
-	background-color: #B0E2FF;
-}
-
 
 
 section{
