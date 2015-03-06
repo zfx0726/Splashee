@@ -12,7 +12,7 @@ angular.module('splashapp')
      {"category":"Weather", "paths":["../img/picPool/Ski.jpg", "../img/picPool/SunnyBeach.jpg","../img/picPool/Autumn.jpg"]},
      {"category":"Environment", "paths":["../img/picPool/MountainLake.jpg", "../img/picPool/Village.jpg","../img/picPool/City.jpg"]},
      {"category":"Company", "paths":["../img/picPool/CityGirl.jpg", "../img/picPool/Kiss.jpg","../img/picPool/Party.jpg"]},
-     {"category":"Activeness", "paths":["../img/picPool/BarcelonaChilling.jpg", "../img/picPool/ArtGallery.jpg","../img/picPool/SurfsUp.jpg"]},
+     {"category":"Activeness", "paths":["../img/picPool/BarcelonaChilling.jpg", "../img/picPool/ParkPic.jpg","../img/picPool/SurfsUp.jpg"]},
      
  	]
  	
@@ -34,7 +34,7 @@ angular.module('splashapp')
  	 //{"experience":"Yoga", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
  	 {"experience":"Oktoberfest", "location":"in Munich, Germany", "path":"../img/picPool/Oktoberfest.jpg", "flightPrice":782, "dailyPrice":65.82, "date": "September"},
  	 //{"experience":"St Patrick's Day", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
- 	 //{"experience":"Songkran", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+ 	 {"experience":"Songkran", "location":"in Chiang Mai, Thailand", "path":"../img/picPool/Songkran.jpg", "flightPrice":1338, "dailyPrice":20.02, "date": "April"},
  	 //{"experience":"Surf", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
  	 //{"experience":"Trek", "location":"in Antarctica", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
  	 
