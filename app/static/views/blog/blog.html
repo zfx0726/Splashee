@@ -3,34 +3,51 @@
         
 		
 		 <div class= "slideOne">
-			<div class="col-sm-4 col-md-4 col-lg-4 pageTwo"></div>
-            <div class="col-sm-4 col-md-4 col-lg-4 pageTwo"></div>
-            <div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageTwo"></div>
-            <div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageTwo"></div>
-
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 visible-xs-block visible-sm-block visible-md-block visible-lg-block pageTwo"></div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 visible-xs-block visible-sm-block visible-md-block visible-lg-block pageThree"></div>
+           
 			<div class="clearfix visible-lg-block pageTwo"></div>
 			<div class="clearfix visible-md-block pageTwo"></div>
 			<div class="clearfix visible-sm-block pageTwo"></div>
+			<div class="clearfix visible-xs-block pageTwo"></div>
 			
-            <div class="col-sm-12 col-md-12 col-lg-12 blogPage">
+			<div class="clearfix visible-lg-block pageThree"></div>
+			<div class="clearfix visible-md-block pageThree"></div>
+			<div class="clearfix visible-sm-block pageThree"></div>
+			<div class="clearfix visible-xs-block pageThree"></div>
+			
+			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 visible-xs-block visible-sm-block visible-md-block visible-lg-block">
+			
+			<div class="blogBar">
+			<a ng-click="set(0)">The Beginning</a>
+			</div>
+			<br>
+			<div class="blogBar">
+			<a ng-click="set(1)">Living Homelessly</a>
+			</div>
+			
+			</div>
+			
+            <div class="col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==0">
             
             <!-- 	BLOG TITLE - FROM FINANCE TO FREEDOM -->
 
+			<p class="blogHead">The Beginning</p>
+			
 	       	<p>Hi world!  My name is Forrest.  I'm a 25 year old guy from the US,
 	       	leaving behind a high-paying job at a hedge fund for long-term,
-        	low-budget travel around the world.  But let's back up - how did I end
-        	up here?</p>
+        	low-budget travel around the world.  Here's the story of how I got here.</p>
 			<br>
 			
-			<p> I grew up in Kansas.  Maybe it's because there wasn't much to do there and we had to 
-			create our own entertainment, maybe it's just who I am, but as a kid I developed a strong
-			urge for adventure.  My friends and I would go explore where we could, riding our bikes
-			around and occasionally getting into trouble for our shenanigans.  My adventure-seeking 
-			continued to grow with time.  I picked up pole vaulting in high school, which was a thrilling
-			outlet for my energy.  In college, I joined a great group of guys in a fraternity.  My degree in
-			neuroscience really helped me appreciate both the experiences and the dangers 
-			of the substances I experimented with.  An amazing, fun, transformative, and
-			surreal four years later, I graduated and was ready to move on.
+			<p> I grew up in Kansas.  Maybe it's because there wasn't much to do there and I had to 
+			make my own entertainment, maybe it's just who I am, but I developed a taste for exploration and adventure.  
+			My friends and I would ride our bikes around, checking out new neighborhoods, occasionally 
+			getting into trouble for our shenanigans.  My adventure-seeking 
+			continued to grow with time.  I picked up pole vaulting in high school, which was a great
+			outlet for my energy.  In college, I joined an awesome group of guys in a fraternity.  
+			We drank a lot, did secret fraternity stuff, the whole deal.  I studied neuroscience in school, and ended up
+			spending as much time experimenting with substances outside of class as I did in the labs.
+			An amazing, fun, transformative, and surreal four years later, I graduated and was ready to move on.
 			</p>
 			<br>
 			
@@ -42,31 +59,22 @@
 			Say what you want about the vampire squids, but I have a ton of respect for Goldman.  
 			I was surrounded by talented, driven people, and they taught me how to really work.  
 			At the same time, I got to live in one of the most amazing cities I've ever been to 
-			(more on that later)!  I had a great group of friends, enough money for the expensive 
+			(more on that later)!  I had great friends, enough money for the expensive 
 			lifestyle, and the youthful endurance needed to go out in the city that never 
 			sleeps.</p>
 			<br>
 			
-			<p>An intense year later, I again got lucky and was offered a job at a 
+			<p>An fun and intense year later, I again got lucky and was offered a job at a 
 			quantitative hedge fund in Connecticut.  I accepted, jumping at the chance to 
 			learn from former Harvard professors and some of the most respected people in 
 			the quant world.  But as I settled in, I realized I wasn't happy.  Yes, I was 
 			making more money than a 23 year old probably should and was living what looked
 			like a nice life.  Black cars drove me from Connecticut back to NYC where I still 
 			lived.  I could (and am embarrassed to say, sometimes did) spend over $500 a 
-			night on dinner or going out.  But I wasn't happy.  I could feel my optimism, 
-			idealism, and passion for living life draining away, and that sucked. </p>
-			<br>
-			
-			
-			<p>Unsurprisingly, finance seemed like a place where most people worked just for the money,
-			without some underlying passion or sense of purpose.  What was I creating?  I made money 
-			into more money and I guess that helped some people.  Why did I have to sit at this desk for ten hours a day?  
-			This was the 21st century; all of my work could be done remotely.  I could be out 
-			seeing the world!  As these thoughts gnawed at me, I decided I needed to go.  Life 
+			night on dinner or going out.  But I wasn't happy.  Life 
 			wasn't about making money so I could buy nice things, then needing to make even more 
 			money to buy even nicer things.  I wanted to live an inspired life filled with 
-			amazing experiences and help others do the same.  I wanted to surround myself 
+			amazing people and experiences and help others do the same.  I wanted to surround myself 
 			with passionate, inspired people who were living the dream! </p>
 			
 			<br>
@@ -74,8 +82,83 @@
 			of the road.  Working to create something I believe in, to help others see the world that
 			I'm lucky enough to experience.  </p>
 			
+			
+			
+			
+			<br>
+			<br>
+			
             </div>
 
+			
+			<div class="col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==1">
+            
+            <p class="blogHead">Living Homelessly</p>
+ 			
+ 			<p>
+ 			At the end of January I got rid of my apartment, packed everything I needed into my backpack,
+ 			and started living homelessly.  It's been a great month, and especially great as my last 
+ 			month in the country!  I've been able to see good friends one last time, save some 
+ 			extra money for my travels, and also test out my travel gear.  I definitely 
+ 			recommend it for those who are planning a nomadic lifestlye.
+ 			</p>
+ 			<br>
+ 			<p>
+ 			Still, it's not for everyone.  I remember my first day of being homeless - I got back to the city
+ 			around 6pm, the sun was going down, and I felt nervous that I might not find a place
+ 			to sleep for the night.  Luckily, my cousin James was around.  We grabbed a drink, hung out
+ 			at the bar for awhile, and I ended up crashing on his couch.  It turned out to be a really fun night!
+ 			Since then, I haven't felt that same twinge of nervousness.  Instead, I've 
+ 			felt empowered, free to explore and move about.  I've stayed with friends in New York, Connecticut, and even Colorado.
+ 			With no worries of where I need to end up for the night, I've been able to be much more spontaneous.
+ 			</p>
+ 			<br>
+ 			<p>
+ 			I've had great nights that started with no plans.  One night I ended up going out with this cool girl
+ 			I first met on Tinder, meeting up with my friend from school,
+ 			and getting brunch the next morning before work (weekday brunch is awesome by the way)!  I've also had nights that went less smoothly.  
+ 			Another night I was at my friend's party, having a great time.  We decided to go out to the lower
+ 			east side and bust out our sweet dance moves. We got separated during the night, and I ended up not
+ 			being able to stay at her place like I'd thought I would.  I had this realization at around 3am.
+ 			It also happened to be one of the coldest nights of the winter!  Luckily, another friend lived around
+ 			the area, and I was able to sleep at his place.  All in all, it's been a great experience.  Even
+ 			the unexpected, tough times have ended up as good memories.
+ 			<p/>
+ 			<br>
+ 			
+ 			<p>
+ 			Don't get me wrong, it's definitely nice to have a home.  It's comfortable and stable,
+ 			a great place to come back to and relax.  You don't have to worry about where you're going to 
+ 			sleep, or shower, or go to the bathroom (turns out a gym membership is super useful, at least for the latter two).  
+ 			You don't worry about how you're going to
+ 			fit a months worth of work clothes into a backpack (wearing a fleece over
+ 			a t-shirt does the trick. Oh yeah, and a pair of pants too if you don't want to get fired).
+ 			But at the same time, an apartment can become
+ 			burdensome.  It's been very freeing to finally remove the clutter from my life.  
+ 			My apartment was full of stuff I didn't need, but that I held onto, for some distant
+ 			day in the future. I think it was mostly a fear of letting go.  It's been nice to let go
+ 			of that stuff, and then of my apartment too.
+ 			Tomorrow, I'll be fully uncluttering my life by letting go of one last thing - my job.  
+ 			
+ 			
+ 		<!-- 
+	It's also been 
+ 			comfortable and stable.  I've also held onto it, for some distant day in the future.
+ 			
+ -->
+ 			</p>
+ 			<br>
+ 			<p>
+ 			
+			</p>
+			
+			<br>
+			
+            </div>
+
+			
+			
+			
 			
 		</div> 
         

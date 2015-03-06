@@ -96,7 +96,7 @@ check out the clearfix, if I end up with issues:
             	</td>
             	<td>
 					<p class="box">
-					<input type="text" name="currency" ng-model="budget" ng-init="budget=1500"> 
+					<input type="text" name="currency" ng-model="budget" ng-init="budget=3500"> 
 					</p>
 				</td>
 				</tr>
@@ -175,7 +175,7 @@ check out the clearfix, if I end up with issues:
             	<br> (Or {{inputPictures.length - inputBatch}} More Pic Clicks Gets You There)
             	</div>
 			<div class="col-sm-4 col-md-4 col-lg-4 pageOne">
-				<h2>
+				<h2 ng-show="(inputPictures.length - inputBatch)>=2">
 				<p class="box"> 
             	<button class="forwardArrow nextButton" ng-click="forward()">Skip</button>
             	</p></h2>

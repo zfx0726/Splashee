@@ -8,7 +8,22 @@ div select{
 
 .blogPage{
 	text-align: left;
+	line-height: 200%;
+	font-size: 20px;
 }
+
+
+.blogBar{
+	text-align: left;
+	line-height: 120%;
+	font-size: 20px;
+}
+
+.blogHead{
+	text-decoration: underline;
+	font-size: 24px;
+}
+
 
 .box{
 	
@@ -23,6 +38,10 @@ div select{
 .specialBox{
 	text-align: center;
 	color: #B2F511; 
+}
+
+.blogText{
+	font-weight: normal;
 }
 
 
