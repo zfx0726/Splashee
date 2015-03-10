@@ -84,6 +84,10 @@ div select{
 	text-decoration: underline;
 }
 
+.rotate{
+	transform: rotate(90deg);
+	float: right;
+}
 
 button.backArrow {
     position:relative;
