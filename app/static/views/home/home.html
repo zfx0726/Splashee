@@ -24,10 +24,13 @@ check out the clearfix, if I end up with issues:
 			<div class="clearfix visible-md-block pageOne"></div>
 			
             <div class="col-sm-12 col-md-12 col-lg-12 pageOne"><h2><p class="wrapBox"> 
-          	Choose a trip below, or click the button the get a recommendation
+          	Choose a trip below, or click the button to get a recommendation.
             </p></h2>
             
             <br>
+            
+            
+            <!-- Sort by:  Closest to you, Lowest Price, Soonest time of year -->
             
             <h2><p class="box">
             <button class="nextButton" ng-click="nextStep()">Recommend!</button>
@@ -40,6 +43,9 @@ check out the clearfix, if I end up with issues:
   						<img ng-src="{{exp.path}}" width="280" height="220"/>
   					</a>
   					<p id="cityName">{{exp.experience}} {{exp.location}}</p>	
+  	  				<p> Average Flight Price: ${{exp.flightPrice| number:2}}</p>
+  					<p> Cost Per Day: ${{exp.dailyPrice| number:2}}</p>	
+  					
 			</div>
 			
 
