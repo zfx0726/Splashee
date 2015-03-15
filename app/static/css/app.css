@@ -86,7 +86,12 @@ div select{
 
 .rotate{
 	transform: rotate(90deg);
-	float: right;
+	position: absolute;
+	left: 400px;
+}
+
+.rote{
+	transform: rotate(90deg);
 }
 
 button.backArrow {
@@ -229,7 +234,6 @@ div input:active{
 }
 
 .slideOne{
-  	float:none;
   	height: 100%;
   	vertical-align: middle;
   

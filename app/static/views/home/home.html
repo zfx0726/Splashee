@@ -36,15 +36,80 @@ check out the clearfix, if I end up with issues:
             <button class="nextButton" ng-click="nextStep()">Recommend!</button>
             </p></h2></div>
 
+			
+			<div class="clearfix visible-sm-block pageOne"></div>
+			<div class="clearfix visible-lg-block pageOne"></div>
+			<div class="clearfix visible-md-block pageOne"></div>
+			
+			
+			
+<!-- 
+
+Filter bar
+
+
+			 <div class="col-sm-4 col-md-4 col-lg-4 pageFive">
+			</div>
+			
+			<div class="col-sm-4 col-md-4 col-lg-4 pageFive">
+            	<table align="center" style="margin: 0px auto;">
+            	<tr>
+            	
+            	<td>
+            		<p class="box">
+            		Filter By:
+            		</p>
+            	</td>
+            	
+            	<td>
+            		<p class="box">
+                	<select ng-model="value" ng-options="wrap.value as wrap.key for wrap in wrappers"></select>
+            		</p>
+            	</td>
+            	
+            	<td>
+            	=
+            	</td>
+            	<td>
+            	<p class="box">
+                <select ng-model="value" ng-options="wrap.value as wrap.key for wrap in wrappers"></select>
+            	</p>
+            	</td>
+            	</tr>
+            </table>
+            </div>
+            
+			
+            <div class="col-sm-4 col-md-4 col-lg-4 pageFive">
+
+			</div>
+			
+			
+			<div class="clearfix visible-xs-block pageFive"></div>
+			<div class="clearfix visible-sm-block pageFive"></div>
+			<div class="clearfix visible-md-block pageFive"></div>
+			
+			
+			<div class="clearfix visible-sm-block pageFive"></div>
+			<div class="clearfix visible-lg-block pageFive"></div>
+			
+			<div class="clearfix visible-sm-block pageFive"></div>
+			<div class="clearfix visible-lg-block pageFive"></div>
+			<div class="clearfix visible-md-block pageFive"></div>
+ -->
+
 
 
 			<div class="col-sm-4 col-md-4 col-lg-4 pagePicBig" ng-repeat="exp in experiencePictures">
   					<a ng-click="goTo(5)">
   						<img ng-src="{{exp.path}}" width="280" height="220"/>
   					</a>
-  					<p id="cityName">{{exp.experience}} {{exp.location}}</p>	
-  	  				<p> Average Flight Price: ${{exp.flightPrice| number:2}}</p>
+  					<p>Activity: {{exp.experience}}</p>
+  					<p>Location: {{exp.location}}</p>
+  	  				<!-- 
+<p> Average Flight Price: ${{exp.flightPrice| number:2}}</p>
   					<p> Cost Per Day: ${{exp.dailyPrice| number:2}}</p>	
+ -->
   					
 			</div>
 			
@@ -158,7 +223,6 @@ check out the clearfix, if I end up with issues:
             </p></h2></div>
             <div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
 
-
 			<div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
 			<div class="col-sm-4 col-md-4 col-lg-4 pageThree">
 				<h3><p class="category"> {{inputPictures[inputBatch].category}}  </p> </h3>   <!-- this should say the category, ie weather, activity, etc -->
@@ -166,17 +230,17 @@ check out the clearfix, if I end up with issues:
 			<div class="col-sm-4 col-md-4 col-lg-4 pageThree"></div>
 			
 			<div class="col-sm-4 col-md-4 col-lg-4 pagePic">
-				<a ng-click="inputClick(inputBatch+1)">
+				<a ng-click="inputClick(inputPictures[inputBatch].labels[0])">
   					<img ng-src="{{inputPictures[inputBatch].paths[0]}}"width="280" height="220"/>
   				</a>
 			</div>
 			<div class="col-sm-4 col-md-4 col-lg-4 pagePic">
-				<a ng-click="inputClick(inputBatch+1)">
+				<a ng-click="inputClick(inputPictures[inputBatch].labels[1])">
   					<img ng-src="{{inputPictures[inputBatch].paths[1]}}"width="280" height="220"/>
   				</a>
 			</div>
 			<div class="col-sm-4 col-md-4 col-lg-4 pagePic">
-				<a ng-click="inputClick(inputBatch+1)">
+				<a ng-click="inputClick(inputPictures[inputBatch].labels[2])">
   					<img ng-src="{{inputPictures[inputBatch].paths[2]}}"width="280" height="220"/>
   				</a>
 			</div>
@@ -250,7 +314,8 @@ check out the clearfix, if I end up with issues:
   							</a>
   							
   							
-  							<p id="cityName">{{e1.experience}} {{e1.location}}</p>
+  							<p>Activity: {{e1.experience}} </p>
+  							<p>Location: {{e1.location}}</p>
   						
   							
   							
@@ -258,9 +323,11 @@ check out the clearfix, if I end up with issues:
   								<p> Total Cost: ${{e1.flightPrice + e1.dailyPrice *tripLength| number:2}}</p>
   							</div>
   							
-  							<p> Average Flight Price: ${{e1.flightPrice| number:2}}</p>
+  							<!-- 
+<p> Average Flight Price: ${{e1.flightPrice| number:2}}</p>
   							
   							<p> Cost Per Day: ${{e1.dailyPrice| number:2}}</p>	
+ -->
   					</div>
   					
 			</div>
@@ -273,7 +340,8 @@ check out the clearfix, if I end up with issues:
   							</a>
   							
   							
-  							<p id="cityName">{{e2.experience}} {{e2.location}}</p>
+  							<p>Activity: {{e2.experience}} </p>
+  							<p>Location: {{e2.location}}</p>
   						
   							
   							
@@ -281,14 +349,16 @@ check out the clearfix, if I end up with issues:
   								<p> Total Cost: ${{e2.flightPrice + e2.dailyPrice *tripLength| number:2}}</p>
   							</div>
   							
-  							<p> Average Flight Price: ${{e2.flightPrice| number:2}}</p>
+  							<!-- 
+<p> Average Flight Price: ${{e2.flightPrice| number:2}}</p>
   							
-  							<p> Cost Per Day: ${{e2.dailyPrice| number:2}}</p>  					
+  							<p> Cost Per Day: ${{e2.dailyPrice| number:2}}</p>  
+ -->					
   					
   					</div>
   					
   					<div ng-show="!show1">
-  						Budget Too Low :(
+  						We don't have anything that fits your criteria :( but we're working to add more!
   					</div>
   					
   					
@@ -304,7 +374,8 @@ check out the clearfix, if I end up with issues:
   							</a>
   							
   							
-  							<p id="cityName">{{e3.experience}} {{e3.location}}</p>
+  							<p>Activity: {{e3.experience}} </p>
+  							<p>Location: {{e3.location}}</p>
   						
   							
   							
@@ -312,9 +383,11 @@ check out the clearfix, if I end up with issues:
   								<p> Total Cost: ${{e3.flightPrice + e3.dailyPrice *tripLength| number:2}}</p>
   							</div>
   							
-  							<p> Average Flight Price: ${{e3.flightPrice| number:2}}</p>
+  							<!-- 
+<p> Average Flight Price: ${{e3.flightPrice| number:2}}</p>
   							
   							<p> Cost Per Day: ${{e3.dailyPrice| number:2}}</p>
+ -->
   							
   				</div>
 			</div>
