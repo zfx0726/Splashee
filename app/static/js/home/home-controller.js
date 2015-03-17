@@ -27,11 +27,35 @@ angular.module('splashapp')
  	
  	
  	$scope.experiencePictures = [
-     {"experience":"Songkran", "location":"Chiang Mai, Thailand", "path":"../img/picPool/SongkranWatergun.jpg", 
-     "flightPrice":1338, "dailyPrice":20.02, "date": "April", "Weather":"warm", "Environment": "urban"},
+ 	
+ 	
+ 	{"experience":"Aurora Borealis (Northern Lights)", "location":"Reykjavik, Iceland", "path":"../img/picPool/NorthernLights.jpg", 
+ 	 "flightPrice":717, "dailyPrice":69.66, "Weather":"cold", "Activeness":"relaxed"},
+ 	 
+ 	 {"experience":"Scuba Dive", "location":"Great Barrier Reef, Australia", "path":"../img/picPool/ScubaGreatReef.jpg", 
+ 	 "flightPrice":1138, "dailyPrice":100, "date": "November", "Weather":"warm",
+     "Activeness":"active"},
      
      {"experience":"Safari", "location":"Kruger National Park, South Africa", "path":"../img/picPool/KrugerSafari.jpg", 
      "flightPrice":1194, "dailyPrice":40, "date": "September", "Weather":"warm", "Environment":"village"},
+     
+ 	 
+ 	 
+ 	 {"experience":"Meditation Retreat", "location":"Johor Bahru, Malaysia", "path":"../img/picPool/BaliRetreat.jpg", 
+     "flightPrice":1283, "dailyPrice":25, "date": "April", "Weather":"warm", "Environment":"village",
+     "Activeness":"relaxed"},
+     
+     {"experience":"Kitesurf", "location":"Kite Beach, Dominican Republic", "path":"../img/picPool/Kitesurfing.jpg", 
+     "flightPrice":621, "dailyPrice":130, "date": "April", "Weather":"warm", "Environment":"village",
+     "Activeness":"active"},
+     
+     {"experience":"World's Highest Bungee Bridge", "location":"Bloukrans Bridge, South Africa", "path":"../img/picPool/Bungee.jpg", 
+ 	 "flightPrice":1600, "dailyPrice":80, "Weather":"warm", "Environment":"wild", "Activeness":"active"},
+     
+     {"experience":"Songkran", "location":"Chiang Mai, Thailand", "path":"../img/picPool/SongkranWatergun.jpg", 
+     "flightPrice":1338, "dailyPrice":20.02, "date": "April", "Weather":"warm", "Environment": "urban"},
+     
+     
      
      {"experience":"Ski", "location":"Swiss Alps", "path":"../img/picPool/SwissAlps.jpg", 
      "flightPrice":696, "dailyPrice":175, "date": "November","Weather":"cold",
@@ -41,13 +65,7 @@ angular.module('splashapp')
      "flightPrice":935, "dailyPrice":45, "date": "July", "Weather":"warm", 
      "Activeness":"active"},
      
-     {"experience":"Meditation Retreat", "location":"Bali, Indonesia", "path":"../img/picPool/BaliRetreat.jpg", 
-     "flightPrice":1283, "dailyPrice":25, "date": "April", "Weather":"warm", "Environment":"village",
-     "Activeness":"relaxed"},
      
-     {"experience":"Kitesurf", "location":"Kite Beach, Dominican Republic", "path":"../img/picPool/Kitesurfing.jpg", 
-     "flightPrice":621, "dailyPrice":130, "date": "April", "Weather":"warm", "Environment":"village",
-     "Activeness":"active"},
      
      {"experience":"Camp", "location":"Denali National Park, Alaska", "path":"../img/picPool/DenaliCamping.jpg", 
      "flightPrice":526, "dailyPrice":25, "date": "July", "Environment":"wild",
@@ -59,13 +77,13 @@ angular.module('splashapp')
      
  	 
  	 
- 	 {"experience":"Scuba Dive", "location":"Great Barrier Reef, Australia", "path":"../img/picPool/ScubaGreatReef.jpg", 
- 	 "flightPrice":1138, "dailyPrice":100, "date": "November", "Weather":"warm",
-     "Activeness":"active"},
  	 
  	 {"experience":"Pilgrimage to Mecca", "location":"Mecca, Saudi Arabia", "path":"../img/picPool/MeccaPilgrimage.jpg", 
  	 "flightPrice":926, "dailyPrice":25, "date": "May", "Weather":"warm", 
      "Activeness":"active"},
+     
+     
+     
  	 
  	 //{"experience":"Yacht Week", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
  	 
@@ -118,8 +136,25 @@ angular.module('splashapp')
   	}
   	
   	
+  	$scope.exploreImg;
+  	$scope.setExplore = function(path){
+  		$scope.exploreImg=path;
+  		$scope.goTo(5);
+  	}
+  	
   	$scope.goTo = function(num){
-  			$scope.page= num;
+  		$scope.page= num;
+  	}
+  	
+  	
+  	var checkArray = function(array, value){
+  		var match = false;
+		for(var i=0;i<array.length;i++){
+    		if(array[i]===value){
+        		match=true;
+    		}
+		}
+  	
   	}
   	
 	var getRecs = function(){

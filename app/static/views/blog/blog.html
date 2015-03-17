@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid-blog">
     <div class="row" >
         
         
@@ -15,6 +15,8 @@
 		<div class="clearfix visible-sm-block pageThree"></div>
 		<div class="clearfix visible-xs-block pageThree"></div>
 			
+		
+		
 		
 		 <div class= "slideOne col-xs-2 col-sm-2 col-md-2 col-lg-2 visible-xs-block visible-sm-block visible-md-block visible-lg-block">
 			
@@ -41,9 +43,17 @@
 			<br>
 			
 			<div class="blogBar">
-			<a ng-click="set(4)">Bangkok - First Day</a>
+			<a ng-click="set(4)">Bangkok - Day One</a>
 			</div>
 			<br>
+			<div class="blogBar">
+			<a ng-click="set(5)">Bangkok - Day Two</a>
+			</div>
+			
+			<br>
+			<div class="blogBar">
+			<a ng-click="set(6)">Bangkok - Day Three</a>
+			</div>
 			
 <!-- 
 			<div class="blogBar">
@@ -457,7 +467,7 @@
         <div class="col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==4">
             
 
-			<p class="blogHead">Bangkok - First Day</p>
+			<p class="blogHead">Bangkok - Day One</p>
 			
 			<br>
 			
@@ -479,7 +489,11 @@
 			</p>
 			<br>
 			
-			<img ng-src="../img/picPool/Hostel.jpg" width="280" height="220"/>
+	<!-- 
+			mess around with this more: http://cssdemos.tupence.co.uk/image-popup.htm
+ -->
+			<img ng-src="../img/picPool/Hostel.jpg" width="280" height="220" alt="Hostel"/>
+
 			
 			<p>
 			I made my way up to my room, which was a 10 bed mixed room.  Nice, clean quarters,
@@ -523,18 +537,37 @@
 			After wandering what felt like a few miles in each direction, I got lost.  It was a
 			nice chance to talk to some locals and try to figure out directions (backup pre-downloaded 
 			map on my phone, and also a map from the hostel, but I'd rather ask someone).  I talked to a few
-			people who looked around my age, and they all spoke decent English.  Apparently not good enough,
+			people who looked around my age, and they all spoke decent English.  Though apparently not good enough,
 			because the last kid I asked directions from told me the opposite way, and so I ended up accidentally 
 			crossing the Chao Phraya River.  No biggie, there was a nice view from the bridge,
 			I got some extra exercise, and saw more of the city.  I also got pretty good at dodging
-			cars, since there were almost no stop lights in the area, and crossing the street
-			was like a real life game of frogger.</p>
+			cars, since there were almost no stop lights in the area and I had to cross the streets somehow.</p>
 			<br>
+			<br>
+			
+			<p class="blogHead">Thoughts</p>
+			<p>Coming into this, I thought the experience of traveling, meeting new people and understanding
+			new perspectives and cultures, seeing life through a different lens, would change me the most.
+			After one day, I'm starting to think that the bigger benefit is having this unconstrained
+			time, away from the daily pressures of survival and away from the influences I've surrounded
+			myself with.  I can observe myself more objectively, or maybe less objectively?  Either way,
+			it's different and seems beneficial.  I'll be noting thoughts I have and observations I
+			make about myself in a "thoughts" section from now on.  One thing so far.  I watched a great
+			documentary before I came called "A Map For Saturday."  It details one man's year abroad,
+			with perspectives from multiple other backpackers along the way.  It's really great.  In 
+			the film, one major comment at the start was how people felt this deep sense of loneliness,
+			and that made them want to reach out and connect with whoever was around them.  I haven't
+			felt this at all.  Maybe it's still too early, maybe I'm more introverted, maybe something else.
 			
 			<!-- 
 
-			<p>Thoughts</p>
 			
+			
+			Other people's influence.  Every interaction influences you.  While coming to Thailand
+			removes some of the influence of habits and people I've been surrounded by back in the US,
+			it also introduces other influences.  It can be hard to go against norms, ie there's strong
+			familial pressures in chinese society.  But it's also good, as it can show me what things
+			I like and don't like.
 			
 			
 			
@@ -603,9 +636,12 @@
 		<div class="col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==5">
             
 
-			<p class="blogHead">Bangkok - Day Two Highlights</p>
+			<p class="blogHead">Bangkok - Day Two</p>
 			
 			<br>
+			<img ng-src="../img/picPool/AllThaiMe.jpg" width="280" height="220"/>
+			<img ng-src="../img/picPool/FlatSpicyNoodle.jpg" width="280" height="220"/>
+			<img ng-src="../img/picPool/CoconutDesse.jpg" width="280" height="220"/>
 			<p>Lunch</p>
 			<p>
 			Had some good food and nice conversation at lunch.  I was on my way to check out the 
@@ -621,7 +657,11 @@
 			(1 of these for 4 regular coconuts), in coconut milk/syrup.
 			</p>
 			
-			
+			<br>
+			<br>
+			<img ng-src="../img/picPool/ImPark.jpg" width="280" height="220"/>
+			<img ng-src="../img/picPool/ImSi.jpg" width="280" height="220"/>
+			<img ng-src="../img/picPool/BACC.jpg" width="280" height="220"/>
 			<p>Bangkok Arts and Culture Center</p>
 			<p>Armed with my pre-loaded route on Google Maps, I walked around looking for the Bangkok
 			Arts and Culture Center (BACC).  As I mentioned above, I took a quick detour for lunch.
@@ -629,21 +669,70 @@
 			high-schoolers at this mall-ish place called I'm Park.  Stores 
 			at the mall included Domino's, a math workout center, and a Botox clinic.  I continued on,
 			by the National Stadium (host of the FIFA 2015 World Deaf Futsal Championships) and finally to the 
-			BACC.
+			BACC.  Really cool art in there, unfortunately they didn't allow photography throughout a lot of it,
+			so you'll just have to take my word for it.
 			
+			<br>
+			<br>
+			<img ng-src="../img/picPool/BoatToAsiatique.jpg" width="280" height="220"/>
+			<img ng-src="../img/picPool/Asiatique.jpg" width="280" height="220"/>
 			<p>Asiatique with Gift</p>
 			I met up this evening with Gift, a friend from Wash U.  She's been back in Thailand for
-			about a year now.
-			got good spicy papaya salad, some thai sausage (fermented and regular).  Talked about
-			buddhism, yoga, superstition, Thai concepts of time, Thai relationships, college, 
-			self-medication, etc.
-			
-			
+			about a year now.  We decided to take a boat over to Asiatique, this kind of outdoor mall/market/carnival
+			thing.  Like Chinese culture, food seems to be a huge part of Thai culture.  We walked around
+			to all the little stands and Gift pointed out some foods I should try.  We ended up with
+			a bunch of little dishes - some spicy papaya salad, thai sausage (fermented and regular),
+			squid stuffed with egg, salmon.  It was fun to try out a little of everything.  We walked
+			around for a bit more then decided to sit down and grab a couple of beers (Chang).  We caught
+			up on everything that's happened since we've graduated, reminisced about what an awesome time 
+			college was, talked about Thailand.  It was interesting to hear that her transition back to Thailand wasn't
+			that easy; I guess she'd been gone a long time.  I really liked hearing and thinking about how
+			Thai culture was different.  For instance, the perception of time.  Like when a bus is leaving at 
+			8am, it actually leaves when it fills up with people.  Thai people seem much more relaxed about
+			when things occur, and people don't really seem to be in too much of a rush.  Generally pretty
+			chill.  There also seems to be a religious/superstitious tint over a lot of things.  
+			I definitely want to learn more about Buddhism, it seems like it's got some sweet
+			ideas. 
+			</p>
+			<br>
 			
 			<p>Thoughts</p>
+			<p>The future of learning.  Things started off as apprenticeships.  Blacksmiths trained
+			other blacksmiths, artists trained artists, etc.  But in those times, most people learned
+			what they were supposed to learn, based on their positions in society, etc.  Then came
+			the industrial revolution.  Things grew big, we mechanized things, gained economies of 
+			scale, and distributed to the masses.  Including education.  We created universities to 
+			with different types of standard degrees, taught people in a mostly-standardized lecture
+			format, and cranked out degrees.  The future will be smaller, more specific, better tailored.  
+			Technology makes this more feasible.</p>
+			<p>Work art into everything.  Create something beautiful.  Yes, it's good to be practical
+			and design something to make money and support you.  It's better if you can incorporate some
+			mission that aligns with your purpose.  But why not make it beautiful, a work of art.  I 
+			saw some really amazing art today.  The artists spent so long on little details that
+			made the art awe-inspiring.  Do that.  There should be more internet-based, quant-y,
+			art.</p>
+			<p>I want to try meditation for an extended period of time.  Applied for a 10-day meditation
+			retreat in Malaysia today.  I think it'll be really good for reflecting.</p>
 			
 			
 		</div> 
+
+		
+		
+		
+		<div class="col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==6">
+            
+
+			<p class="blogHead">Bangkok - Day Three</p>
+			
+			<p><h2>WELL, IT LOOKS LIKE I'M OFF TO MALAYSIA FOR A 10 DAY MEDITATION RETREAT ON WEDNESDAY!</h2></p>
+			<p><a href="http://dhamma.org.au/v/a/app?re=asia&sc=my&co=522&la=EN">
+			http://dhamma.org.au/v/a/app?re=asia&sc=my&co=522&la=EN</a></p>
+			
+			
+		</div> 
+		
+		
 		
 		
 		
@@ -673,6 +762,9 @@
 			<p>More important than just traveling for a year, is to have this year to myself, to just
 			explore myself.  This time is invaluable.  I haven't thought thoughts like these in awhile, 
 			and it's only the first day.</p>
+			
+			
+			
 
 			
 			

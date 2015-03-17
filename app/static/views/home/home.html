@@ -101,8 +101,8 @@ Filter bar
 
 
 			<div class="col-sm-4 col-md-4 col-lg-4 pagePicBig" ng-repeat="exp in experiencePictures">
-  					<a ng-click="goTo(5)">
-  						<img ng-src="{{exp.path}}" width="280" height="220"/>
+  					<a ng-click="setExplore(exp.path)">
+  						<img class="clickImg" ng-src="{{exp.path}}" width="280" height="220"/>
   					</a>
   					<p>Activity: {{exp.experience}}</p>
   					<p>Location: {{exp.location}}</p>
@@ -429,20 +429,15 @@ Filter bar
     
     
     	<div ng-show="page==5">
-			<div class="col-sm-4 col-md-4 col-lg-4 pageOne"></div>
-            <div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageOne"></div>
-            <div class="col-sm-4 col-md-4 col-lg-4 visible-sm-block visible-md-block visible-lg-block pageOne"></div>
-
-			<div class="clearfix visible-lg-block pageOne"></div>
-			<div class="clearfix visible-md-block pageOne"></div>
 			
-            <div class="col-sm-12 col-md-12 col-lg-12 pageOne"><h2><p class="wrapBox"> 
-          	IN PROGRESS - MORE DETAIL COMING SOON!
+			
+            <div class="col-sm-12 col-md-12 col-lg-12"><h2><p class="wrapBox"> 
+          	<img class="headerPic" ng-src="{{exploreImg}}" />
             </p></h2>
             
-            <br>
+
             
-            <h2><p class="box">
+            <h2><p class="exploreBox">
             <button class="nextButton" ng-click="goTo(1)">Back</button>
             </p></h2></div>
 

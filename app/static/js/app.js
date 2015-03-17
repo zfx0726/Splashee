@@ -8,6 +8,9 @@ angular.module('splashapp', ['ngResource', 'ngRoute', 'ui.bootstrap', 'ui.date']
       .when('/blog', {
         templateUrl: 'views/blog/blog.html', 
         controller: 'BlogController'})  
+      .when('/mission', {
+        templateUrl: 'views/mission/mission.html', 
+        controller: 'MissionController'})  
       .when('/explore', {
         templateUrl: 'views/explore/explore.html', 
         controller: 'ExploreController'})
