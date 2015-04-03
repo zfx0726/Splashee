@@ -39,6 +39,7 @@ angular.module('splashapp')
      {"experience":"Safari", "location":"Kruger National Park, South Africa", "path":"../img/picPool/KrugerSafari.jpg", 
      "flightPrice":1194, "dailyPrice":40, "date": "September", "Weather":"warm", "Environment":"village"},
      
+     
  	 
  	 
  	 {"experience":"Meditation Retreat", "location":"Johor Bahru, Malaysia", "path":"../img/picPool/BaliRetreat.jpg", 
@@ -49,17 +50,21 @@ angular.module('splashapp')
      "flightPrice":621, "dailyPrice":130, "date": "April", "Weather":"warm", "Environment":"village",
      "Activeness":"active"},
      
+     {"experience":"Ski", "location":"Swiss Alps", "path":"../img/picPool/SwissAlps.jpg", 
+     "flightPrice":696, "dailyPrice":175, "date": "November","Weather":"cold",
+     "Activeness":"active"},
+     
      {"experience":"World's Highest Bungee Bridge", "location":"Bloukrans Bridge, South Africa", "path":"../img/picPool/Bungee.jpg", 
  	 "flightPrice":1600, "dailyPrice":80, "Weather":"warm", "Environment":"wild", "Activeness":"active"},
      
      {"experience":"Songkran", "location":"Chiang Mai, Thailand", "path":"../img/picPool/SongkranWatergun.jpg", 
      "flightPrice":1338, "dailyPrice":20.02, "date": "April", "Weather":"warm", "Environment": "urban"},
      
+     {"experience":"Hot Air Balloon", "location":"Cappadocia, Turkey", "path":"../img/picPool/Balloon.jpg", 
+     "flightPrice":700, "dailyPrice":40, "date": "October", "Weather":"mild", "Environment":"village"},
+     //https://www.flickr.com/photos/88657298@N00/7183574033
      
      
-     {"experience":"Ski", "location":"Swiss Alps", "path":"../img/picPool/SwissAlps.jpg", 
-     "flightPrice":696, "dailyPrice":175, "date": "November","Weather":"cold",
-     "Activeness":"active"},
      
      {"experience":"Running of the Bulls", "location":"Pamplona, Spain", "path":"../img/picPool/RunningBulls.jpg", 
      "flightPrice":935, "dailyPrice":45, "date": "July", "Weather":"warm", 
