@@ -4,7 +4,6 @@ angular.module('splashapp')
   	
   	$scope.page = 1;
   	
-
   	
   	//json model here: http://www.w3schools.com/js/js_json.asp
   	
@@ -13,80 +12,94 @@ angular.module('splashapp')
   	
   	$scope.filters= ["Weather","Environment"];
   	
-  	$scope.inputPictures = [
-     {"category":"Weather", "paths":["../img/picPool/Ski.jpg", "../img/picPool/SummerSunny.jpg","../img/picPool/Autumn.jpg"],"labels":
-     ["cold","warm","mild"]},
-     {"category":"Environment", "paths":["../img/picPool/MountainLake.jpg", "../img/picPool/Village.jpg","../img/picPool/City.jpg"],
-     "labels":["wild","village","urban"]},
-     //{"category":"Company", "paths":["../img/picPool/CityGirl.jpg", "../img/picPool/Kiss.jpg","../img/picPool/Party.jpg"],
-     //"labels":["solo","couple","group"]},
-     {"category":"Activeness", "paths":["../img/picPool/BarcelonaChilling.jpg", "../img/picPool/ParkPic.jpg","../img/picPool/SurfsUp.jpg"],
-     "labels":["relaxed","moderate","active"]},
+//   	$scope.inputPictures = [
+//      {"category":"Weather", "paths":["../img/picPool/Ski.jpg", "../img/picPool/SummerSunny.jpg","../img/picPool/Autumn.jpg"],"labels":
+//      ["cold","warm","mild"]},
+//      {"category":"Environment", "paths":["../img/picPool/MountainLake.jpg", "../img/picPool/Village.jpg","../img/picPool/City.jpg"],
+//      "labels":["wild","village","urban"]},
+//      //{"category":"Company", "paths":["../img/picPool/CityGirl.jpg", "../img/picPool/Kiss.jpg","../img/picPool/Party.jpg"],
+//      //"labels":["solo","couple","group"]},
+//      {"category":"Activeness", "paths":["../img/picPool/BarcelonaChilling.jpg", "../img/picPool/ParkPic.jpg","../img/picPool/SurfsUp.jpg"],
+//      "labels":["relaxed","moderate","active"]},
+//  	]
+
+//		Relax, See, Do -> Learn, Culture, Adrenaline, Self-Realization
+//Culture - historic/modern
+//When looking at the motives for travel, the things that the visitors are most likely to be seeking 
+//are cultural difference, excitement, learning and relaxation.
+
+ 	$scope.inputPictures = [
+     {"category":"Activity type?", "paths":["../img/picPool/BoatCouple.jpg", "../img/picPool/ParkPic.jpg","../img/picPool/SurfsUp.jpg"],
+     "labels":["Relax","See","Do"]},
      
- 	]
+     {"category":"Preferred weather?", "paths":["../img/picPool/Ski.jpg", "../img/picPool/SummerSunny.jpg","../img/picPool/Autumn.jpg"],"labels":
+     ["Cold","Warm","Mild"]},
+     {"category":"Environment?", "paths":["../img/picPool/MountainLake.jpg", "../img/picPool/Village.jpg","../img/picPool/City.jpg"],
+     "labels":["Nature","Town","City"]},
+//      //{"category":"Company", "paths":["../img/picPool/CityGirl.jpg", "../img/picPool/Kiss.jpg","../img/picPool/Party.jpg"],
+//      //"labels":["solo","couple","group"]},
+  	]
  	
  	
  	$scope.experiencePictures = [
  	
  	
  	{"experience":"Aurora Borealis (Northern Lights)", "location":"Reykjavik, Iceland", "path":"../img/picPool/NorthernLights.jpg", 
- 	 "flightPrice":717, "dailyPrice":69.66, "Weather":"cold", "Activeness":"relaxed"},
+ 	 "flightPrice":717, "dailyPrice":69.66, "tags":["Relax","See","Cold","Nature"]},
  	 
  	 {"experience":"Scuba Dive", "location":"Great Barrier Reef, Australia", "path":"../img/picPool/ScubaGreatReef.jpg", 
- 	 "flightPrice":1138, "dailyPrice":100, "date": "November", "Weather":"warm",
-     "Activeness":"active"},
+ 	 "flightPrice":1138, "dailyPrice":100, "date": "November", "tags":["Warm","Nature","Do"]},
      
      {"experience":"Safari", "location":"Kruger National Park, South Africa", "path":"../img/picPool/KrugerSafari.jpg", 
-     "flightPrice":1194, "dailyPrice":40, "date": "September", "Weather":"warm", "Environment":"village"},
+     "flightPrice":1194, "dailyPrice":40, "date": "September", "tags":["Warm","Mild","Nature","Town","See","Do"]},
      
      
  	 
  	 
  	 {"experience":"Meditation Retreat", "location":"Johor Bahru, Malaysia", "path":"../img/picPool/BaliRetreat.jpg", 
-     "flightPrice":1283, "dailyPrice":25, "date": "April", "Weather":"warm", "Environment":"village",
-     "Activeness":"relaxed"},
+     "flightPrice":1283, "dailyPrice":25, "date": "April", "tags":["Warm","Town","Relax","Do","Mild"]},
      
      {"experience":"Kitesurf", "location":"Kite Beach, Dominican Republic", "path":"../img/picPool/Kitesurfing.jpg", 
-     "flightPrice":621, "dailyPrice":130, "date": "April", "Weather":"warm", "Environment":"village",
-     "Activeness":"active"},
+     "flightPrice":621, "dailyPrice":130, "date": "April", "tags":["Warm","Town","Do"]},
      
      {"experience":"Ski", "location":"Swiss Alps", "path":"../img/picPool/SwissAlps.jpg", 
-     "flightPrice":696, "dailyPrice":175, "date": "November","Weather":"cold",
-     "Activeness":"active"},
+     "flightPrice":696, "dailyPrice":175, "date": "November", "tags":["Cold","Town","Nature","Do"]},
      
      {"experience":"World's Highest Bungee Bridge", "location":"Bloukrans Bridge, South Africa", "path":"../img/picPool/Bungee.jpg", 
- 	 "flightPrice":1600, "dailyPrice":80, "Weather":"warm", "Environment":"wild", "Activeness":"active"},
+ 	 "flightPrice":1600, "dailyPrice":80, "tags":["Warm","Nature","Do"]},
      
      {"experience":"Songkran", "location":"Chiang Mai, Thailand", "path":"../img/picPool/SongkranWatergun.jpg", 
-     "flightPrice":1338, "dailyPrice":20.02, "date": "April", "Weather":"warm", "Environment": "urban"},
+     "flightPrice":1338, "dailyPrice":20.02, "date": "April", "tags":["Warm","City","See","Do"]},
      
      {"experience":"Hot Air Balloon", "location":"Cappadocia, Turkey", "path":"../img/picPool/Balloon.jpg", 
-     "flightPrice":700, "dailyPrice":40, "date": "October", "Weather":"mild", "Environment":"village"},
+     "flightPrice":700, "dailyPrice":40, "date": "October", "tags":["Warm","Nature","Town","Do","See"]},
      //https://www.flickr.com/photos/88657298@N00/7183574033
      
      
      
      {"experience":"Running of the Bulls", "location":"Pamplona, Spain", "path":"../img/picPool/RunningBulls.jpg", 
-     "flightPrice":935, "dailyPrice":45, "date": "July", "Weather":"warm", 
-     "Activeness":"active"},
+     "flightPrice":935, "dailyPrice":45, "date": "July", "tags":["Warm","City","Do"]},
      
      
      
      {"experience":"Camp", "location":"Denali National Park, Alaska", "path":"../img/picPool/DenaliCamping.jpg", 
-     "flightPrice":526, "dailyPrice":25, "date": "July", "Environment":"wild",
-     "Activeness":"active"},
+     "flightPrice":526, "dailyPrice":25, "date": "July", "tags":["Mild", "Cold","Nature","Do","See"]},
      
      
      {"experience":"Wine Tour", "location":"Napa Valley, California", "path":"../img/picPool/NapaVineyard.jpg", 
-     "flightPrice":328, "dailyPrice":100, "date": "September", "Weather":"mild"},
+     "flightPrice":328, "dailyPrice":100, "date": "September", "tags":["Warm","Mild","Nature","Town","Relax","Do"]},
      
  	 
  	 
  	 
  	 {"experience":"Pilgrimage to Mecca", "location":"Mecca, Saudi Arabia", "path":"../img/picPool/MeccaPilgrimage.jpg", 
- 	 "flightPrice":926, "dailyPrice":25, "date": "May", "Weather":"warm", 
-     "Activeness":"active"},
+ 	 "flightPrice":926, "dailyPrice":25, "date": "May", "tags":["Warm","City","Do","See"]},
      
+     {"experience":"Oktoberfest", "location":"Munich, Germany", "path":"../img/picPool/Oktoberfest.jpg", 
+ 	 "flightPrice":782, "dailyPrice":65.82, "date": "September", "tags":["Mild","City","Do","See"] },
+ 	 
+// 	 {"experience":"Volcano Board", "location":"South America", "path":"../img/picPool/Oktoberfest.jpg", 
+ //	 "flightPrice":782, "dailyPrice":65.82, "date": "September", "tags":["Mild","City","Do","See"] },
      
      
  	 
@@ -96,8 +109,7 @@ angular.module('splashapp')
  	 //{"experience":"Work on a Vineyard", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
  	 //{"experience":"Yoga", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
  	   
- 	 {"experience":"Oktoberfest", "location":"Munich, Germany", "path":"../img/picPool/Oktoberfest.jpg", 
- 	 "flightPrice":782, "dailyPrice":65.82, "date": "September", "Weather":"mild" },
+ 	 
  	 
  	 //{"experience":"St Patrick's Day", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
  	 //{"experience":"Adventure Sport", "location":"in New Zealand", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
@@ -119,7 +131,6 @@ angular.module('splashapp')
   	$scope.tripLength;
   	$scope.budget;
   	
-  	$scope.backArrow = false;
   	
   	
   	$scope.forward = function(){
@@ -128,7 +139,10 @@ angular.module('splashapp')
     }
     
     $scope.backward = function(){
-    	$scope.inputBatch= $scope.inputBatch - 1;
+    	if($scope.inputBatch>0)
+    	{
+    		$scope.inputBatch= $scope.inputBatch - 1;
+    	}
     }
 
 
@@ -137,8 +151,13 @@ angular.module('splashapp')
   			$scope.page= $scope.page + 1;
   			
   			//can do this only when page gets large enough
-			getRecs();
+  			
+  			if ($scope.page==3){
+				getRecs();
+			}
   	}
+  	
+  	
   	
   	
   	$scope.exploreImg;
@@ -150,6 +169,7 @@ angular.module('splashapp')
   	$scope.goTo = function(num){
   		$scope.page= num;
   	}
+  	
   	
   	
   	var checkArray = function(array, value){
@@ -164,33 +184,59 @@ angular.module('splashapp')
   	
 	var getRecs = function(){
 		
-		if ($scope.page==3){
   		
   		
   			var tempArray=[];
   			var tempIndex=0;
+  			var matches = false;
+  		
+  		
+  			// maybe filter like this: http://stackoverflow.com/questions/22024631/angularjs-filter-based-on-array-of-strings
   		
   			for (var index=0; index<$scope.experiencePictures.length; index++)
-  			{
+  			{//look through all of the experiences
   				
-  				if($scope.experiencePictures[index].flightPrice + $scope.experiencePictures[index].dailyPrice*$scope.tripLength<$scope.budget)
-  				{
-  					if($scope.experiencePictures[index].Weather==$scope.clickedLabels[0] || !$scope.experiencePictures[index].Weather 
-  					|| !$scope.clickedLabels[0]){
-  						
-  						if($scope.experiencePictures[index].Environment==$scope.clickedLabels[1] || 
-  						!$scope.experiencePictures[index].Environment || !$scope.clickedLabels[1]){
-  							
-  							if($scope.experiencePictures[index].Activeness==$scope.clickedLabels[2] || 
-  							!$scope.experiencePictures[index].Activeness || !$scope.clickedLabels[2]){
-  									tempArray[tempIndex]=$scope.experiencePictures[index];
-  									tempIndex= tempIndex+1;
-  								}
-  								
+//  				if($scope.experiencePictures[index].flightPrice + $scope.experiencePictures[index].dailyPrice*$scope.tripLength<$scope.budget)
+// 				{//first make sure that the experiences are in the right price range, filter for that
+  					
+  					for (var clickedIndex=0; clickedIndex<$scope.clickedLabels.length; clickedIndex++)
+  					{//look through all of the clicked labels, make sure they're contained in the tags
+  					
+  						for (var picTag=0; picTag<$scope.experiencePictures[index].tags.length; picTag++)
+  						{
+  							if($scope.experiencePictures[index].tags[picTag]==$scope.clickedLabels[clickedIndex])
+  							{
+  								matches = true;
+  								picTag=$scope.experiencePictures[index].tags.length;	
   							}
   							
-  						}
-  						
+						}
+						if(matches==false)
+						{
+							clickedIndex= $scope.clickedLabels.length;
+						}
+						else
+						{
+							if(clickedIndex==$scope.clickedLabels.length-1)
+							{
+								if(matches==true)
+								{
+									tempArray[tempIndex]=$scope.experiencePictures[index];
+  									tempIndex= tempIndex+1;	
+								}
+							}
+							matches = false;
+						}
+						
+						
+
+//  					}
+  					
+  					
+  					
+  					
+  					
+  					
   					
   				}
   				
@@ -243,7 +289,7 @@ angular.module('splashapp')
   			}
   			
 	
-  		}
+ 
 	
 	
 	}
@@ -315,15 +361,18 @@ angular.module('splashapp')
 
 
   	$scope.inputClick = function(label){
+  	
+  	 $scope.clickedLabels[$scope.inputBatch]=label;
+  	 
+  	if($scope.inputBatch<$scope.inputPictures.length-1)
+  	{
 		$scope.inputBatch = $scope.inputBatch+1;
-        $scope.backArrow = true;
+	}
+	
         
-        $scope.clickedLabels.push(label);
+       
         
-        	
-        if($scope.inputPictures.length-$scope.inputBatch == 0){
-        	$scope.nextStep();
-        }
+
 	};
 	
 

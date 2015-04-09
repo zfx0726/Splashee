@@ -1,16 +1,52 @@
 from app import app
 from app import db
+from app import mail
 from app.models.matches import *
 from flask import Flask, render_template, jsonify, request
 from flask.ext.wtf import Form
 from wtforms import StringField, SubmitField, HiddenField
 from wtforms.validators import Required
 import json
+from flask_mail import Message
 
 
 @app.route('/', methods=['GET', 'POST'])
 def root():
 	return app.send_static_file('index.html')
+	
+	
+@app.route('/email/', methods=['GET', 'POST'])
+def sendMail():
+	args = json.loads(request.data)
+	import smtplib
+	gmail_user = "zfx0726@gmail.com"
+	gmail_pwd = "Alt2906442ius"
+	FROM = 'zfx0726@gmail.com'
+	TO = ['zfx0726@gmail.com'] #must be a list
+	SUBJECT = "Subscribed"
+	TEXT = args['email']
+	# Prepare actual message
+	message = """\From: %s\nTo: %s\nSubject: %s\n\n%s
+	""" % (FROM, ", ".join(TO), SUBJECT, TEXT)
+	try:
+		#server = smtplib.SMTP(SERVER) 
+		server = smtplib.SMTP("smtp.gmail.com", 587) #or port 465 doesn't seem to work!
+		server.ehlo()
+		server.starttls()
+		server.login(gmail_user, gmail_pwd)
+		server.sendmail(FROM, TO, message)
+		#server.quit()
+		server.close()
+		print 'successfully sent the mail'
+	except:
+		print "failed to send mail"
+	return jsonify({ 'success': True })
+#                 
+#                 
+# 	msg = Message("Hello", sender="zfx0726@gmail.com", recipients=["zfx0726@gmail.com"])
+# 	msg.body = "test"
+# 	mail.send(msg)
+	
 
 
 @app.route('/api/inputs/', methods=['GET'])
