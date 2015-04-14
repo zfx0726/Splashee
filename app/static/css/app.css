@@ -12,6 +12,12 @@ div select{
 	text-align: center;
 }
 
+.testing{
+	position: absolute;
+	top: 500px;
+	left: 33.333333333%;
+}
+
 .headerPic{
 	width: 100%;
 	height: 40%;
@@ -227,7 +233,7 @@ div input:active{
 }
 
 .nextButton{
-    color: #fff;
+    color: #E0E0E0;
     border: 2px solid #fff;
     border-radius: 2px;
     background-color: transparent;
@@ -251,7 +257,7 @@ div input:active{
 
 
 .recButton{
-    color: #fff;
+    color: #E0E0E0;
     border: 2px solid #fff;
     border-radius: 2px;
     background-color: transparent;
@@ -296,20 +302,20 @@ section{
 	
 }
 
-a:link { color: #FF; }
-a:visited { color: #FFFFFF; }
+a:link { color: #E0E0E0; }
+a:visited { color: #E0E0E0; }
 a:hover { color: #F60; cursor: pointer; }
 a:active {color: #B2F511; }
 
 
 
-a:link { color: #FF; }
-a:visited { color: #FFFFFF; }
+a:link { color: #E0E0E0; }
+a:visited { color: #E0E0E0; }
 a:hover { color: #F60; cursor: pointer; }
 a:active {color: #B2F511; }
 
-td a:link { color: #FF; }
-td a:visited { color: #FFFFFF; }
+td a:link { color: #E0E0E0; }
+td a:visited { color: #E0E0E0; }
 td a:hover { color: #F60; cursor: pointer; }
 
 td a:active {color: #B2F511; }
@@ -440,6 +446,8 @@ position: absolute;
 top: -7px;
 left: 190px;
 }
+
+
 
 
 td, th { padding: 10px; }

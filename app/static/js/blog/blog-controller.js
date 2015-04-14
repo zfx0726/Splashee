@@ -10,9 +10,11 @@ angular.module('splashapp')
 	
 	}
 	
+	$scope.showSubscribe=true;
 	
 	$scope.sendEmail = function(){
   			$http.post('/email/', {'email': $scope.email}).success(function() {
+  			$scope.showSubscribe=false;
          	alert('Subscribed!');
          }).error(function() {
          	alert('ERROR!');

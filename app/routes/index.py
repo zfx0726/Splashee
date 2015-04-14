@@ -8,6 +8,8 @@ from wtforms import StringField, SubmitField, HiddenField
 from wtforms.validators import Required
 import json
 from flask_mail import Message
+from config import MAIL_USERNAME
+from config import MAIL_PASSWORD
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -19,11 +21,11 @@ def root():
 def sendMail():
 	args = json.loads(request.data)
 	import smtplib
-	gmail_user = "zfx0726@gmail.com"
-	gmail_pwd = "Alt2906442ius"
-	FROM = 'zfx0726@gmail.com'
-	TO = ['zfx0726@gmail.com'] #must be a list
-	SUBJECT = "Subscribed"
+	gmail_user = MAIL_USERNAME
+	gmail_pwd = MAIL_PASSWORD
+	FROM = gmail_user
+	TO = [gmail_user] #must be a list
+	SUBJECT = "Splashee Alert!"
 	TEXT = args['email']
 	# Prepare actual message
 	message = """\From: %s\nTo: %s\nSubject: %s\n\n%s

@@ -4,9 +4,48 @@ angular.module('splashapp')
   	
   	$scope.page = 1;
   	
+	$scope.destination;
+	
+	$scope.cols=0;
+	
+	$scope.start1="";
+	$scope.end1=""
+	
+	$scope.divs = [
+ 	{"startDate":"", "endDate":""},
+ 	{"startDate":"", "endDate":""},
+ 	{"startDate":"", "endDate":""},
+ 	{"startDate":"", "endDate":""},
+  	];
+	
+	
+    $scope.email1="";
+    
+    $scope.emailDivs=[
+    {email:""},
+    {email:""},
+    {email:""},
+    {email:""},
+    {email:""},
+    {email:""},
+    ];  
+    
+    
+    
+    
+    $scope.emailCols=1;
+    $scope.increaseEmailCols = function () {
+        $scope.emailCols++;
+    }
+    
+    $scope.increaseCols = function () {
+        $scope.cols++;
+    }
   	
   	//json model here: http://www.w3schools.com/js/js_json.asp
   	
+  	
+  
   	
   	$scope.clickedLabels= [];
   	
@@ -27,18 +66,39 @@ angular.module('splashapp')
 //Culture - historic/modern
 //When looking at the motives for travel, the things that the visitors are most likely to be seeking 
 //are cultural difference, excitement, learning and relaxation.
+//put in something like: priority: budget, time, experience
 
  	$scope.inputPictures = [
-     {"category":"Activity type?", "paths":["../img/picPool/BoatCouple.jpg", "../img/picPool/ParkPic.jpg","../img/picPool/SurfsUp.jpg"],
+ 	
+ 	//need to see if they already have a destination/activity in mind or if they need to pick a place first
+ 	
+ 	// {"category":"How much have you planned so far?", "paths":["../img/picPool/BoatCouple.jpg", "../img/picPool/ParkPic.jpg","../img/picPool/SurfsUp.jpg"],
+//      "labels":["Destination","Activities","Details"]},
+ 	
+ 	
+     {"category":"Would you rather...", "paths":["../img/picPool/BoatCouple.jpg", "../img/picPool/ParkPic.jpg","../img/picPool/SurfsUp.jpg"],
      "labels":["Relax","See","Do"]},
      
-     {"category":"Preferred weather?", "paths":["../img/picPool/Ski.jpg", "../img/picPool/SummerSunny.jpg","../img/picPool/Autumn.jpg"],"labels":
+     {"category":"Weather?", "paths":["../img/picPool/Ski.jpg", "../img/picPool/SummerSunny.jpg","../img/picPool/Autumn.jpg"],"labels":
      ["Cold","Warm","Mild"]},
-     {"category":"Environment?", "paths":["../img/picPool/MountainLake.jpg", "../img/picPool/Village.jpg","../img/picPool/City.jpg"],
+     
+     {"category":"Environment?", "paths":["../img/picPool/MountainLake.jpg", "../img/picPool/DenmarkTown.jpg","../img/picPool/City.jpg"],
      "labels":["Nature","Town","City"]},
+     //town https://www.flickr.com/photos/hozho/15242684458
+     
+     
+    // {"category":"What type of experience?", "paths":["../img/picPool/MountainLake.jpg", "../img/picPool/Village.jpg","../img/picPool/City.jpg"],
+    // "labels":["Roughing it","Quaint","Luxury"]},
+     
+     {"category":"Will you be traveling by yourself or with others?", "paths":["../img/picPool/CityGirl.jpg", "../img/picPool/GroupTravel.jpg"],
+     "labels":["Solo","Group"]},
+     //https://www.flickr.com/photos/rbos/77157265
+     
 //      //{"category":"Company", "paths":["../img/picPool/CityGirl.jpg", "../img/picPool/Kiss.jpg","../img/picPool/Party.jpg"],
 //      //"labels":["solo","couple","group"]},
   	]
+ 	
+ 	
  	
  	
  	$scope.experiencePictures = [
@@ -102,6 +162,12 @@ angular.module('splashapp')
  //	 "flightPrice":782, "dailyPrice":65.82, "date": "September", "tags":["Mild","City","Do","See"] },
      
      
+     
+//     {"experience":"Sonar", "location":"Barcelona, Spain", "path":"../img/picPool/Oktoberfest.jpg", 
+// 	 "flightPrice":782, "dailyPrice":65.82, "date": "September", "tags":["Mild","City","Do","See"] },
+     
+     
+     
  	 
  	 //{"experience":"Yacht Week", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
  	 
@@ -130,33 +196,53 @@ angular.module('splashapp')
   	
   	$scope.tripLength;
   	$scope.budget;
+  	$scope.startingCity;
   	
   	
-  	
-  	$scope.forward = function(){
-    	$scope.inputBatch= $scope.inputBatch + 1;
-    	$scope.clickedLabels.push(null);
-    }
-    
-    $scope.backward = function(){
-    	if($scope.inputBatch>0)
-    	{
-    		$scope.inputBatch= $scope.inputBatch - 1;
-    	}
-    }
 
 
 
-	$scope.nextStep = function(){
-  			$scope.page= $scope.page + 1;
+
+	$scope.nextStep = function(clicked){
+  		$scope.page= $scope.page + 1;
+  				
+  		if (clicked!=null)
+  		{
   			
-  			//can do this only when page gets large enough
-  			
-  			if ($scope.page==3){
-				getRecs();
-			}
+  			$scope.clickedLabels.push(clicked);
+  		}
+	
   	}
   	
+  	$scope.emailClick = function(){
+  		var emailString="";
+  		for(var j=0; j<$scope.emailCols; j++){
+  			emailString=emailString.concat($scope.emailDivs[j].email+",");
+  		}
+  		
+  		$scope.nextStep($scope.email1.concat(","+emailString));
+  		$scope.sendClicked()
+  	}
+  	
+  	
+  	
+  	$scope.sendClicked = function(){
+  			$http.post('/email/', {'email': $scope.clickedLabels}).success(function() {
+         	alert('Good Job!');
+         }).error(function() {
+         	alert('ERROR!');
+         });
+     };
+  	
+  	
+  	$scope.dateClick = function(){
+  		var dateString="";
+  		for(var j=0; j<=$scope.cols; j++){
+  			dateString=dateString.concat($scope.divs[j].startDate+","+$scope.divs[j].endDate+",");
+  		}
+  		
+  		$scope.nextStep(($scope.start1+","+$scope.end1).concat(","+dateString));
+  	}
   	
   	
   	
@@ -171,128 +257,7 @@ angular.module('splashapp')
   	}
   	
   	
-  	
-  	var checkArray = function(array, value){
-  		var match = false;
-		for(var i=0;i<array.length;i++){
-    		if(array[i]===value){
-        		match=true;
-    		}
-		}
-  	
-  	}
-  	
-	var getRecs = function(){
-		
-  		
-  		
-  			var tempArray=[];
-  			var tempIndex=0;
-  			var matches = false;
-  		
-  		
-  			// maybe filter like this: http://stackoverflow.com/questions/22024631/angularjs-filter-based-on-array-of-strings
-  		
-  			for (var index=0; index<$scope.experiencePictures.length; index++)
-  			{//look through all of the experiences
-  				
-//  				if($scope.experiencePictures[index].flightPrice + $scope.experiencePictures[index].dailyPrice*$scope.tripLength<$scope.budget)
-// 				{//first make sure that the experiences are in the right price range, filter for that
-  					
-  					for (var clickedIndex=0; clickedIndex<$scope.clickedLabels.length; clickedIndex++)
-  					{//look through all of the clicked labels, make sure they're contained in the tags
-  					
-  						for (var picTag=0; picTag<$scope.experiencePictures[index].tags.length; picTag++)
-  						{
-  							if($scope.experiencePictures[index].tags[picTag]==$scope.clickedLabels[clickedIndex])
-  							{
-  								matches = true;
-  								picTag=$scope.experiencePictures[index].tags.length;	
-  							}
-  							
-						}
-						if(matches==false)
-						{
-							clickedIndex= $scope.clickedLabels.length;
-						}
-						else
-						{
-							if(clickedIndex==$scope.clickedLabels.length-1)
-							{
-								if(matches==true)
-								{
-									tempArray[tempIndex]=$scope.experiencePictures[index];
-  									tempIndex= tempIndex+1;	
-								}
-							}
-							matches = false;
-						}
-						
-						
 
-//  					}
-  					
-  					
-  					
-  					
-  					
-  					
-  					
-  				}
-  				
-  			}
-  			
-  			
-  			
-  			
-  			if (tempArray.length==0)
-  			{
-  				
-  				$scope.show1=false;
-  				$scope.show2=false;
-  				$scope.show3=false;
-  			}
-
-  			else{
-  				
-  				var randomIndex = Math.floor(Math.random() * tempArray.length);
-  				$scope.e1= tempArray[randomIndex];
-  				
-  				if (tempArray.length==1)
-  				{	
-  					$scope.show2=false;
-  					$scope.show3=false;
-  				}
-				else{
-				
-					
-					tempArray.splice(randomIndex,1);
-					randomIndex = Math.floor(Math.random() * tempArray.length);
-  					$scope.e2= tempArray[randomIndex];
-  					
-  				
-					if (tempArray.length==1)
-  					{
-  						$scope.show3=false;
-  					}
-
-					else{
-						tempArray.splice(randomIndex,1);
-						randomIndex = Math.floor(Math.random() * tempArray.length);
-  						$scope.e3= tempArray[randomIndex];
-					
-					}
-
-  				}
-  				
-  			
-  			}
-  			
-	
- 
-	
-	
-	}
 	
 	
   	
@@ -375,6 +340,8 @@ angular.module('splashapp')
 
 	};
 	
+	$('#dp1').datepicker();
+	$('#dp2').datepicker();
 
 
 
