@@ -7,7 +7,7 @@ from flask.ext.wtf import Form
 from wtforms import StringField, SubmitField, HiddenField
 from wtforms.validators import Required
 import json
-from flask_mail import Message
+# from flask_mail import Message
 from config import MAIL_USERNAME
 from config import MAIL_PASSWORD
 
@@ -20,28 +20,28 @@ def root():
 @app.route('/email/', methods=['GET', 'POST'])
 def sendMail():
 	args = json.loads(request.data)
-	import smtplib
-	gmail_user = MAIL_USERNAME
-	gmail_pwd = MAIL_PASSWORD
-	FROM = gmail_user
-	TO = [gmail_user] #must be a list
-	SUBJECT = "Splashee Alert!"
-	TEXT = args['email']
-	# Prepare actual message
-	message = """\From: %s\nTo: %s\nSubject: %s\n\n%s
-	""" % (FROM, ", ".join(TO), SUBJECT, TEXT)
-	try:
-		#server = smtplib.SMTP(SERVER) 
-		server = smtplib.SMTP("smtp.gmail.com", 587) #or port 465 doesn't seem to work!
-		server.ehlo()
-		server.starttls()
-		server.login(gmail_user, gmail_pwd)
-		server.sendmail(FROM, TO, message)
-		#server.quit()
-		server.close()
-		print 'successfully sent the mail'
-	except:
-		print "failed to send mail"
+# 	import smtplib
+# 	gmail_user = MAIL_USERNAME
+# 	gmail_pwd = MAIL_PASSWORD
+# 	FROM = gmail_user
+# 	TO = [gmail_user] #must be a list
+# 	SUBJECT = "Splashee Alert!"
+# 	TEXT = args['email']
+# 	# Prepare actual message
+# 	message = """\From: %s\nTo: %s\nSubject: %s\n\n%s
+# 	""" % (FROM, ", ".join(TO), SUBJECT, TEXT)
+# 	try:
+# 		#server = smtplib.SMTP(SERVER) 
+# 		server = smtplib.SMTP("smtp.gmail.com", 587) #or port 465 doesn't seem to work!
+# 		server.ehlo()
+# 		server.starttls()
+# 		server.login(gmail_user, gmail_pwd)
+# 		server.sendmail(FROM, TO, message)
+# 		#server.quit()
+# 		server.close()
+# 		print 'successfully sent the mail'
+# 	except:
+# 		print "failed to send mail"
 	return jsonify({ 'success': True })
 #                 
 #                 

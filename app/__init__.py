@@ -2,14 +2,14 @@
 
 from flask import Flask, render_template
 from flask.ext.sqlalchemy import SQLAlchemy
-from flask_mail import Mail
+# from flask_mail import Mail
 
 
 app = Flask(__name__, static_url_path='')
 app.config.from_object('config')
 
 
-mail = Mail(app)
+#mail = Mail(app)
 
 db = SQLAlchemy(app)
 
