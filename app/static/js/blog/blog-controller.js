@@ -12,8 +12,9 @@ angular.module('splashapp')
 	
 	$scope.showSubscribe=true;
 	
+	//get rid of this eventually and send real emails!
 	$scope.sendEmail = function(){
-  			$http.post('/email/', {'email': $scope.email}).success(function() {
+  			$http.post('/tempPosts/', {'email': $scope.email}).success(function() {
   			$scope.showSubscribe=false;
          	alert('Subscribed!');
          }).error(function() {

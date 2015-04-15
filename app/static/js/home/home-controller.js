@@ -221,13 +221,21 @@ angular.module('splashapp')
   		}
   		
   		$scope.nextStep($scope.email1.concat(","+emailString));
-  		$scope.sendClicked()
+  		$scope.sendClicked();
   	}
   	
   	
+  	var arrayToString = function(ieClickedLabels){
+  		var emailString="";
+  		for(var j=0; j<ieClickedLabels.length; j++){
+  			emailString=emailString.concat(ieClickedLabels[j]+",");
+  		}  		
+  		return emailString;
+  	}
   	
+  	//need to change this to send email eventually.  Adding in database for now.
   	$scope.sendClicked = function(){
-  			$http.post('/email/', {'email': $scope.clickedLabels}).success(function() {
+  			$http.post('/tempPosts/', {'email': arrayToString($scope.clickedLabels)}).success(function() {
          	alert('Good Job!');
          }).error(function() {
          	alert('ERROR!');
