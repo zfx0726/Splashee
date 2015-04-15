@@ -49,7 +49,6 @@ angular.module('splashapp')
   	
   	$scope.clickedLabels= [];
   	
-  	$scope.filters= ["Weather","Environment"];
   	
 //   	$scope.inputPictures = [
 //      {"category":"Weather", "paths":["../img/picPool/Ski.jpg", "../img/picPool/SummerSunny.jpg","../img/picPool/Autumn.jpg"],"labels":
@@ -76,13 +75,13 @@ angular.module('splashapp')
 //      "labels":["Destination","Activities","Details"]},
  	
  	
-     {"category":"Would you rather...", "paths":["../img/picPool/BoatCouple.jpg", "../img/picPool/ParkPic.jpg","../img/picPool/SurfsUp.jpg"],
+     {"category":"Would you rather...", "paths":["../img/picPool/BoatCoupleO.jpg", "../img/picPool/ParkPicO.jpg","../img/picPool/SurfsUpO.jpg"],
      "labels":["Relax","See","Do"]},
      
-     {"category":"Weather?", "paths":["../img/picPool/Ski.jpg", "../img/picPool/SummerSunny.jpg","../img/picPool/Autumn.jpg"],"labels":
+     {"category":"Weather?", "paths":["../img/picPool/SkiO.jpg", "../img/picPool/SummerSunny.jpg","../img/picPool/AutumnO.jpg"],"labels":
      ["Cold","Warm","Mild"]},
      
-     {"category":"Environment?", "paths":["../img/picPool/MountainLake.jpg", "../img/picPool/DenmarkTown.jpg","../img/picPool/City.jpg"],
+     {"category":"Environment?", "paths":["../img/picPool/MountainLakeO.jpg", "../img/picPool/DenmarkTownO.jpg","../img/picPool/CityO.jpg"],
      "labels":["Nature","Town","City"]},
      //town https://www.flickr.com/photos/hozho/15242684458
      
@@ -90,7 +89,7 @@ angular.module('splashapp')
     // {"category":"What type of experience?", "paths":["../img/picPool/MountainLake.jpg", "../img/picPool/Village.jpg","../img/picPool/City.jpg"],
     // "labels":["Roughing it","Quaint","Luxury"]},
      
-     {"category":"Will you be traveling by yourself or with others?", "paths":["../img/picPool/CityGirl.jpg", "../img/picPool/GroupTravel.jpg"],
+     {"category":"Will you be traveling by yourself or with others?", "paths":["../img/picPool/CityGirlO.jpg", "../img/picPool/GroupTravelO.jpg"],
      "labels":["Solo","Group"]},
      //https://www.flickr.com/photos/rbos/77157265
      
@@ -101,89 +100,89 @@ angular.module('splashapp')
  	
  	
  	
- 	$scope.experiencePictures = [
- 	
- 	
- 	{"experience":"Aurora Borealis (Northern Lights)", "location":"Reykjavik, Iceland", "path":"../img/picPool/NorthernLights.jpg", 
- 	 "flightPrice":717, "dailyPrice":69.66, "tags":["Relax","See","Cold","Nature"]},
- 	 
- 	 {"experience":"Scuba Dive", "location":"Great Barrier Reef, Australia", "path":"../img/picPool/ScubaGreatReef.jpg", 
- 	 "flightPrice":1138, "dailyPrice":100, "date": "November", "tags":["Warm","Nature","Do"]},
-     
-     {"experience":"Safari", "location":"Kruger National Park, South Africa", "path":"../img/picPool/KrugerSafari.jpg", 
-     "flightPrice":1194, "dailyPrice":40, "date": "September", "tags":["Warm","Mild","Nature","Town","See","Do"]},
-     
-     
- 	 
- 	 
- 	 {"experience":"Meditation Retreat", "location":"Johor Bahru, Malaysia", "path":"../img/picPool/BaliRetreat.jpg", 
-     "flightPrice":1283, "dailyPrice":25, "date": "April", "tags":["Warm","Town","Relax","Do","Mild"]},
-     
-     {"experience":"Kitesurf", "location":"Kite Beach, Dominican Republic", "path":"../img/picPool/Kitesurfing.jpg", 
-     "flightPrice":621, "dailyPrice":130, "date": "April", "tags":["Warm","Town","Do"]},
-     
-     {"experience":"Ski", "location":"Swiss Alps", "path":"../img/picPool/SwissAlps.jpg", 
-     "flightPrice":696, "dailyPrice":175, "date": "November", "tags":["Cold","Town","Nature","Do"]},
-     
-     {"experience":"World's Highest Bungee Bridge", "location":"Bloukrans Bridge, South Africa", "path":"../img/picPool/Bungee.jpg", 
- 	 "flightPrice":1600, "dailyPrice":80, "tags":["Warm","Nature","Do"]},
-     
-     {"experience":"Songkran", "location":"Chiang Mai, Thailand", "path":"../img/picPool/SongkranWatergun.jpg", 
-     "flightPrice":1338, "dailyPrice":20.02, "date": "April", "tags":["Warm","City","See","Do"]},
-     
-     {"experience":"Hot Air Balloon", "location":"Cappadocia, Turkey", "path":"../img/picPool/Balloon.jpg", 
-     "flightPrice":700, "dailyPrice":40, "date": "October", "tags":["Warm","Nature","Town","Do","See"]},
-     //https://www.flickr.com/photos/88657298@N00/7183574033
-     
-     
-     
-     {"experience":"Running of the Bulls", "location":"Pamplona, Spain", "path":"../img/picPool/RunningBulls.jpg", 
-     "flightPrice":935, "dailyPrice":45, "date": "July", "tags":["Warm","City","Do"]},
-     
-     
-     
-     {"experience":"Camp", "location":"Denali National Park, Alaska", "path":"../img/picPool/DenaliCamping.jpg", 
-     "flightPrice":526, "dailyPrice":25, "date": "July", "tags":["Mild", "Cold","Nature","Do","See"]},
-     
-     
-     {"experience":"Wine Tour", "location":"Napa Valley, California", "path":"../img/picPool/NapaVineyard.jpg", 
-     "flightPrice":328, "dailyPrice":100, "date": "September", "tags":["Warm","Mild","Nature","Town","Relax","Do"]},
-     
- 	 
- 	 
- 	 
- 	 {"experience":"Pilgrimage to Mecca", "location":"Mecca, Saudi Arabia", "path":"../img/picPool/MeccaPilgrimage.jpg", 
- 	 "flightPrice":926, "dailyPrice":25, "date": "May", "tags":["Warm","City","Do","See"]},
-     
-     {"experience":"Oktoberfest", "location":"Munich, Germany", "path":"../img/picPool/Oktoberfest.jpg", 
- 	 "flightPrice":782, "dailyPrice":65.82, "date": "September", "tags":["Mild","City","Do","See"] },
- 	 
-// 	 {"experience":"Volcano Board", "location":"South America", "path":"../img/picPool/Oktoberfest.jpg", 
- //	 "flightPrice":782, "dailyPrice":65.82, "date": "September", "tags":["Mild","City","Do","See"] },
-     
-     
-     
-//     {"experience":"Sonar", "location":"Barcelona, Spain", "path":"../img/picPool/Oktoberfest.jpg", 
-// 	 "flightPrice":782, "dailyPrice":65.82, "date": "September", "tags":["Mild","City","Do","See"] },
-     
-     
-     
- 	 
- 	 //{"experience":"Yacht Week", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
- 	 
- 	 //{"experience":"Hiking", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
- 	 //{"experience":"Work on a Vineyard", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
- 	 //{"experience":"Yoga", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
- 	   
- 	 
- 	 
- 	 //{"experience":"St Patrick's Day", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
- 	 //{"experience":"Adventure Sport", "location":"in New Zealand", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
- 	 //{"experience":"Surf", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
- 	 //{"experience":"Trek", "location":"in Antarctica", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
- 	 //{"experience":"Surf", "location":"in Galapagos", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
- 	 //{"experience":"Full Moon Party", "location":"in Koh Phangan, Thailand", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
- 	]
+ 	// $scope.experiencePictures = [
+//  	
+//  	
+//  	{"experience":"Aurora Borealis (Northern Lights)", "location":"Reykjavik, Iceland", "path":"../img/picPool/NorthernLights.jpg", 
+//  	 "flightPrice":717, "dailyPrice":69.66, "tags":["Relax","See","Cold","Nature"]},
+//  	 
+//  	 {"experience":"Scuba Dive", "location":"Great Barrier Reef, Australia", "path":"../img/picPool/ScubaGreatReef.jpg", 
+//  	 "flightPrice":1138, "dailyPrice":100, "date": "November", "tags":["Warm","Nature","Do"]},
+//      
+//      {"experience":"Safari", "location":"Kruger National Park, South Africa", "path":"../img/picPool/KrugerSafari.jpg", 
+//      "flightPrice":1194, "dailyPrice":40, "date": "September", "tags":["Warm","Mild","Nature","Town","See","Do"]},
+//      
+//      
+//  	 
+//  	 
+//  	 {"experience":"Meditation Retreat", "location":"Johor Bahru, Malaysia", "path":"../img/picPool/BaliRetreat.jpg", 
+//      "flightPrice":1283, "dailyPrice":25, "date": "April", "tags":["Warm","Town","Relax","Do","Mild"]},
+//      
+//      {"experience":"Kitesurf", "location":"Kite Beach, Dominican Republic", "path":"../img/picPool/Kitesurfing.jpg", 
+//      "flightPrice":621, "dailyPrice":130, "date": "April", "tags":["Warm","Town","Do"]},
+//      
+//      {"experience":"Ski", "location":"Swiss Alps", "path":"../img/picPool/SwissAlps.jpg", 
+//      "flightPrice":696, "dailyPrice":175, "date": "November", "tags":["Cold","Town","Nature","Do"]},
+//      
+//      {"experience":"World's Highest Bungee Bridge", "location":"Bloukrans Bridge, South Africa", "path":"../img/picPool/Bungee.jpg", 
+//  	 "flightPrice":1600, "dailyPrice":80, "tags":["Warm","Nature","Do"]},
+//      
+//      {"experience":"Songkran", "location":"Chiang Mai, Thailand", "path":"../img/picPool/SongkranWatergun.jpg", 
+//      "flightPrice":1338, "dailyPrice":20.02, "date": "April", "tags":["Warm","City","See","Do"]},
+//      
+//      {"experience":"Hot Air Balloon", "location":"Cappadocia, Turkey", "path":"../img/picPool/Balloon.jpg", 
+//      "flightPrice":700, "dailyPrice":40, "date": "October", "tags":["Warm","Nature","Town","Do","See"]},
+//      //https://www.flickr.com/photos/88657298@N00/7183574033
+//      
+//      
+//      
+//      {"experience":"Running of the Bulls", "location":"Pamplona, Spain", "path":"../img/picPool/RunningBulls.jpg", 
+//      "flightPrice":935, "dailyPrice":45, "date": "July", "tags":["Warm","City","Do"]},
+//      
+//      
+//      
+//      {"experience":"Camp", "location":"Denali National Park, Alaska", "path":"../img/picPool/DenaliCamping.jpg", 
+//      "flightPrice":526, "dailyPrice":25, "date": "July", "tags":["Mild", "Cold","Nature","Do","See"]},
+//      
+//      
+//      {"experience":"Wine Tour", "location":"Napa Valley, California", "path":"../img/picPool/NapaVineyard.jpg", 
+//      "flightPrice":328, "dailyPrice":100, "date": "September", "tags":["Warm","Mild","Nature","Town","Relax","Do"]},
+//      
+//  	 
+//  	 
+//  	 
+//  	 {"experience":"Pilgrimage to Mecca", "location":"Mecca, Saudi Arabia", "path":"../img/picPool/MeccaPilgrimage.jpg", 
+//  	 "flightPrice":926, "dailyPrice":25, "date": "May", "tags":["Warm","City","Do","See"]},
+//      
+//      {"experience":"Oktoberfest", "location":"Munich, Germany", "path":"../img/picPool/Oktoberfest.jpg", 
+//  	 "flightPrice":782, "dailyPrice":65.82, "date": "September", "tags":["Mild","City","Do","See"] },
+//  	 
+// // 	 {"experience":"Volcano Board", "location":"South America", "path":"../img/picPool/Oktoberfest.jpg", 
+//  //	 "flightPrice":782, "dailyPrice":65.82, "date": "September", "tags":["Mild","City","Do","See"] },
+//      
+//      
+//      
+// //     {"experience":"Sonar", "location":"Barcelona, Spain", "path":"../img/picPool/Oktoberfest.jpg", 
+// // 	 "flightPrice":782, "dailyPrice":65.82, "date": "September", "tags":["Mild","City","Do","See"] },
+//      
+//      
+//      
+//  	 
+//  	 //{"experience":"Yacht Week", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+//  	 
+//  	 //{"experience":"Hiking", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+//  	 //{"experience":"Work on a Vineyard", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+//  	 //{"experience":"Yoga", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+//  	   
+//  	 
+//  	 
+//  	 //{"experience":"St Patrick's Day", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+//  	 //{"experience":"Adventure Sport", "location":"in New Zealand", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+//  	 //{"experience":"Surf", "location":"in Mecca", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+//  	 //{"experience":"Trek", "location":"in Antarctica", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+//  	 //{"experience":"Surf", "location":"in Galapagos", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+//  	 //{"experience":"Full Moon Party", "location":"in Koh Phangan, Thailand", "path":"../img/picPool/MeccaPilgrimage.jpg", "flightPrice":926, "dailyPrice":25, "date": "May"},
+//  	]
 
   	$scope.inputBatch = 0;
   	$scope.e1;

@@ -74,7 +74,8 @@ def getCities():
 @app.route('/tempPosts/', methods=['GET', 'POST'])
 def addPosts():
 	args = json.loads(request.data)
-	a=Picture(path=args['email'], category='city', total_count=1)	
+	picID = Picture.query.count()
+	a=Picture(id=picID, path=args['email'], category='city', total_count=1)	
 	db.session.add(a)
 	db.session.commit()
 	return jsonify({ 'success': True })
