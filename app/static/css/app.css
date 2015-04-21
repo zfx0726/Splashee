@@ -245,6 +245,19 @@ div input:active{
   box-shadow:         0px 0px 0px 0px #FFFFFF;
 }
 
+.blogButton{
+    color: #E0E0E0;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    background-color: transparent;
+    width: 150px;
+    font-weight: 300;
+    
+    -moz-box-shadow:    0px 0px 0px 0px #FFFFFF;
+  -webkit-box-shadow: 0px 0px 0px 0px #FFFFFF;
+  box-shadow:         0px 0px 0px 0px #FFFFFF;
+}
+
 .subscribeButton{
 
     width: 120px;

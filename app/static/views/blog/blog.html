@@ -17,7 +17,7 @@
 			
 		
 		
-		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 pageThree" ng-show="showSubscribe">
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pageThree" ng-show="showSubscribe">
 		</div>
 		
         
@@ -34,7 +34,29 @@
 				</tr>
 			</table>
 		</div>
+        
+        
+		
+		
+		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 pageThree" ng-show="postNum>13"></div>
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 pageThree" ng-hide="postNum>13">
+        	<h2><p class="box"> 
+            	<button class="backArrow blogButton" ng-click="back()">Back</button>
+            </p></h2>
+        </div>
+		
+		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 pageThree" ng-show="postNum>=13"></div>
+		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 pageThree" ng-show="postNum<13">
+            <h2><p class="box">
+        	<button class="forwardArrow blogButton" ng-click="next()">Next</button>
+        	</p></h2>
+		</div>
+	
+		
             
+            
+        	
+        	
 		
 		 <div class= "slideOne col-xs-2 col-sm-2 col-md-2 col-lg-2 visible-xs-block visible-sm-block visible-md-block visible-lg-block">
 		
@@ -73,59 +95,60 @@
 			<a ng-click="set(4)">First Stop - Bangkok!</a>
 			</div>
 			<br>
+
+
 			<div class="blogBar">
-			<a ng-click="set(5)">Bangkok - Food</a>
+			<a ng-click="set(5)">Bangkok Arts and Culture Center</a>
 			</div>
 			
 			<br>
 			<div class="blogBar">
-			<a ng-click="set(6)">Bangkok Arts and Culture Center</a>
-			</div>
-			
-			<br>
-			<div class="blogBar">
-			<a ng-click="set(7)">Asiatique with Gift</a>
+			<a ng-click="set(6)">Asiatique with Gift</a>
 			</div>
 			
 			
 			
 			<br>
 			<div class="blogBar">
-			<a ng-click="set(8)">Visit From Andrew</a>
+			<a ng-click="set(7)">Visit From Andrew</a>
 			</div>
 			
 			<br>
 			<div class="blogBar">
-			<a ng-click="set(9)">Outdoor Gym</a>
+			<a ng-click="set(8)">Outdoor Gym</a>
 			</div>
 			
 			<br>
 			<div class="blogBar">
-			<a ng-click="set(10)">Meditation Retreat</a>
+			<a ng-click="set(9)">Meditation Retreat</a>
 			</div>
 			
 			 
 <br>
  
 			<div class="blogBar">
-			<a ng-click="set(11)">Crossroads</a>
+			<a ng-click="set(10)">Crossroads</a>
 			</div>
 			<br>
 			
-			<!--
+
 			<div class="blogBar">
-			<a ng-click="set(12)">First Night on Tioman</a>
+			<a ng-click="set(11)">First Night in Tioman</a>
 			</div>
 			
 			
 			<br>
 			<div class="blogBar">
-			<a ng-click="set(13)">Through the Jungle</a>
+			<a ng-click="set(12)">Through the Jungle</a>
 			</div>
 			
 			<br>
+			<div class="blogBar">
+			<a ng-click="set(13)">George Town</a>
+			</div>
+			
 			<br>
- -->
+ 
 <!--			
 			
 			<br>
@@ -662,7 +685,7 @@
 			to get to my hostel before the diarrhea hit :O !  Gotta perform under pressure.  Luckily,
 			Hostelworld had really straightforward directions, and it was a nice trip over to the 
 			Saphaipae Hostel.  Also, no diarrhea!  Maybe the airport food was just really clean,
-			maybe the boiling hot water you dip the utensils in at the utensil station actually killed 
+			maybe the boiling hot water for dipping the utensils in at the utensil station actually killed 
 			some germs.
 			</p>
 			<br>
@@ -799,7 +822,7 @@
 		
 		
 		
-		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==5">
+		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==50129192">
             
 
 			<p class="blogHead">Bangkok - Food</p>
@@ -826,16 +849,37 @@
 		</div>
 			
 			
-		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==6">
+		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==5">
 			<p class="blogHead">Bangkok Arts and Culture Center</p>
-			<p>Armed with my pre-loaded route on Google Maps, I walked around looking for the Bangkok
-			Arts and Culture Center (BACC).  As I mentioned above, I took a quick detour for lunch.
-			On the way, I also discovered this impromptu live music played by overall-wearing 
-			high-schoolers at this mall-ish place called I'm Park.  Stores 
+			<p>
+			I wasn't quite sure what to do with my now-seemingly-unlimited spare time.  Since I happened to
+			be in Bangkok, I Googled a few things to do, and decided on the Bangkok Arts and Culture Center (BACC). 
+			So I set out with a rough idea of where to go, and hungrily keeping an eye out for good food on the way.  
+			Maybe it was getting a bit late for lunch, but most of the places I passed were empty.  Finally,
+			I decided to go into this small-ish place that was pretty filled with local people.  I sat
+			down and pointed to a picture of what looked like flat noodles and meat.  The owner
+			warned me that it was spicy, and so we started talking.  Turns out
+			he's wasn't Thai, he was actually Chinese (third generation in Thailand).  As I found out later, Chinese people
+			seem to integrate pretty well into Thailand.  I guess he'd integrated a bit too well and
+			didn't speak Mandarin, and since my Thai-speaking abilities were non-existent so far, we 
+			stumbled along in English.  He was really curious about my background, and really 
+			eager to share his.  Also, really proud of his food.  I really enjoyed his noodles (and actually they 
+			weren't very spicy), and decided I'd like to cap off the meal with some interesting dessert.
+			I settled on an icy-looking mix that he explained was some red, gel-like water-chestnut, 
+			relatively rare, thick-skinned coconut (1 of these for 4 regular coconuts), in coconut milk/syrup.
+			</p>
+			<br>
+			<img ng-src="../img/picPool/AllThaiMe.jpg" width="280" height="220"/>
+			<img ng-src="../img/picPool/FlatSpicyNoodle.jpg" width="280" height="220"/>
+			<img ng-src="../img/picPool/CoconutDesse.jpg" width="280" height="220"/>
+			<br>
+			<p>Stomach full, I continued my journey to the BACC.  As I got closer, I decided to go into a store to make sure I was
+			heading the right way.  After stepping out, I found myself at this mall-ish place called I'm
+			Park (yes, really spelled like that), listening to live music played by overall-wearing 
+			high-schoolers.  Stores 
 			at the mall included Domino's, a math workout center, and a Botox clinic.  I continued on,
 			by the National Stadium (host of the FIFA 2015 World Deaf Futsal Championships) and finally to the 
-			BACC.  Really cool art in there, unfortunately they didn't allow photography throughout a lot of it,
-			so you'll just have to take my word for it.
+			BACC.  Really cool art in there, but unfortunately they didn't allow photography throughout a lot of it.
 			</p>
 			<br>
 			<img ng-src="../img/picPool/ImPark.jpg" width="280" height="220"/>
@@ -844,7 +888,7 @@
 			<br>
 		</div>
 			
-		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==7">
+		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==6">
 			<p class="blogHead">Asiatique with Gift</p>
 			<p>
 			I met up this evening with Gift, a friend from Wash U.  She's been back in Thailand for
@@ -853,11 +897,11 @@
 			to all the little stands and Gift pointed out some foods I should try.  We ended up with
 			a bunch of little dishes - some spicy papaya salad, thai sausage (fermented and regular),
 			squid stuffed with egg, salmon.  It was fun to try out a little of everything.  We walked
-			around for a bit more then decided to sit down and grab a couple of beers (Chang).  We caught
+			around for a bit more then decided to sit down and grab a couple of Chang beers.  We caught
 			up on everything that's happened since we've graduated, reminisced about what an awesome time 
 			college was, talked about Thailand.  It was interesting to hear that her transition back to Thailand wasn't
-			that easy; I guess she'd been gone a long time.  I really liked hearing and thinking about how
-			Thai culture was different.  For instance, the perception of time.  Like when a bus is leaving at 
+			that easy; I guess she'd been gone a long time.  I really liked hearing about the cultural differences
+			between Thailand and the US.  For instance, the perception of time/timeliness.  Like when a bus is leaving at 
 			8am, it actually leaves when it fills up with people.  Thai people seem much more relaxed about
 			when things occur, and people don't really seem to be in too much of a rush.  Generally pretty
 			chill.  There also seems to be a religious/superstitious tint over a lot of things.  
@@ -879,7 +923,7 @@
 		
 		
 		
-		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==8">
+		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==7">
             
 
 			<p class="blogHead">Visit From Andrew</p>
@@ -894,6 +938,9 @@
 			too adventurous for some - an older couple had ended up in the hospital after some boating mishaps), 
 			parts were domestic (learning to cook Thai food), and overall seemed like a nice, balanced
 			tour that gave them a flavor of local life.  I'll learn some things from that organization.  
+			</p>
+			<br>
+			<p>
 			Most of the people on his tour were older, and some
 			were retired and traveling around the world.  I couldn't easily find age distributions
 			for around-the-world travelers, but based on my experience I'd guess that most tend to be the young
@@ -902,10 +949,12 @@
 			maybe it's a societal thing.  It reminds me of this Japanese dude in my hostel, who was on a final
 			month-long trip around Asia before starting his job.  As he said, this was his last chance to travel,
 			and then his life was over.  The sad thing about it is that he didn't say it in that half-joking
-			way that some Americans might have.  He said it as if he truly believed that after this trip,
-			he had a lifetime of work ahead of him with no end in sight but death.  Bummer.</p>
+			way that some Americans might have.  He said it like he truly believed that after this trip,
+			he had a lifetime of work ahead of him with no end in sight but death (which as he told me
+			was how it was).  Bummer.</p>
 			<br>
-			<p>As Andrew
+			<p>
+			Ok sorry, back to lunch.  As Andrew
 			observed, NYC has the best of a lot of things.  He expected Thai food here to be very different
 			or in some way better than Thai food in New York, but was disappointed.  Similar taste, lower
 			sanitation standard, slow service, etc.  While I tend not to think of things in terms
@@ -939,7 +988,7 @@
 		</div> 
 		
 		
-		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==9">
+		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==8">
             
 
 			<p class="blogHead">Outdoor Gym</p>
@@ -949,10 +998,18 @@
 			told me there was an outdoor gym at this place called Lumpini (or Lumphini) Park,
 			so I geared up and headed over.  It was about half an hour walk down Silom Road, a really
 			lively road lined with lots of little food and merchant stands.  As I got
-			closer to the park, the streets got more crowded and live music started popping up, 
-			a lot of which was really good.  After a 20 minute
-			detour to listen to some good music, I continued my trek to the park.  The sun was setting
-			by the time I got there, but the park was still pretty full with joggers and walkers.  
+			closer to the park, the streets got more crowded and live music started popping up.  After a 20-minute
+			detour to listen to some good music, I continued my trek to the park.  Let's stop there for 
+			me to reflect on and appreciate that detour.  Back when I was caught up in the day-to-day
+			hustle of NYC, I would NEVER give myself the time to stop en-route to my destination to
+			listen to music for 20 minutes.  Having the time and freedom to stop and appreciate the
+			beauty of life around me is incredibly awesome.  I think it's definitely a skill that can
+			be improved, and I aim to improve.
+			</p>
+			<br>
+			<p>
+			The sun was setting
+			by the time I got to Lumpini Park, but the park was still pretty full with joggers and walkers.  
 			I think working out is a lot less common in asia than in the US, and this was one of the 
 			few places I've seen where people have actually been jogging outside.  It's not like NYC
 			where you see runners everywhere on the streets.  After a bit of wandering around,
@@ -968,7 +1025,7 @@
 		</div> 
 		
 		
-		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==10">
+		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==9">
             
 
 			<p class="blogHead">Meditation Retreat</p>
@@ -992,7 +1049,8 @@
 				<p>
 				
 				<p>Ok - get ready for a wall of text.  A few pictures to help you get through it all
-				(taken at the end of the retreat - no phone allowed during).</p>
+				(taken at the end of the retreat - no phone allowed during).  I've also sprinkled in
+				a couple of pictures my fellow meditators sent me throughout the text, so look forward to those!</p>
 				<br>
 			<img ng-src="../img/picPool/MeditationO.jpg" width="280" height="220"/>
 			<img ng-src="../img/picPool/ViewOutO.jpg" width="280" height="220"/>
@@ -1012,15 +1070,11 @@
 				painter, who painted a beautiful, captivating, amazing portrait of a woman.  He looked
 				at the painting and could not live without it - he was in love with this painting,
 				wanted bring it home, lock himself away and just be with the painting forever.  People
-				said, "Are you mad?  This is a painting, you drew it yourself!"  </p>
-				<p>
-				A second painter paints
+				said, "Are you mad?  This is a painting, you drew it yourself!"  A second painter paints
 				the same woman, but paints a horrifying, ugly picture of the woman.  He's 
 				disgusted and terrified by his painting and wants to run away from it and hide.  Again, people
-				question whether the man is mad - after all, he painted this image himself!  </p>
-				
-				<p>
-				In the third part of the story, there are two ordinary men, gazing at a woman before them.  The first man
+				question whether the man is mad - after all, he painted this image himself!  Finally, there
+				are two ordinary men, gazing at a woman before them.  The first man
 				can't live without her, wants to run away with her and be with her forever.  The second man
 				is disgusted and terrified by the woman.  Are these two men not mad in the same way
 				the painters are mad?  They've painted different pictures of the same woman, and each reacts to his own image.
@@ -1032,7 +1086,7 @@
 				self-observation.  So let's get into what actually happened.  I land in Johor Bahru and make
 				my way over to the meetup point, funnily enough in front of a KFC at the side of the road.
 				Me and a British dude (Dannie) get picked up by a local girl (Natasha), her mom and her aunt.  
-				It's Natasha's first time doing this, and her aunt tells us a bit about "aches and pains"
+				It's Natasha's first time doing this as well, and her aunt tells us a bit about "aches and pains"
 				halfway through the course, and then the good stuff that happens once you're past that.
 				It was all very vague-sounding, and so we headed into the course with barely any idea
 				what to expect.  I sign in and settled into our quarters, ready to see what happens over the
@@ -1049,7 +1103,8 @@
 				dream, when as soon as I become aware I'm dreaming that shocks me into waking up.  
 				Over the hours, I was slowly able to fall into natural breathing and as the instructors 
 				said, to "just observe", my breath.  I was surprised at how light ny natural breathing was.  
-				By the end of the day I was constantly observing my breath, even when not meditating.  
+				By the end of the day I was constantly observing my breath, even when not meditating. 
+				Or maybe just constantly meditating.
 				</p>
 				<br>
 				<p>
@@ -1126,8 +1181,8 @@
 				the deep soreness, and heaviness in my body was overwhelming.  We weren't supposed to 
 				move so I couldn't even try to stretch out, and the idea is that sensations arise and 
 				pass away, so I bore the pain.  It was a rough hour.  We took a five minute break 
-				and then continued.  I was not looking forward to the next couple of hours.  There's 
-				that aversion to sensation that I was supposed to be getting rid of.  
+				and then continued.  I was NOT looking forward to the next couple of hours.  There's 
+				that aversion to sensation that I was supposed to be getting rid of :P.  
 				</p>
 				<br>
 				<p>
@@ -1161,6 +1216,12 @@
 				of the girls became convinced that this black man was showing up in front of her 
 				while she was sleeping.  
 				</p>
+				Bonus pic of us pushing Blank's car out of a ditch.  It had gotten stuck that night
+				when he was rushed to the hospital:
+				</p>
+				<br>
+				<img ng-src="../img/picPool/BlanksCarO.jpg" width="280" height="220"/>
+				
 				<br>
 				<p>For me, I was worried that I was falling into insanity as 
 				I tried to be rational.  I created this feeling on my own, I thought, and now it's 
@@ -1188,12 +1249,12 @@
 				<a href="http://en.wikipedia.org/wiki/Equanimity" class="underline">equanimous</a> 
 				whether they are pleasant or unpleasant sensations, and as the sensations pass we have 
 				purified ourselves more.  I wasn't the most still meditator, but I could spend 
-				am hour at a time during our periods of strong determination sitting completely still.  
+				an hour at a time during our periods of strong determination sitting completely still.  
 				When I chose to.  In some cases I just didn't see the benefit of remaining equanimous.  
 				Sure, sensations arise and pass.  But it's not always best to just observe.  
 				Sensations can be signals from your body that you need to take action.  During one of 
-				my personal sessions with the instructor I asked her (remember, can break noble 
-				silence to ask instructor questions) about a hypothetical situation 
+				my personal sessions with the instructor I asked her (we can break noble 
+				silence to ask the instructor questions) about a hypothetical situation 
 				where you hit your arm on a table.  With an equanimous mindset, you can say ok, 
 				I feel this pain, it will arise and pass away.  But then maybe you don't go to the 
 				doctor, who would tell you your arm is broken and you need to put it in a cast to 
@@ -1221,15 +1282,16 @@
 				By Day 8 or 9 I felt I had reached some stable point of equanimity.  Not the perfect 
 				equanimity of Vapassana but a level I was happy with.  It was cool to see a change in 
 				others and myself in our daily interactions.  Things that we would have gotten upset 
-				about at the start we were understanding of.  I think much had to do with reducing the 
-				ego, attachment to self.  I remember getting annoyed at some point when this old dude 
+				about at the start, we were now understanding of.  I think much had to do with reducing the 
+				ego, another form of attachment.  I remember getting annoyed at some point when this old dude 
 				just jumped in front of me while I was waiting to use the sink to wash my dishes.  
 				I realize that much of my angry or annoyed reactions are based in my ego.  Putting 
 				more importance on myself or what I want than on what others want, which I think is somewhat 
 				natural but which I think I could work to reduce.  On the other hand 
 				there is a need to stand up for oneself when the time arises. Like everything, 
 				some balance.  Actually one of the main things I think Vapassana does is to try 
-				to dissolve the ego. Seems kind of contradictory since it's all about self reflection.
+				to dissolve the ego. Seems kind of contradictory since it's also focusing on the
+				self.
 				</p>
 				<br>
 				<p>
@@ -1238,7 +1300,13 @@
 				It's difficult to appreciate what you have until it's taken away.  When you're healthy, 
 				you don't appreciate what you have until you're sick.  When you can talk you don't 
 				appreciate that until it's taken away. 
+				</p><br>
+				<p>
+				Bonus pic #2 - me and the meditation bros:
 				</p>
+				<img ng-src="../img/picPool/GroupMeditationPicO.jpg" width="280" height="220"/>
+				
+				
 				<br>
 				<p>
 				Some closing/random thoughts from 10 days in my own head.
@@ -1253,9 +1321,7 @@
 				<br>
 				<p>
 				I realize that I do have some obsessive tendencies, and I struggle because I have a 
-				strong desire to control myself.  </p>
-				<p>
-				I have strong attachments that I don't want to give up.  Equanimity is good for dealing 
+				strong desire to control myself.  I have strong attachments that I don't want to give up.  Equanimity is good for dealing 
 				with anger/annoyment, but I want to experience big highs associated with passion and attachment, 
 				and I'm ok with the accompanying big lows.
 				</p>
@@ -1283,7 +1349,7 @@
 		</div> 
 		
 		
-		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==11">
+		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==10">
             
 
 			<p class="blogHead">Crossroads</p>
@@ -1294,11 +1360,11 @@
 			all over. Some were getting picked up, some were taking the bus, some were hitchhiking.
 			I hadn't made any plans for after the retreat, but I had been considering heading down to 
 			Singapore, either on a bus with this guy from Barcelona (Mane) or maybe grabbing a ride with someone
-			driving down there.  It was a new city, I had a family friend I could stay with, so maybe a cool place to 
+			driving down there.  It was a new city and I had a family friend I could stay with, so maybe a cool place to 
 			check out.  After talking to some of the Singaporeans, I was less psyched to head there.
 			It seemed like a hectic, stressed out place, with a lot of the asian focus on prestige and
 			being the best along a well-defined track.  Ok that's probably not a fair representation,
-			but I wasn't feeling it.  I ended up talking with a German girl (Miriam) who was headed
+			but I wasn't feeling it.  I ended up talking to a German girl (Miriam) who was headed
 			to this island called Tioman Island.  It was a few hours north, and apparently a really
 			beautiful island.  I flipped through her Lonely Planet guide, and it sounded
 			awesome - great beaches, jungles, a nice relaxing place to ease back into the real world
@@ -1316,38 +1382,48 @@
 		
 	
 		
-		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==12">
+		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==11">
             
 
-			<p class="blogHead">First Night on Tioman</p>
+			<p class="blogHead">First Night in Tioman</p>
 			<p>
-				After a few hours on the bus and a few more on a ferry, we landed on Tioman Island
-				in the early evening. Miriam had planned a kind of around-the-world meditation/spiritual trip for herself, and
-				so had already booked her hostel.  
-				
-				
-				Miriam's career had taken her around europe - having worked
-				in Germany, France, and Switzerland.  It was interesting hearing the differences in how people worked.
-				Melanie was from a small village in Germany (Seeg?).  She was the only one in her year who
-				had gone onto more advanced studies, and so had more of a world perspective than others in
-				her village, who were apparently more close-minded/a bit racist.  She had studied music.
-				
-				
-				Like me, Melanie is more of an in-the-moment decision
-				maker (I would guess a strong "P" in Myers-Briggs tests), and so we ended up on this beautiful
-				island with no place to stay.  We started off by walking from the pier (Schtiek? in German)
-				to Miriam's place to drop off our backpacks.  Melanie had jumped off a really high waterfall
-				a couple months ago and landed wrong, and still had some back pain, so I helped carry the bag.  
-				Apparently the first few days after she mis-landed, she couldn't even move and just had
-				to lay there - pretty scary!  It's been getting better slowly.  
-				
+				After a few hours on the bus and some confusion over the ferry ticketing counters, we
+				were finally on the ferry to Tioman.  Melanie was pretty tired and napped for a bit, while
+				me and Miriam chatted.  Miriam was on a career break from an intense job that had 
+				taken her around Germany, France, and Switzerland.  Over the next couple of hours, I
+				got perspective on everything from food differences between the countries to
+				what's it's like being a woman in each place.  From worries of future motherhood to gender 
+				power dynamics in the workplace.  Props to Miriam for learning how to deal with such
+				a male-dominated work environment.  At the same time, bummer for having to 
+				face that in the first place.  I've started to see more awareness of some of the issues
+				women face in the workplace, and I hope that as word spreads, things will get better.  
+				Our conversation continued from there, on to personality, self-discovery, girl looks vs guy status,
+				etc.  So our ferry ride passed quickly and before we realized,
+				we were on Tioman!
 				</p>
+				<img ng-src="../img/picPool/TiomanBeach2O.jpg" width="280" height="220"/>
+				
+				<br>
+				<p>We landed on Tioman Island
+				in the early evening. Miriam had planned a kind of around-the-world meditation/spiritual trip for herself, and
+				so had already booked her hostel.  Like me, Melanie is more of an in-the-moment traveler 
+				(I would guess a strong "P" in Myers-Briggs tests), and so we ended up on this beautiful
+				island with no place to stay.  We started off by walking from the pier 
+<!-- 				(Schtiek? in German) -->
+				to Miriam's place to drop off our backpacks.  Melanie had jumped off a really high waterfall
+				a couple months ago and landed wrong, and still had some back pain, so we helped carry some
+				of her stuff.  
+				Apparently the first few days after she had mis-landed, she couldn't even move and just had
+				to lay there - pretty scary!  It's been getting better slowly.  
+				</p>
+				
 				<br>
 			<p>
 				Miriam's hostel was
 				fully booked, and the area we were staying in didn't have many other hostels, especially
 				not cheaper hostels, so me and Melanie packed some overnight stuff from our main bags 
-				and started scouting out places to sleep.  We walked
+				and started scouting out places to sleep.  <!-- 
+We walked
 				along the beach for awhile, and found a rock-enclosed shelter that looked like it could 
 				be nice.  We thought the tides might come up or there might be sandflies/mosquitos, so
 				it wasn't the best choice.  Miriam's hostel had a treehouse on the beach we thought would
@@ -1357,6 +1433,7 @@
 				</p>
 				<br>
 				<p>
+ -->
 				Our walk to get dinner took us by
 				a police station.  Across from that was this barbed-wire enclosed recreation area
 				where kids were playing this volleyball-like game with their feet.  We explored a couple
@@ -1367,6 +1444,9 @@
 				by a night market and got some spicy pho-like noodles with veggies and fishballs,
 				and some coconut, corn, and sugar-filled crispy pancakes for dessert.
 				</p>
+				<img ng-src="../img/picPool/HackeyBallO.jpg" width="280" height="220"/>
+				<img ng-src="../img/picPool/PoolTableO.jpg" width="280" height="220"/>
+				
 				<br>
 			<p>
 				After dinner we parted ways with Miriam.  We walked back to the pier, which we decided 
@@ -1375,18 +1455,27 @@
 				are more real.  Past a lot of the superficial formalities you would be talking about
 				with other people you'd known for the same amount of time.  I'm curious why that's the
 				case.  Maybe personality types are more similar, maybe the shared experience of traveling
-				creates an automatic community, maybe something else. We exchanged life/travel
-				stories, and boy has Melanie has had some crazy adventures!  She's rafted down rivers
+				creates an automatic bond, maybe something else.
+				</p>
+				<br>
+				<p>
+				Melanie was from a small village in Germany (Seeg?), and was the only person who 
+				had ever really traveled abroad.  So she was seen as the crazy one.  From my readings
+				on backpacker studies, a lot of backpackers have advanced education and true
+				to form, she was the only one in her year who had gone onto more advanced studies.
+
+				We exchanged life/travel
+				stories for awhile, and boy has Melanie has had some big adventures!  She's rafted down rivers
 				in Cambodia in a leaky boat she found.  She's spent nights in the jungle, with dangerous animals 
 				all around and no real protection.  She's hitchiked her way across many of the countries
 				by herself.  Hearing about all she's done in just half a year has got me pumped for my
 				trip!  After a few hours, we head back to our new home.  We set up a little spot for
-				ourselves, burned some anti-mosquito incense that another travel had given Melanie, and
+				ourselves, burned some anti-mosquito incense that another traveler had given Melanie, and
 				called it a night.  
 				
 				</p>
 				
-				<!-- Pic of game, outside of house, pool table -->
+				
 				
 				<br>
 				<p>
@@ -1399,6 +1488,8 @@
 				after negotiating the price down by 60%, we decided to get a room there for a couple of
 				days.  Now we had a place to stay!
 				</p>
+		
+				<img ng-src="../img/picPool/TiomanHostelO.jpg" width="280" height="220"/>
 				
 				<!-- Pic of rock, maybe hostel room, beach in front of house -->
 				
@@ -1407,13 +1498,13 @@
 		</div>
 		
 		
-		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==13">
+		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==12">
             
 
 			<p class="blogHead">Through the Jungle</p>
 			<p>
 				  After a couple days of relaxing and snorkeling on the beaches of the west coast, I
-				  was ready for a change of scenery.  We (me, Melanie, Miriam) decided to trek through the jungle to 
+				  was ready for a change of scenery.  We (me, Miriam, Melanie) decided to trek through the jungle to 
 				  Juara, on the east side of the island.  My pumas, banana republic chinos, v-neck
 				  t-shirt, and AQR jacket weren't the most optimal for jungle trekking, but I would
 				  have to make due.  We set out around 9am, after being delayed by a few hours of 
@@ -1427,29 +1518,33 @@
 				  about an hour and a half and found a little waterfall we had heard about.  We dipped our
 				  toes in, cooled down, and washed off. 
 				</p>
+				<img ng-src="../img/picPool/JungleO.jpg" width="280" height="220"/>
+				<img ng-src="../img/picPool/WaterfalO.jpg" width="280" height="220"/>
 				<br>
 				
 				<p>
 				We continued on, and a short while later found a road that cut through the jungle.  We
 				walked along for about half an hour, when a nice stranger in a pickup truck stopped by
 				and offered to let us jump in the back.  I took this to mean the bed of the truck so hopped 
-				in there, but apparently Melanie and Miriam took this to be the backseat.  It was my 
+				in there, while Melanie and Miriam sweet-talked their way to the backseat.  It was my 
 				first time riding out in the bed of a truck, and I really enjoyed it.  We cruised along
 				at a reasonable speed (maybe 40mph) and I got to see some great jungle scenery
-				and take a few pictures.
+				and take a few truckbed selfies.
 				</p>
+				<img ng-src="../img/picPool/HitchHikeO.jpg" width="280" height="220"/>
 				<br>
 				<p>
-				Fifteen minutes later, we'd arrived to the north end of Juara.  We stopped to help the 
+				Twenty minutes later, we'd arrived to the north end of Juara.  We stopped to help the 
 				driver unload the truck, then we got changed and walked down the beach.  Like the beaches
-				on our side, this beach was nice and peaceful, not loaded up with toursits like I had
-				been partly expecting.  It had nice soft, white sand, and I liked that the beach curved
+				on our side, this beach was nice and peaceful, not loaded up with tourists like I had
+				been partly expecting.  It had nice, soft sand, and I liked that the beach curved
 				into a little bay (not sure if that's the right term, hopefully you get what I mean).
 				We stayed there and relaxed for a couple more hours, and Melanie and I decided this would
 				probably be our last night on the island.  Miriam wanted to stay on the beach longer and
 				grab a cab back to our side of the island later, so me and Melanie left for the long trek 
 				back.  
 				</p>
+				<img ng-src="../img/picPool/JuaraO.jpg" width="280" height="220"/>
 				<br>
 				<p>
 				We'd walked for about five minutes when we saw a white car coming down the road.  We
@@ -1472,61 +1567,158 @@
 				our goodbyes, and now I'm off to the next set of adventues!
 				</p>
 				<br>
+				<p>
+				Oh some closing thoughts.  This helped me start to appreciate how differently people
+				travel.  But also how traveling can bring different people traveling in different ways
+				together.  People from all over the world.  Melanie taught me how to backpack in a pretty
+				intense way.  It's cool because you can travel the world for almost no money and you can
+				stay with locals and really understand different cultures.  But of course it involves some
+				risk.
+				</p>
+				<br>
 				
 			
 		</div>
 		
 		
-		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==14">
+		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==13">
             
 
 			<p class="blogHead">George Town</p>
 			
-			<p>
-			I spent about a day and a half in Kuala Lumpur, getting caught back up on emails, writing a few
-			blog posts, reading a book (The Ellimist Chronicles), and doing my taxes.  I walked around the
+			<!-- 
+<p>
+			After Tioman, I spent a day and a half in Kuala Lumpur getting caught back up on emails, writing a few
+			blog posts, reading a book, and doing my taxes.  Exciting stuff.  I walked around the
 			city a bit, chilled in Central Market and on Petaling street.  It was way more developed
-			than I had expected, and also way more touristy.  It looked like there were more tourists than
-			locals!  Part of it might be because Malaysia is pretty diverse (only half the population
-			is Malaysian).  The people there were all really helpful.  I was a bit lost at the metro
+			than I had expected, and also way more touristy.  Still, the locals there were all really helpful.  
+			I was a bit lost at the metro
 			station and a local dude helped me buy a ticket and directed me to where I needed to go.
 			Turns out he was a coffee bean plantation owner, which I thought was pretty cool.  Anyway,
 			I didn't end up staying long in KL, and decided to head up to George Town in Penang. 
 			</p>
-			<br>
+			<img ng-src="../img/picPool/KL.jpg" width="280" height="220"/>
+ -->
 			<p>
+			After Tioman Island, I spent a day and a half in Kuala Lumpur (KL) getting caught back up on emails, writing a few
+			blog posts, reading a book, and doing my taxes.  Exciting stuff.  Then, needing to head up
+			north to catch an eventual flight out of Chiang Mai, I continued on to George Town, Penang.
 			George Town is a really neat place!  It feels like a blend of New Orleans, the Florida Keys,
 			and some carribbean island, but an asian, Muslim version with amazing food!  It's this little island with
-			lots of cool art, live music, some kind of reggae scene, and is apparently the "food paradise of asia."
-			Actually lots of people were telling me before I came that Penang had great food and they were 
-			right!
+			lots of interesting street art, music (I saw Chinese, American, and even a reggae scene), 
+			and is apparently the "food paradise of asia."
 			</p>
 			<br>
 			<p>
+			<img ng-src="../img/picPool/BikeArt.jpg" width="280" height="220"/>
+			<img ng-src="../img/picPool/SwingsetAr.jpg" width="280" height="220"/>
+			<img ng-src="../img/picPool/MuayThai.jpg" width="280" height="220"/>
+			<br>
+			<br>
+			<p>
+			Actually lots of people were telling me before I came that Penang had great food and they were 
+			right!  I start by getting a restaurant rec from the dude working at the hostel, and go feast.
+			Here's me being that guy who takes pictures of all his food:
+			</p>
+			<img ng-src="../img/picPool/PenangDouble.jpg" width="280" height="220"/>
+			<img ng-src="../img/picPool/Oysters.jpg" width="280" height="220"/>
+			<img ng-src="../img/picPool/SavoryFruit.jpg" width="280" height="220"/>
+			<br>
+			
+			
+			<!-- 
+<p>
 			After finding my hostel, I asked the guy at the desk for food recs and headed over to 
 			CF Cafe.  I start off with Ambra juice and some fried oysters, mixed with tapioca flour batter, chives, 
 			eggs, onions, and chili sauce.  I wanted something after that and got Char Koay Teow,
 			this wok-fried noodle dish with prawn, eggs, chives, some crispy bits of lard, and sweet pork
 			sausage.  Yum. 
 			</p>
+ -->
 			<br>
 			<p>
-			I go back to my room, where I end up grabbing some beers with my hostelmates (a Canadian
-			dude and a Scottish couple, who had been traveling off and on with one another for a few months),
-			and sitting to 
-			watch an epic rainstorm for a few hours.  First off - beers in Muslim countries are expensive!
+			Hours later, after polishing off multiple meals and enjoying a karaoke performance that starts up in
+			the middle of the cafe I'm in, I finally head back to the hostel.  There, I end up grabbing some beers with my hostelmates 
+			(a Canadian
+			dude and a Scottish couple),
+			and we pull up some seats on our balcony to watch an epic rainstorm for a few hours.  
+			First off - beers in Muslim countries are expensive!
 			Second off - it's been way too long since I've just sat and watched a storm.  Good to appreciate
-			the beauty in everyday life.
+			the beauty in everyday life.  <a class="underline" href="http://www.huffingtonpost.com/iain-s-thomas/the-day-you-read-this_b_7100062.html?ir=Books&utm_hp_ref=books"
+			>Semi-relevant link</a>.
 			</p>
 			<br>
 			<p>
-			I spent most of my time in George Town wandering around the streets, eating good street food
+			Right now I'm slightly torn between wanting to hang out with locals vs with other backpackers.
+			On one hand, I feel like I'd be getting a more authentic cultural experience if I lived
+			and hung out with just locals.  On the other hand, being with backpackers gives me a more
+			mixed, international experience.  It's also nice to get other backpackers' perspectives
+			of local culture, because of course I'm biased in my own way.
+			</p>
+			<br>
+<!-- 
+			I spend the next few days in George Town wandering around the streets, making friends with 
+			the local restaurant
+			seating good street food
 			and taking in really amazing historical sites sprinkled throughout the streets.  I also
 			stopped by a flea market with stolen goods one of the days.  Picked up an interesting watch
 			with Chinese characters instead of Arabic numbers on it, for 8 RM (~$2).  Still finding it
 			hard to get away from wanting to own cool *stuff*.
 			</p>
+			<img ng-src="../img/picPool/ChineseWatch.jpg" width="280" height="220"/>
+ -->
 			
+		</div> 
+		
+		
+		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==14">
+            
+
+			<p class="blogHead">Sharing</p>
+			
+			<p>
+			In the grown-up (western) world, it seems like we lose the fun of sharing as we get older.
+			When we're kids we share our toys (or at least we're supposed to).  But as we grow up, we start sharing less.
+			I realize I've become more possessive of my space and of my things.  
+			
+			One thing I really like about the backpacking is the culture of sharing.  
+			When I was on Tioman, most of Melanie's things seemed to have been passed down to her by
+			other travelers.  As I continue my journey, I've been given more from other travelers, and
+			have passed along some of my things.  A guy named Blank gave me my first item at the meditation
+			retreat - a t-shirt with the Om symbol on it.  At my hostel in George Town, a Dutch guy
+			gave me a book called "the curious incident of the dog in the night-time."  It's a book 
+			written from the perspecive/writing-style of an autistic person.  It was a quick read
+			and I really enjoyed the different perspective.
+			</p>
+			<br>
+			<img ng-src="../img/picPool/Book.jpg" width="280" height="220"/>
+			<br>
+			<p>
+			The first things I've started passing along are the books that I've finished reading.
+			The book they gave me during the Vipassana retreat.  The Little Prince.  Yes, they were
+			definitely books I would have liked to keep and hold onto.  But after reading through them,
+			it only seemed fair to let others enjoy them on their trips also.  Besides the hours spent
+			together on the road or hanging out and chatting, sharing books is another form of idea sharing,
+			which is a really important part of backpacking.  Ideas of a place and culture are carried by one backpacker,
+			interpreted through their own culture, and shared in a different time,
+			different place, with a different group.  And thankfully, idea sharing isn't another type
+			of sharing that's been lost over time.  With the internet, sharing things has become incredibly
+			fast and easy.  It's now the filtering that seems to matter more. 
+			
+			
+<!-- 
+			What is it that people like about famous things?  They seem to make popular destinations
+			when people go to visit places.  Partially, it may be something to do with an availability
+			bias.  People have heard about them, so want to go.  Also, it seems to have something to
+			do with being able to talk to others about those things.  But do those things really
+			give you a good flavor of what a place is like?  Maybe.  I guess those things were or perhaps
+			are important to the local people, which is what made them famous.
+		
+ -->	
+			
+			
+			</p>
+
 			
 		</div> 
 		
@@ -1534,66 +1726,53 @@
 		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==15">
             
 
-			<p class="blogHead">Sharing</p>
-			
-			<p>
-			In the grown-up Western world, it seems like we lose the fun of sharing as we get older.
-			Kids play with toys, and are told to share.  But as you grow up, you start sharing less.
-			You become more possessive of your space, of your things.  One thing I like about
-			backpacking culture is the free flow of things.  On one hand, you'd think that because
-			each person is carrying so few things, they'd be more attached to those things.  But
-			backpackers also seem less attached to things in general.  So I guess this results in more
-			sharing.  
-			</p>
-			<br>
-			<p>
-			When I was on Tioman, most of Melanie's things seemed to have been passed down to her by
-			other travelers.  As I continue my journey, I've been given more from other travelers, and
-			have passed along some of my things.  A guy named Blank gave me my first item at the meditation
-			retreat - a t-shirt with the Ohm symbol on it.  At my hostel in George Town, a Dutch guy
-			gave me a book called "the curious incident of the dog in the night-time."  It's a book 
-			written from the perspecive/writing-style of an autistic person.  It was a quick read
-			and I really enjoyed the different perspective.
-			</p>
-
-			
-		</div> 
-		
-		
-		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==16">
-            
-
 			<p class="blogHead">Train and Perspective</p>
 			
 			<p>
 			After a few days in George Town, I decided it was time to head up to Chiang Mai for Songkran!
-			A couple of issues with the train ticket stand later (not possible to book tickets online),
+			A couple of issues with the train ticket stand later (not possible to book tickets online,
+			no electricity one day),
 			I was on a sleeper train heading up north.
 			</p>
 			<br>
 			<p>
-			Me and this French guy (Aurelien) were lucky enough to get a segment next to this super hyperactive,
-			really loud little kid.  I used a bottle cap to play fetch with him for a bit, 
-			which was entertaining, then used my magic skills and made the bottle cap disappear.  That
+			Me and this French guy (Aurelien) were lucky enough to get beds next to this super hyperactive,
+			really loud little Malay kid.  I used a bottle cap to play fetch with him for a bit, 
+			which was entertaining, then made the bottle cap disappear.  That
 			kept him busy for a surprisingly long time.
 			</p>
-			<br>
-			<p>
-			Aurelien had finished a geography degree in the UK, and was traveling for five weeks
-			while waiting to hear back about his application for an urban planning masters, in Amsterdam.
-			</p>
+			<img ng-src="../img/picPool/MalayKid.jpg" width="280" height="220"/>
+			
+			
 			<br>
 			<p>
 			One part of traveling I really enjoy is getting a new perspective.  Part of this is illustrated
 			in studies on problem solving (link to matchbox study).  I was reminded of this on the train
-			when seeing people drinking out of plastic bags (a pretty common way to serve drinks over here)
-			and when I was talking to Aurelien.   A couple of things stood out.  I gave him a couple of 
-			extra ear plugs I had, to help with the noisy kid.  And he started wondering what the 
+			when seeing people drinking out of plastic bags
+			and when I was talking to Aurelien.   A couple of things stood out.  At one point, I gave him some
+			extra ear plugs I had, to help with the noisy kid.  He started wondering what the 
 			best way to wear them was - flat end in first, rounded end in first, or even sideways or some
 			other way!  It occurred to me that I'd never really thought about that before. I'd always
 			just taken it for granted that the rounded end goes in first.  Also, when we were getting off
 			the train, I looked and the train seemed longer than when I had gotten on.  Aurelien suggested
 			that maybe at the stops we had been connecting to other trains.  Good thought!
+			</p>
+			<br>
+			<p>
+			Aurelien's local friend met us at the Bangkok train station.  They were going to stay in 
+			Bangkok for a few days before maybe meeting up with me in Chiang Mai.  We said our goodbyes,
+			and a few hours later I was on the second leg of my trip, up to enjoy Songkran in Chiang Mai!
+			</p>
+			
+			<!-- 
+<br>
+			<p>
+			Aurelien had just finished his geography degree in the UK, and was traveling for five weeks
+			while waiting to hear back about his application for an urban planning masters, in Amsterdam.
+			
+			</p>
+			<img ng-src="../img/picPool/MalayKid.jpg" width="280" height="220"/>
+ -->
 			
 		</div> 
 		
@@ -1767,6 +1946,48 @@
 			this at 4am local time here.  More "normal" hours have the practicality of sunlight, food, and activities.
 			But these hours afford me quiet and fewer distractions.  I work when I feel like working, 
 			travel and relax when I feel like it.  It's very nice.
+			</p>
+			
+			<br>
+			
+			
+			
+		</div> 
+		
+		
+		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 blogPage" ng-show="postNum==14232424">
+            
+
+			<p class="blogHead">Tokyo!</p>
+			
+			<p>
+			Got in to Tokyo and wandered around with my mom.  Feels natural, same same, just new city
+			to explore.  Very cool.  In some ways very different from backpacking around.  But it's 
+			cool and similar in other ways.  After exploring during the day we'll just hang out and chat
+			in the room for a few hours.  Outside of the everyday routine, there's more time to just hang out.
+			Also, I realize I'm more emotional and have less control over some strong emotions than I had
+			thought.  Darn.  Oh well, just gotta rock it.
+			
+			Day Two.  Man, Tokyo is super different, and I'm just starting to realize it.  I think real 
+			culture shock usually takes some extended time living in a place to kick in, but I feel
+			like I'm getting a small dose of it already.  In the background, there's a sense of being slightly
+			overwhelmed.  A gnawing discomfort, not fundamentally "getting" things.  On the surface things seem pretty similar.  
+			Big city.  Shiny new buildings, good public transport, polite people dressed in business clothes.  But it's like
+			that daft punk video.  Just the outside appearance is something I know.  Then you notice the anime everywhere. 
+			And girls dressed up in anime costumes advertising cafes.  And then you go in a cafe,
+			and it's like you're in some alternate world where the waitstaff are roleplaying
+			anime characters.  Slightly concerning when they're all wearing schoolgirl anime outfits,
+			customers are almost all dudes, and you're with your mom.  But then, more than anything sexual, it's an alternate reality
+			where your meal is interrupted by impromptu light shows while the girls sing songs from anime
+			movies.  Very surreal.
+			
+			And mixed in with this oddly captivating, childlike, internet-meme world with anime and collectibles,
+			are high tech electronics.  I played around with the Occulus Rift.  I found temperature-controlled
+			shoes.  I think the US has been good with web/software startups, but we could learn from
+			Japan just based on the hardware I've seen.  Maybe I haven't looked hard enough at US hardware.
+			
+			
+			
 			</p>
 			
 			<br>

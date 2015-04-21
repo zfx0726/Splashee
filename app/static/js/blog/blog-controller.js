@@ -1,12 +1,26 @@
 angular.module('splashapp')
   .controller('BlogController', ['$scope', '$http', function ($scope, $http, $filter) {
 
-	$scope.postNum=10;
+	$scope.postNum=11;
 	
 	$scope.email="";
 	
 	$scope.set = function(num){
 		$scope.postNum = num;
+	
+	}
+	
+	$scope.next = function(){
+		if($scope.postNum<13){
+			$scope.postNum = $scope.postNum +1;
+		}
+	
+	}
+	
+	$scope.back = function(){
+		if($scope.postNum>0){
+			$scope.postNum = $scope.postNum-1;
+		}
 	
 	}
 	

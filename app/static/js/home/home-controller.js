@@ -74,6 +74,8 @@ angular.module('splashapp')
  	// {"category":"How much have you planned so far?", "paths":["../img/picPool/BoatCouple.jpg", "../img/picPool/ParkPic.jpg","../img/picPool/SurfsUp.jpg"],
 //      "labels":["Destination","Activities","Details"]},
  	
+ 	// {"category":"Single stop or multi-destination?", "paths":["../img/picPool/BoatCouple.jpg", "../img/picPool/ParkPic.jpg","../img/picPool/SurfsUp.jpg"],
+//      "labels":["Destination","Activities","Details"]},
  	
      {"category":"Would you rather...", "paths":["../img/picPool/BoatCoupleO.jpg", "../img/picPool/ParkPicO.jpg","../img/picPool/SurfsUpO.jpg"],
      "labels":["Relax","See","Do"]},
